@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    style="@style/utility_dlg_layout_style"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/main_screen_worksheet_content"
+    android:orientation="vertical">
+
+    <!--标题和胎儿信息-->
+    <!--医院病人检查等信息-->
+    <!--<include layout="@layout/report_growth_curve_head_layout" />-->
+    <include layout="@layout/status_bar_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/patient_info_area_height"/>
+
+    <!--<include layout="@layout/report_worksheet_devider" />-->
+
+    <!--身体信息-->
+    <!--<include layout="@layout/report_growth_curve_gravida_info"/>-->
+
+    <edan.am57.bx4.report.growthCurve.itemLayout.GrowthCurveGravidaInfoLayout
+        android:id="@+id/growth_curve_gravida_info"
+        android:layout_width="wrap_content"
+        android:layout_height="95dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"/>
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:background="@color/black"/>-->
+    <include layout="@layout/report_worksheet_devider" />
+
+    <include layout="@layout/report_growth_curve_fetus_mark" />
+
+    <!--曲线图区域-->
+    <FrameLayout
+        android:id="@+id/f_curve_container"
+        android:layout_width="match_parent"
+        android:layout_height="655dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:text="@string/common_next_page"
+            android:layout_width="128dp"
+            android:layout_height="48dp"
+            android:enabled="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:textSize="20px"
+            android:background="@drawable/main_screen_btn_oneshot_selector"
+            android:id="@+id/next_page_tv" />
+
+        <TextView
+            android:text="@string/common_previous_page"
+            android:layout_width="128dp"
+            android:layout_height="48dp"
+            android:enabled="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="256dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:textSize="20px"
+            android:background="@drawable/main_screen_btn_oneshot_selector"
+            android:id="@+id/previous_page_tv" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

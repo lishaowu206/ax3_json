@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.image.view.CinePlayLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:continuous="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/image_ts_padding_bottom">
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/cine_play_speed_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/image_ts_cine_sliders_left"
+        continuous:label="@string/cine_speed"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <Button
+        android:id="@+id/cine_play_tbn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_alignTop="@+id/cine_play_start_btn"
+        android:layout_marginEnd="@dimen/image_ts_cine_buttons_spacing_horizontal"
+        android:layout_toStartOf="@+id/cine_play_start_btn"
+        android:text="@string/cine_play"/>
+
+    <Button
+        android:id="@+id/cine_play_start_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_marginTop="@dimen/image_ts_cine_buttons_top"
+        android:layout_centerHorizontal="true"
+        android:text="@string/cine_start"/>
+
+    <Button
+        android:id="@+id/cine_play_end_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_alignTop="@+id/cine_play_start_btn"
+        android:layout_marginStart="@dimen/image_ts_cine_buttons_spacing_horizontal"
+        android:layout_toEndOf="@+id/cine_play_start_btn"
+        android:text="@string/cine_end"/>
+</edan.am57.bx4.image.view.CinePlayLayout>

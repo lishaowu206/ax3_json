@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.measurement.TsMeasAppLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--科室-->
+    <RelativeLayout
+        android:id="@+id/meas_app_type_area"
+        android:layout_width="860px"
+        android:layout_height="223px"
+        android:layout_marginTop="13px"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <View
+        android:id="@+id/study_item_line"
+        android:layout_width="840px"
+        android:layout_height="1px"
+        android:layout_below="@+id/meas_app_type_area"
+        android:layout_marginTop="5px"
+        android:layout_marginStart="10px"
+        android:background="@color/touch_screen_tab_frame"/>
+
+    <!--检查模式-->
+    <RelativeLayout
+        android:id="@+id/meas_exam_mode_area"
+        android:layout_width="860px"
+        android:layout_height="223px"
+        android:layout_below="@+id/study_item_line"
+        android:layout_marginTop="5px">
+    </RelativeLayout>
+</edan.am57.bx4.measurement.TsMeasAppLayout>

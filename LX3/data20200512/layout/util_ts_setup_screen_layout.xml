@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.utility.setup.layout.TsScreenSetupLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/util_ts_setup_screen_main_bright_view"
+        layout="@layout/util_ts_setup_screen_layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setup_screen_ts_seek_bar_area_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/setup_screen_ts_margin_right"
+        android:layout_marginStart="@dimen/setup_screen_ts_margin_left"
+        android:layout_marginTop="@dimen/setup_screen_ts_margin_top"/>
+
+    <include
+        android:id="@+id/util_ts_setup_screen_main_contrast_view"
+        layout="@layout/util_ts_setup_screen_layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setup_screen_ts_seek_bar_area_height"
+        android:layout_below="@+id/util_ts_setup_screen_main_bright_view"
+        android:layout_marginEnd="@dimen/setup_screen_ts_margin_right"
+        android:layout_marginStart="@dimen/setup_screen_ts_margin_left"/>
+
+    <include
+        android:id="@+id/util_ts_setup_screen_touch_bright_view"
+        layout="@layout/util_ts_setup_screen_layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setup_screen_ts_seek_bar_area_height"
+        android:layout_below="@+id/util_ts_setup_screen_main_contrast_view"
+        android:layout_marginEnd="@dimen/setup_screen_ts_margin_right"
+        android:layout_marginStart="@dimen/setup_screen_ts_margin_left"/>
+
+    <Button
+        android:id="@+id/util_ts_restore_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_height="@dimen/touch_screen_button_small_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/utility_ts_margin_bottom"
+        android:layout_marginStart="@dimen/utility_ts_margin_right"
+        android:text="@string/common_restore_default"/>
+
+    <Button
+        android:id="@+id/util_ts_return_pre_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_height="@dimen/touch_screen_button_small_height"
+        android:layout_alignBottom="@+id/util_ts_restore_btn"
+        android:layout_marginEnd="@dimen/utility_buttons_spacing_horizontal"
+        android:layout_toStartOf="@+id/util_ts_return_image_btn"
+        android:text="@string/common_back"/>
+
+    <Button
+        android:id="@+id/util_ts_return_image_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_height="@dimen/touch_screen_button_small_height"
+        android:layout_alignBottom="@+id/util_ts_restore_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/utility_ts_margin_right"
+        android:text="@string/common_exit"/>
+</edan.am57.bx4.utility.setup.layout.TsScreenSetupLayout>

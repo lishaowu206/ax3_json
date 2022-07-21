@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/measure_ms_mini_report_items_height"
+    android:background="@color/measure_mini_report_list_item_bg">
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/measure_ms_mini_report_expand_indicator_size"
+        android:layout_height="@dimen/measure_ms_mini_report_expand_indicator_size"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="3dp"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/mr_info_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/measure_ms_mini_report_items_interval"
+        android:layout_marginStart="@dimen/measure_ms_mini_report_items_interval"
+        android:layout_marginBottom="5dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_toEndOf="@+id/iv_icon"
+        android:layout_toStartOf="@+id/mr_info_value"
+        android:gravity="center_vertical"
+        android:textColor="@color/measure_mini_report_content_text"
+        android:textSize="@dimen/measure_ms_mini_report_text_size"/>
+
+    <!--android:background="@color/measure_mini_report_tab_selected"-->
+
+    <TextView
+        android:id="@+id/mr_info_value"
+        android:layout_width="@dimen/measure_ms_mini_report_items_value_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:textColor="@color/measure_mini_report_content_text"
+        android:textSize="@dimen/measure_ms_mini_report_text_size"
+        android:visibility="invisible"/>
+</RelativeLayout>

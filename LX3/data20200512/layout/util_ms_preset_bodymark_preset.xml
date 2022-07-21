@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_screen_tab_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/preset_list_title"
+        style="@style/main_screen_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/bodymark_preset_package_list_listview"
+        android:gravity="center_vertical"
+        android:text="@string/mcb_preset_list" />
+
+    <ListView
+        android:id="@+id/bodymark_preset_package_list_listview"
+        android:layout_width="@dimen/util_preset_mcb_preset_list_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/preset_list_title"
+        android:layout_marginBottom="@dimen/util_ms_padding"
+        android:layout_marginEnd="@dimen/util_preset_mcb_preset_button_width_reserved"
+        android:layout_marginStart="@dimen/util_ms_padding"
+        android:divider="@color/main_screen_tab_content_bg"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:listSelector="@color/transparent"
+        android:background="@drawable/main_screen_content_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/bodymark_preset_package_list_listview"
+        android:layout_toStartOf="@+id/bodymark_preset_library_gv">
+
+
+        <TextView
+            android:id="@+id/body_mark_preset_title"
+            style="@style/main_screen_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/util_preset_body_mark_spinner_height"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="@string/bodymark_preset_predefined_graphics" />
+
+        <LinearLayout
+            android:id="@+id/bodymark_preset_viewpager_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/body_mark_preset_title"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/bodymark_preset_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bodymark_preset_delete_btn"
+            android:layout_below="@+id/bodymark_preset_viewpager_indicator"
+            android:layout_marginBottom="@dimen/util_ms_padding"
+            android:layout_marginTop="@dimen/util_ms_padding"
+            android:background="@drawable/main_screen_content_bg"/>
+
+        <Button
+            android:id="@+id/bodymark_preset_default_btn"
+            style="@style/main_screen_oneshot_button"
+            android:layout_alignBottom="@+id/bodymark_preset_delete_btn"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="120dp"
+            android:text="@string/common_default" />
+
+        <Button
+            android:id="@+id/bodymark_preset_delete_btn"
+            style="@style/main_screen_oneshot_button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginTop="@dimen/util_ms_padding"
+            android:text="@string/common_delete" />
+    </RelativeLayout>
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bodymark_library_customspinner"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/bodymark_library_customspinner"
+        android:gravity="center"
+        android:text="@string/bodymark_preset_library"
+        tools:ignore="RelativeOverlap" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/bodymark_library_customspinner"
+        style="@style/main_screen_spinner_style"
+        android:layout_width="@dimen/util_preset_body_mark_spinner_width"
+        android:layout_height="@dimen/util_preset_body_mark_spinner_height"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginTop="50dp"/>
+
+    <edan.am57.bx4.common.ViewWithScrollBar.EDANGridView
+        android:id="@+id/bodymark_preset_library_gv"
+        android:layout_width="@dimen/util_preset_body_mark_library_grid_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/bodymark_library_customspinner"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="@dimen/util_ms_padding"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="@dimen/util_ms_padding"
+        android:padding="1px"
+        android:background="@drawable/main_screen_content_bg"
+        android:numColumns="5" />
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1510dp"
+    android:layout_height="800dp">
+
+    <TextView
+        style="@style/main_screen_big_text_style"
+        android:id="@+id/status_bar_storage_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/bottom_status_bar_storage_heading"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/status_bar_storage_headline"
+        android:layout_above="@+id/status_bar_storage_exit_btn"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="1dp"
+        android:background="@drawable/ms_patient_grey_frame_bg">
+
+        <include
+            android:id="@+id/status_bar_storage_dialog_list_head"
+            layout="@layout/status_bar_storage_dialog_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/main_screen_listview_head_bg"/>
+
+        <!--<edan.am57.bx4.common.ViewWithScrollBar.ArrowScrollListView-->
+            <!--style="@style/main_screen_list_view_style"-->
+            <!--android:id="@+id/status_bar_storage_lv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_below="@+id/status_bar_storage_dialog_list_head"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:divider="@android:color/black"-->
+            <!--android:dividerHeight="1dp"-->
+            <!--android:fadeScrollbars="false"-->
+            <!--android:footerDividersEnabled="true"-->
+            <!--android:headerDividersEnabled="true"/>-->
+
+        <edan.am57.bx4.common.ViewWithScrollBar.VListview
+            android:scrollbarSize="0dp"
+            android:layout_toStartOf="@+id/list_vscrol"
+            android:scrollbarThumbHorizontal="@color/colorAccent"
+            android:scrollbarTrackVertical="@color/colorAccent"
+            android:scrollbars="vertical"
+            android:gravity="top|left"
+            android:fadeScrollbars="false"
+            android:id="@+id/status_bar_storage_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/status_bar_storage_dialog_list_head"
+            android:layout_alignParentStart="true"
+            android:divider="@android:color/black"
+            android:dividerHeight="1dp"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"/>
+
+        <edan.am57.bx4.common.ViewWithScrollBar.VScrollBar
+            android:id="@+id/list_vscrol"
+            android:background="@android:color/background_dark"
+            android:layout_alignTop="@+id/status_bar_storage_lv"
+            android:layout_alignBottom="@id/status_bar_storage_lv"
+            android:layout_alignParentEnd="true"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <Button
+        style="@style/main_screen_oneshot_small_button"
+        android:id="@+id/status_bar_storage_send_btn"
+        android:layout_width="120dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignBottom="@+id/status_bar_storage_exit_btn"
+        android:layout_toStartOf="@+id/status_bar_storage_delete_btn"
+        android:ellipsize="end"
+        android:text="@string/common_resend" />
+
+    <Button
+        style="@style/main_screen_oneshot_small_button"
+        android:id="@+id/status_bar_storage_delete_btn"
+        android:layout_width="120dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignBottom="@+id/status_bar_storage_exit_btn"
+        android:layout_toStartOf="@+id/status_bar_storage_exit_btn"
+        android:visibility="invisible"
+        android:ellipsize="end"
+        android:text="@string/common_delete" />
+
+    <Button
+        style="@style/main_screen_oneshot_small_button"
+        android:id="@+id/status_bar_storage_exit_btn"
+        android:layout_width="120dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/common_exit" />
+</RelativeLayout>

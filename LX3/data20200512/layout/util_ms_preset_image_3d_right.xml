@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="530dp"
+    android:layout_height="match_parent"
+    android:background="@color/main_screen_tab_content_bg"
+    android:layout_alignParentEnd="true"
+    android:paddingBottom="20dp"
+    android:paddingEnd="40dp"
+    android:paddingStart="20dp">
+
+    <TextView
+        android:id="@+id/preset_3d_slice_settings_tv"
+        style="@style/utility_preset_image_text"
+        android:layout_alignParentTop="true"
+        android:text="@string/para_3d_slice_settings" />
+
+    <TextView
+        style="@style/utility_preset_image_text"
+        android:layout_alignBottom="@+id/preset_3d_slice_layout_spinner"
+        android:text="@string/para_3d_default_layout" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/preset_3d_slice_layout_spinner"
+        android:layout_below="@+id/preset_3d_slice_settings_tv"
+        style="@style/utility_preset_image_spinner"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        customSpinner:entries="@array/slice_layout" />
+
+    <TextView
+        style="@style/utility_preset_image_text"
+        android:layout_alignBottom="@+id/preset_3d_slice_number_spinner"
+        android:text="@string/para_3d_slice_number_full" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/preset_3d_slice_number_spinner"
+        style="@style/utility_preset_image_spinner"
+        android:layout_alignStart="@+id/preset_3d_slice_layout_spinner"
+        android:layout_below="@+id/preset_3d_slice_layout_spinner"
+        customSpinner:entries="@array/slice_number"/>
+
+    <TextView
+        style="@style/utility_preset_image_text"
+        android:layout_alignBottom="@+id/preset_3d_slice_distance_spinner"
+        android:text="@string/para_3d_slice_distance_full" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/preset_3d_slice_distance_spinner"
+        style="@style/utility_preset_image_spinner"
+        android:layout_alignStart="@+id/preset_3d_slice_layout_spinner"
+        android:layout_below="@+id/preset_3d_slice_number_spinner"
+        customSpinner:entries="@array/slice_distance"/>
+
+    <TextView
+        style="@style/utility_preset_image_text"
+        android:layout_alignBottom="@+id/preset_3d_slice_default_plane_spinner"
+        android:text="@string/para_3d_default_plane" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/preset_3d_slice_default_plane_spinner"
+        style="@style/utility_preset_image_spinner"
+        android:layout_alignStart="@+id/preset_3d_slice_layout_spinner"
+        android:layout_below="@+id/preset_3d_slice_distance_spinner"
+        customSpinner:entries="@array/slice_plane"/>
+
+    <TextView
+        style="@style/utility_preset_image_text"
+        android:layout_alignBottom="@+id/preset_3d_slice_tint_spinner"
+        android:text="@string/para_tint" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/preset_3d_slice_tint_spinner"
+        style="@style/utility_preset_image_spinner"
+        android:layout_alignStart="@+id/preset_3d_slice_layout_spinner"
+        android:layout_below="@+id/preset_3d_slice_default_plane_spinner"
+        customSpinner:entries="@array/mpr_tint"/>
+
+    <TextView
+        android:id="@+id/preset_3d_image_type_settings_tv"
+        style="@style/utility_preset_image_text"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/preset_3d_slice_tint_spinner"
+        android:layout_alignStart="@+id/preset_3d_slice_settings_tv"
+        android:text="@string/para_3d_image_type_settings" />
+
+    <RadioGroup
+        android:id="@+id/preset_3d_image_type_grp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/preset_3d_image_type_settings_tv"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/preset_3d_image_type_surface"
+            android:layout_width="@dimen/main_screen_tabs_width"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_screen_tab_label_style2"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/para_3d_image_type_surface"
+            android:textColor="@color/main_screen_text"
+            android:textSize="@dimen/main_screen_gui_text_size" />
+
+        <RadioButton
+            android:id="@+id/preset_3d_image_type_skeleton"
+            android:layout_width="@dimen/main_screen_tabs_width"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/main_screen_tab_divider_width"
+            android:background="@drawable/main_screen_tab_label_style2"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/para_3d_image_type_skeleton"
+            android:textColor="@color/main_screen_text"
+            android:textSize="@dimen/main_screen_gui_text_size" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/preset_3d_image_type_grp"
+        android:background="@drawable/main_screen_tab_style_2_contex_bg"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
+
+        <TextView
+            style="@style/utility_preset_image_text"
+            android:layout_alignBottom="@+id/preset_3d_render_mode_spinner"
+            android:text="@string/para_3d_render_mode" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            android:id="@+id/preset_3d_render_mode_spinner"
+            style="@style/utility_preset_image_spinner"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            customSpinner:entries="@array/volume_render_mode"/>
+
+        <TextView
+            style="@style/utility_preset_image_text"
+            android:layout_alignBottom="@+id/preset_3d_threshold_spinner"
+            android:text="@string/para_3d_threshold_full" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            android:id="@+id/preset_3d_threshold_spinner"
+            style="@style/utility_preset_image_spinner"
+            android:layout_alignStart="@+id/preset_3d_render_mode_spinner"
+            android:layout_below="@+id/preset_3d_render_mode_spinner" />
+
+        <TextView
+            style="@style/utility_preset_image_text"
+            android:layout_alignBottom="@+id/preset_3d_brightness_spinner"
+            android:text="@string/para_3d_brightness_full" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            android:id="@+id/preset_3d_brightness_spinner"
+            style="@style/utility_preset_image_spinner"
+            android:layout_alignStart="@+id/preset_3d_render_mode_spinner"
+            android:layout_below="@+id/preset_3d_threshold_spinner" />
+
+        <TextView
+            style="@style/utility_preset_image_text"
+            android:layout_alignBottom="@+id/preset_3d_contrast_spinner"
+            android:text="@string/para_3d_contrast" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            android:id="@+id/preset_3d_contrast_spinner"
+            style="@style/utility_preset_image_spinner"
+            android:layout_alignStart="@+id/preset_3d_render_mode_spinner"
+            android:layout_below="@+id/preset_3d_brightness_spinner" />
+
+        <TextView
+            android:id="@+id/preset_3d_image_type_2d_settings_tv"
+            style="@style/utility_preset_image_text"
+            android:layout_below="@+id/preset_3d_contrast_spinner"
+            android:text="@string/para_3d_2d_settings" />
+
+        <TextView
+            style="@style/utility_preset_image_text"
+            android:layout_alignBottom="@+id/preset_3d_harmonic_check"
+            android:text="@string/para_b_harmonic" />
+
+        <CheckBox
+            android:id="@+id/preset_3d_harmonic_check"
+            style="@style/utility_preset_image_check_box"
+            android:layout_alignStart="@+id/preset_3d_render_mode_spinner"
+            android:layout_below="@+id/preset_3d_image_type_2d_settings_tv" />
+    </RelativeLayout>
+</RelativeLayout>

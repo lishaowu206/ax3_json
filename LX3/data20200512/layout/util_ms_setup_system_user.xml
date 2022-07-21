@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:EditRegion="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp">
+
+    <RelativeLayout
+        android:id="@+id/system_user_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/system_user_first_pointer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:text="."
+            android:textColor="@color/main_screen_util_text_normal"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/system_user_enable_label"
+            style="@style/general_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/system_user_first_pointer"
+            android:layout_alignTop="@+id/system_user_first_pointer"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/setup_system_user_enable_label" />
+
+        <CheckBox
+            android:id="@+id/system_user_enable_cbox"
+            style="@style/main_screen_checkbox_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/system_user_enable_label"
+            android:layout_alignTop="@+id/system_user_enable_label"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/system_user_enable_label"
+            android:clickable="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/system_user_sleep_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/system_user_label">
+
+        <TextView
+            android:id="@+id/system_user_sleep_first_pointer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:text="."
+            android:textColor="@color/main_screen_btn_text"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/system_user_sleep_enable_label"
+            style="@style/general_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/main_screen_btn_text"
+            android:layout_alignBottom="@+id/system_user_sleep_first_pointer"
+            android:layout_alignTop="@+id/system_user_sleep_first_pointer"
+            android:layout_marginTop="30dp"
+            android:text="@string/setup_system_user_sleep_enable_label" />
+
+        <CheckBox
+            android:id="@+id/system_user_sleep_enable_cbox"
+            style="@style/main_screen_checkbox_style"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/main_screen_btn_text"
+            android:layout_alignBottom="@+id/system_user_sleep_enable_label"
+            android:layout_alignTop="@+id/system_user_sleep_enable_label"
+            android:layout_toEndOf="@+id/system_user_sleep_enable_label"
+            android:layout_height="wrap_content"
+            android:clickable="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/utils_title_list"
+        android:layout_width="800dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/system_user_sleep_label">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:text="."
+            android:textColor="@color/main_screen_util_text_normal"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/general_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/setup_system_user_list_label"
+            android:textColor="@color/main_screen_util_text_normal" />
+    </RelativeLayout>
+
+    <edan.am57.bx4.common.ViewWithScrollBar.VListview
+        android:id="@+id/system_usr_list"
+        android:layout_width="800dp"
+        android:layout_height="500dp"
+        android:layout_alignEnd="@+id/system_usr_list_head"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/system_usr_list_head"
+        android:background="@drawable/ms_patient_grey_frame_bg"
+        android:divider="@android:color/black"
+        android:dividerHeight="1dp"
+        android:fadeScrollbars="false"
+        android:footerDividersEnabled="true"
+        android:gravity="top|left"
+        android:headerDividersEnabled="true"
+        android:scrollbarSize="0dp"
+        android:scrollbarThumbHorizontal="@color/colorAccent"
+        android:scrollbarTrackVertical="@color/colorAccent"
+        android:scrollbars="vertical" />
+
+    <edan.am57.bx4.common.ViewWithScrollBar.VScrollBar
+        android:id="@+id/system_usr_list_vscrol"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/system_usr_list"
+        android:layout_alignEnd="@+id/system_usr_list"
+        android:layout_below="@+id/system_usr_list_head"
+        android:background="@android:color/background_dark" />
+
+    <Button
+        android:id="@+id/system_usr_add_btn"
+        style="@style/main_screen_oneshot_button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/system_usr_list"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/system_usr_list"
+        android:text="@string/setup_manager_user_adduser" />
+
+    <Button
+        android:id="@+id/system_usr_del_btn"
+        style="@style/main_screen_oneshot_button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/system_usr_add_btn"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/system_usr_list"
+        android:text="@string/setup_manager_user_deluser" />
+
+    <Button
+        android:id="@+id/system_usr_edit_btn"
+        style="@style/main_screen_oneshot_button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/system_usr_del_btn"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/system_usr_list"
+        android:text="@string/setup_manager_user_edituser" />
+
+    <Button
+        android:id="@+id/system_usr_change_btn"
+        style="@style/main_screen_oneshot_button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/system_usr_edit_btn"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/system_usr_list"
+        android:text="@string/setup_manager_user_changepasswd" />
+
+    <Button
+        android:id="@+id/system_usr_text_btn"
+        style="@style/main_screen_oneshot_button"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/system_usr_change_btn"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/system_usr_list"
+        android:text="导出无加密数据"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/system_usr_list_head"
+        layout="@layout/util_ms_system_user_item"
+        android:layout_width="800dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/utils_title_list"
+        android:layout_below="@+id/utils_title_list"
+        android:layout_marginEnd="15dp"
+        android:background="@color/main_screen_listview_select_line_bg" />
+
+</RelativeLayout>

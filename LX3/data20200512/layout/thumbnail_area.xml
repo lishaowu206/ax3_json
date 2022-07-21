@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/review_thumbnail_area_bg">
+
+    <RelativeLayout
+        android:id="@+id/thumbnail_tools_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/thumbnail_tools_margin_horizontal"
+        android:layout_marginStart="@dimen/thumbnail_tools_margin_interval"
+        android:layout_marginBottom="@dimen/thumbnail_image_area_margin_bottom">
+        <include layout="@layout/thumbnail_tools_area"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/thumbnail_tools_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/thumbnail_tools_margin_horizontal"
+        android:layout_marginStart="@dimen/thumbnail_tools_margin_interval"
+        android:layout_marginBottom="@dimen/thumbnail_image_area_margin_bottom">
+        <include layout="@layout/thumbnail_tools_area"/>
+    </RelativeLayout>
+
+    <edan.am57.bx4.common.widget.ScrollBar
+        android:id="@+id/thumbnail_image_scrollbar"
+        android:layout_width="@dimen/thumbnail_scrollbar_width"
+        android:layout_height="match_parent"
+        android:layout_above="@id/thumbnail_tools_bottom"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/thumbnail_tools_top"
+        android:layout_marginEnd="@dimen/thumbnail_scrollbar_margin_end"
+        android:layout_marginBottom="2dp"
+        android:background="@color/main_screen_scrollbar_bg"/>
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_height="match_parent"
+        android:layout_above="@id/thumbnail_tools_bottom"
+        android:layout_below="@id/thumbnail_tools_top"
+        android:layout_marginLeft="@dimen/thumbnail_tools_margin_interval"
+        android:background="@color/measure_mini_report_sep"
+        android:visibility="visible"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/thumbnail_tools_bottom"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/thumbnail_tools_top"
+        android:layout_toStartOf="@id/thumbnail_image_scrollbar">
+        <include layout="@layout/thumbnail_layout"/>
+    </RelativeLayout>
+</merge>

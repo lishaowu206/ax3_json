@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/main_screen_text_style"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/maintenance_license_feature"/>
+
+        <TextView
+            style="@style/main_screen_text_style"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/maintenance_license_enable"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:gravity="center"
+
+        android:id="@+id/list_view_config_dlg" >
+    </ListView>
+
+    <Button
+        style="@style/main_screen_oneshot_small_button"
+        android:layout_width="@dimen/ms_tool_btn_ok_cancel_width"
+        android:layout_gravity="right"
+        android:layout_marginRight="100dp"
+        android:id="@+id/btn_ok_config_dlg"
+        android:text="@string/bottom_status_bar_wireless_password_ensure"
+        />
+
+</LinearLayout>

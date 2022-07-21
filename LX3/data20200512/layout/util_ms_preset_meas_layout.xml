@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    style="@style/utility_dlg_layout_style"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bodymark_container_rl">
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_height="match_parent"
+        android:background="@color/measure_mini_report_sep"
+        android:visibility="visible"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="match_parent"
+        android:background="@color/measure_mini_report_sep"
+        android:visibility="visible"/>
+
+    <include
+        android:id="@+id/util_ms_bodymark_top_id"
+        layout="@layout/util_ms_util_top_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/util_ms_bodymark_bottom_id"
+        android:layout_below="@+id/util_ms_bodymark_top_id"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/utility_title_text_style"
+            android:id="@+id/util_ms_bodymark_title"
+            android:textSize="23px"
+            android:text="@string/utility_meas"/>
+
+        <TabHost
+            android:id="@android:id/tabhost"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:background="@drawable/main_screen_tab_indicator"
+                    android:divider="@drawable/main_screen_tab_indicator_divider"
+                    android:showDividers="middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_screen_tabs_height"/>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+                    <LinearLayout
+                        android:id="@+id/meas_tab01"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+                 <!--   <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="General" />
+-->
+                        <include
+                            android:id="@+id/meas_preset_general"
+                            layout="@layout/util_ms_preset_meas_general"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/meas_tab02"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <include
+                            android:id="@+id/meas_preset_params"
+                            layout="@layout/util_ms_preset_meas_params"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/util_ms_bodymark_bottom_id"
+        layout="@layout/util_ms_dlg_bottom_layout" />
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/touch_screen_slider_selector"
+    android:orientation="vertical">
+    <!--参考/opt/Android/android-sdk-linux/platforms/android-24/data/res/layout/number_picker.xml-->
+    <Button
+        android:id="@+id/slider_increment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_screen_slider_btn_height"
+        android:background="@drawable/touch_screen_slider_up_button"
+        android:text="+"
+        android:textColor="@color/touch_screen_btn_text"
+        android:textSize="@dimen/touch_screen_slider_text_size"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:id="@+id/slider_display"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_screen_slider_text_height"
+        android:gravity="center"
+        android:textColor="@color/touch_screen_btn_text"
+        android:textSize="@dimen/touch_screen_slider_text_size"/>
+
+    <Button
+        android:id="@+id/slider_decrement"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_screen_slider_btn_height"
+        android:background="@drawable/touch_screen_slider_down_button"
+        android:text="-"
+        android:textColor="@color/touch_screen_btn_text"
+        android:textSize="@dimen/touch_screen_slider_text_size"
+        tools:ignore="HardcodedText"/>
+</merge>

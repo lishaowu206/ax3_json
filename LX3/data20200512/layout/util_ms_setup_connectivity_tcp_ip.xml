@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tcpipfragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:id="@+id/wired_settings_label">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="45sp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:alpha="1"
+            android:textStyle="bold"
+            android:text="."
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            style="@style/main_screen_second_tittle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:text="@string/tcp_ip_wired_setting"/>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/wired_local_ip_label"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/wired_settings_label"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:text="@string/tcp_ip_wired_local_ip"/>
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/tcp_ip_wired_local_ip_spinner"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/wired_settings_label"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@+id/wired_local_ip_label"
+        android:minHeight="30dp"
+        android:prompt="@string/tcp_ip_wired_local_ip"
+        customSpinner:entries="@array/tcp_ip_local_ip_options" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/wired_address_label"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tcp_ip_wired_local_ip_spinner"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:text="@string/tcp_ip_wired_address" />
+
+    <!--android:paddingLeft="10dp"-->
+    <edan.am57.bx4.common.widget.IPEditText
+        style="@style/general_edit_style"
+        android:id="@+id/tcp_ip_wired_address_edit"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tcp_ip_wired_local_ip_spinner"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@+id/wired_address_label" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/wired_gateway_label"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tcp_ip_wired_local_ip_spinner"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@+id/tcp_ip_wired_address_edit"
+        android:text="@string/tcp_ip_wired_gateway"/>
+
+    <edan.am57.bx4.common.widget.IPEditText
+        style="@style/general_edit_style"
+        android:id="@+id/tcp_ip_wired_gateway_edit"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tcp_ip_wired_local_ip_spinner"
+        android:layout_gravity="center_vertical"
+        android:layout_toEndOf="@+id/wired_gateway_label"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/wired_mask_label"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/wired_address_label"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:text="@string/tcp_ip_wired_mask" />
+
+    <edan.am57.bx4.common.widget.IPEditText
+        style="@style/general_edit_style"
+        android:id="@+id/tcp_ip_wired_mask_edit"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/wired_address_label"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@+id/wired_mask_label"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/wired_dns_label"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/wired_gateway_label"
+        android:layout_alignStart="@+id/wired_gateway_label"
+        android:layout_below="@+id/wired_address_label"
+        android:layout_gravity="center_vertical"
+        android:layout_toEndOf="@+id/tcp_ip_wired_mask_edit"
+        android:text="@string/tcp_ip_wired_dns"/>
+
+    <edan.am57.bx4.common.widget.IPEditText
+        style="@style/general_edit_style"
+        android:id="@+id/tcp_ip_wired_dns_edit"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/wired_address_label"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@+id/wired_dns_label"/>
+
+    <RelativeLayout
+        android:id="@+id/wifi_settings_grp_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/wired_mask_label">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:id="@+id/wifi_settings_label">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="45sp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:alpha="1"
+                android:textStyle="bold"
+                android:text="."
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                style="@style/main_screen_second_tittle_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:text="@string/tcp_ip_wifi_settings"/>
+        </RelativeLayout>
+
+        <TextView
+            style="@style/general_text_style"
+            android:id="@+id/wifi_enabled_label"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/wifi_settings_label"
+            android:layout_margin="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:text="@string/tcp_ip_wifi_enabled"/>
+
+        <LinearLayout
+            android:id="@+id/tcp_ip_wifi_enable_linear"
+            android:layout_below="@+id/wifi_settings_label"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/wifi_enabled_label">
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/tcp_ip_wifi_enable_chk"
+                style="@style/main_screen_checkbox_style"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/general_text_style"
+            android:id="@+id/wifi_network_label"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/wifi_enabled_label"
+            android:layout_alignStart="@+id/wifi_enabled_label"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:text="@string/tcp_ip_wifi_networks"
+            android:visibility="invisible"/>
+
+        <Button
+            style="@style/main_screen_oneshot_button"
+            android:id="@+id/tcp_ip_wifi_join_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_above="@+id/tcp_ip_wifi_forget_btn"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:enabled="false"
+            android:text="@string/tcp_ip_wifi_join"/>
+
+        <Button
+            style="@style/main_screen_oneshot_button"
+            android:id="@+id/tcp_ip_wifi_forget_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_above="@+id/tcp_ip_wifi_add_btn"
+            android:layout_alignEnd="@+id/tcp_ip_wifi_join_btn"
+            android:layout_toStartOf="@+id/tcp_ip_wifi_join_btn"
+            android:text="@string/tcp_ip_wifi_forget"
+            android:enabled="false"/>
+
+        <Button
+            style="@style/main_screen_oneshot_button"
+            android:id="@+id/tcp_ip_wifi_add_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="visible"
+            android:layout_above="@+id/tcp_ip_wifi_refresh_btn"
+            android:layout_alignEnd="@+id/tcp_ip_wifi_join_btn"
+            android:enabled="false"
+            android:text="@string/common_add"/>
+
+        <Button
+            style="@style/main_screen_oneshot_button"
+            android:id="@+id/tcp_ip_wifi_refresh_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_above="@+id/tcp_ip_wifi_advance_btn"
+            android:layout_alignEnd="@+id/tcp_ip_wifi_join_btn"
+            android:enabled="false"
+            android:text="@string/tcp_ip_wifi_refresh"/>
+
+        <Button
+            style="@style/main_screen_oneshot_button"
+            android:id="@+id/tcp_ip_wifi_advance_btn"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignEnd="@+id/tcp_ip_wifi_join_btn"
+            android:layout_alignParentBottom="true"
+            android:enabled="false"
+            android:text="@string/tcp_ip_wifi_advanced"/>
+
+        <edan.am57.bx4.common.ViewWithScrollBar.ArrowScrollListView
+            style="@style/main_screen_list_view_style"
+            android:id="@+id/tcp_ip_wifi_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/tcp_ip_wifi_advance_btn"
+            android:layout_below="@+id/wifi_enabled_label"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/wifi_network_label"
+            android:layout_toStartOf="@+id/tcp_ip_wifi_advance_btn"
+            android:background="@drawable/ms_patient_grey_frame_bg"
+            android:divider="@color/main_screen_frame_line"
+            android:dividerHeight="1dp"
+            android:padding="1dp"/>
+    </RelativeLayout>
+</RelativeLayout>

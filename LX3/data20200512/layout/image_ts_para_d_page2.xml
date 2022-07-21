@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:continuous="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/dmode_volume_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_padding_left"
+        android:layout_alignParentStart="true"
+        continuous:label="@string/para_d_volume"
+        continuous:maxvalue="99"
+        continuous:minvalue="0"
+        continuous:step="1"
+        continuous:type="number">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/dmode_filter_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/dmode_volume_slider"
+        continuous:adapter="@array/wall_filter_options"
+        continuous:label="@string/para_wall_filter"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/dmode_size_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/dmode_filter_slider"
+        continuous:adapter="@array/strip_size_options"
+        continuous:label="@string/para_strip_size"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/dmode_map_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_big"
+        android:layout_toEndOf="@+id/dmode_size_slider"
+        continuous:label="@string/para_gray_map"
+        continuous:maxvalue="10"
+        continuous:minvalue="0"
+        continuous:step="1"
+        continuous:type="number">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/dmode_power_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/dmode_map_slider"
+        continuous:label="@string/para_acoustic_power"
+        continuous:adapter="@array/acoustic_power_options"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+</RelativeLayout>

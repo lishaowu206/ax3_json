@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	style="@style/utility_dlg_layout_style"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<View
+		android:id="@+id/view_divider"
+		android:layout_width="1dp"
+		android:layout_alignParentLeft="true"
+		android:layout_height="match_parent"
+		android:background="@color/measure_mini_report_sep"
+		android:visibility="visible"/>
+	<View
+		android:layout_width="1dp"
+		android:layout_alignParentRight="true"
+		android:layout_height="match_parent"
+		android:background="@color/measure_mini_report_sep"
+		android:visibility="visible"/>
+
+	<include
+		layout="@layout/util_ms_util_top_layout"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/util_ms_bottom_area"
+		android:layout_below="@+id/util_ms_top_area">
+
+
+		<TextView
+			style="@style/utility_title_text_style"
+			android:layout_alignParentStart="true"
+			android:layout_alignParentTop="true"
+			android:id="@+id/main_screen_utility_title"
+			android:text="@string/feature_utility"/>
+
+<RelativeLayout
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_marginTop="200dp"
+	android:layout_below="@+id/main_screen_utility_title">
+			<Button
+				style="@style/main_screen_utility_function_button_style"
+				android:id="@+id/utility_setup_btn"
+				android:layout_centerHorizontal="true"
+				android:text="@string/feature_setup"/>
+
+			<Button
+				style="@style/main_screen_utility_function_button_style"
+				android:id="@+id/utility_preset_btn"
+				android:layout_centerInParent="true"
+				android:layout_below="@+id/utility_setup_btn"
+				android:text="@string/feature_preset" />
+
+			<Button
+				style="@style/main_screen_utility_function_button_style"
+				android:id="@+id/utility_mainte_btn"
+				android:layout_centerHorizontal="true"
+				android:layout_below="@+id/utility_preset_btn"
+				android:text="@string/feature_maintenance"/>
+</RelativeLayout>
+	</RelativeLayout>
+
+	<include layout="@layout/util_ms_util_bottom_layout"/>
+
+</RelativeLayout>

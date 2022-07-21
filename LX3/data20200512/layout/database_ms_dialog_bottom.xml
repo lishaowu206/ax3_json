@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:padding="5dp"
+        android:id="@id/tv_info_rows_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="40dp"
+        android:text="Selected（0  /0   MB total）" />
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:padding="5dp"
+        android:id="@id/tv_destination_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_info_rows_selected"
+        android:gravity="center_vertical"
+        android:text="@string/db_destination" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/main_screen_spinner_style"
+        android:id="@id/cs_export_destination"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@id/tv_destination_label"
+        android:layout_toEndOf="@id/tv_destination_label"
+        android:layout_toRightOf="@id/tv_destination_label"/>
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:padding="5dp"
+        android:id="@id/tv_destination_available_space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/cs_export_destination"
+        android:layout_alignStart="@id/cs_export_destination"
+        android:layout_below="@id/cs_export_destination"
+        android:gravity="center_vertical"/>
+
+</RelativeLayout>
+

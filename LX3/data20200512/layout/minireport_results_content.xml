@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--mini report测量结果区域,包括测量结果区域和计算结果区域-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:layout_margin="1dp"
+    android:background="@color/measure_mini_report_area_bg"
+    android:orientation="vertical">
+    <!--android:background="@drawable/main_screen_tab_content"-->
+
+    <edan.am57.bx4.measurement.minireport.bean.MiniReportExpandListView
+        android:id="@+id/gen_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:transcriptMode="alwaysScroll"/>
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/measure_ms_mini_report_sep"
+        android:background="@color/measure_mini_report_sep"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_calc_zone"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/calc_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:textColor="@color/main_screen_text_normal"
+            android:textSize="@dimen/main_screen_gui_text_size"/>
+
+        <edan.am57.bx4.measurement.minireport.bean.MiniReportExpandListView
+            android:id="@+id/calc_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"/>
+    </LinearLayout>
+
+</LinearLayout>

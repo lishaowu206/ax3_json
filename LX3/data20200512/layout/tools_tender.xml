@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="800dp"
+    android:layout_height="600dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tools_tender_tablelayout"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="20dp">
+        </TableLayout>
+
+        <CheckBox
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/maintenance_tender_tools_select_all"
+            android:id="@+id/tools_tender_allCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/main_screen_oneshot_button"
+            android:text="@string/maintenance_tender_tools_save"
+            android:id="@+id/tools_tender_save_btn"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1" />
+
+        <Button
+            style="@style/main_screen_oneshot_button"
+            android:text="@string/maintenance_tender_tools_cancel"
+            android:id="@+id/tools_tender_cancle_btn"
+
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!--<Space-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="250dp" />-->
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ScrollBar="http://schemas.android.com/apk/res-auto">
+
+
+  <edan.asp.view.ArrowScrollBar
+      android:id="@+id/scrollbarwithindicator"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_alignParentRight="true"
+      ScrollBar:bar_orentation="VERTICAL"
+      ScrollBar:bar_size="20dp"
+      ScrollBar:bar_color="@color/Blue"
+      ScrollBar:bar_back_color="@color/DarkGray"
+      ScrollBar:arrow_btn_color="@color/Black"
+      ScrollBar:arrow_btn_back_ground="@color/Blue"/>
+
+  <ListView
+      android:id="@+id/listView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_toLeftOf="@id/scrollbarwithindicator"
+      android:layout_marginRight="10dp"
+      android:scrollbars="none"></ListView>
+</RelativeLayout>

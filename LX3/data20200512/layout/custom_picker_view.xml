@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_screen_edit_normal"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <edan.am57.bx4.common.widget.datatime.EdanScrollView
+            android:id="@+id/picker_scroll_id"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/picker_linear_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </edan.am57.bx4.common.widget.datatime.EdanScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <edan.am57.bx4.common.widget.datatime.EdanEditText
+                style="@style/main_screen_edit_style"
+                android:paddingLeft="0dp"
+                android:id="@+id/picke_et_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="0"  />
+
+            <LinearLayout
+                android:id="@+id/picker_linear_click_id"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="2"
+                android:orientation="vertical" >
+
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/picke_up_id"
+                    android:background="@mipmap/ic_arrow_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/picke_down_id"
+                    android:layout_height="0dp"
+                    android:background="@mipmap/ic_arrow_down"
+                    android:layout_width="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/picker_linear_expand_id"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical" >
+                <ImageButton
+                    android:background="@color/main_screen_edit_normal"
+                    android:id="@+id/picker_btn_expand_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="20sp"
+                    android:text="+" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

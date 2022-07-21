@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/util_ts_screen_item_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="@dimen/setup_screen_ts_seek_bar_margin_left"
+        android:layout_toStartOf="@+id/util_ts_screen_item_left_btn"
+        android:gravity="center_vertical|end"
+        android:textColor="@color/touch_screen_btn_text"
+        android:textSize="@dimen/touch_screen_button_text_size"/>
+
+    <Button
+        android:id="@+id/util_ts_screen_item_left_btn"
+        android:layout_width="@dimen/setup_screen_ts_seek_bar_button_touch_size"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/util_ts_screen_item_seekbar"
+        android:background="@drawable/screen_setup_seek_bar_button_selector"
+        android:text="-"
+        android:layout_marginTop="@dimen/setup_screen_ts_seek_bar_spacing_vertical"
+        android:textColor="@color/touch_screen_btn_text"
+        android:textSize="@dimen/touch_screen_button_text_size"
+        tools:ignore="HardcodedText"/>
+
+    <edan.am57.bx4.utility.setup.view.EdanSeekBar
+        android:id="@+id/util_ts_screen_item_seekbar"
+        style="@style/utility_setup_screen_seek_bar"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/util_ts_screen_item_right_btn"
+        android:gravity="center"
+        android:max="99"
+        android:progress="35"/>
+
+    <!--<edan.am57.bx4.utility.setup.view.EdanSeekBar-->
+        <!--android:layout_toStartOf="@+id/util_ts_screen_item_right_btn"-->
+        <!--android:id="@+id/util_ts_screen_item_seekbar2"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_width="500dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingTop="30dp"-->
+        <!--android:paddingBottom="30dp"-->
+        <!--android:gravity="center"-->
+        <!--android:max="99"-->
+        <!--android:progress="35"-->
+        <!--android:maxHeight="2dp"-->
+        <!--android:progressDrawable="@drawable/btn_oneshot_selector"-->
+        <!--android:thumb="@drawable/image_tgc_bar_thumb"-->
+        <!--android:thumbOffset="0dp" />-->
+
+    <Button
+        android:id="@+id/util_ts_screen_item_right_btn"
+        android:layout_width="@dimen/setup_screen_ts_seek_bar_button_touch_size"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/screen_setup_seek_bar_button_selector"
+        android:text="+"
+        android:layout_marginTop="@dimen/setup_screen_ts_seek_bar_spacing_vertical"
+        android:textColor="@color/touch_screen_btn_text"
+        android:textSize="@dimen/touch_screen_button_text_size"
+        tools:ignore="HardcodedText"/>
+
+</RelativeLayout>

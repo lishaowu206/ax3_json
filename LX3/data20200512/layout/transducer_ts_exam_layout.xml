@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<RelativeLayout-->
+<edan.am57.bx4.transducer.TsTransducerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <edan.am57.bx4.common.widget.GridRadioGroup
+        android:id="@+id/probe_name_area"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/transducer_ts_probe_area_height"
+        android:layout_marginStart="@dimen/transducer_ts_exams_margin_left"
+        android:layout_marginTop="@dimen/transducer_ts_probes_margin_top"
+        android:layout_marginBottom="@dimen/transducer_ts_probes_margin_bottom"
+        android:orientation="horizontal">
+    </edan.am57.bx4.common.widget.GridRadioGroup>
+
+    <View
+        android:id="@+id/probe_exam_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_screen_tab_content_sep"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/probe_name_area"
+        android:layout_marginEnd="@dimen/transducer_ts_padding_right"
+        android:layout_marginStart="@dimen/transducer_ts_padding_left"
+        android:background="@color/touch_screen_tab_content_sep"/>
+
+    <RelativeLayout
+        android:id="@+id/exam_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/probe_reserved_area"
+        android:layout_below="@+id/probe_name_area"/>
+
+    <TextView
+        android:id="@+id/hint_textview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/transducer_ts_hint_text_height"
+        android:layout_above="@+id/exam_bottom_line"
+        android:layout_alignParentStart="true"
+        android:gravity="center"/>
+
+    <View
+        android:id="@+id/exam_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_screen_tab_content_sep"
+        android:layout_above="@+id/probe_reserved_area"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="@dimen/transducer_ts_padding_right"
+        android:layout_marginStart="@dimen/transducer_ts_padding_left"
+        android:background="@color/touch_screen_tab_content_sep"/>
+
+    <RelativeLayout
+        android:id="@+id/probe_reserved_area"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_above="@+id/probe_ts_bottom_area"
+        android:layout_marginBottom="@dimen/transducer_ts_button_spacing_vertical"/>
+
+    <RelativeLayout
+        android:id="@+id/probe_ts_bottom_area"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_screen_button_small_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/transducer_ts_padding_bottom"
+        android:layout_marginEnd="@dimen/transducer_ts_buttons_margin_right"
+        android:layout_marginStart="@dimen/transducer_ts_buttons_margin_left">
+
+        <Button
+            android:id="@+id/probe_ts_save_btn"
+            style="@style/touch_screen_oneshot_button"
+            android:layout_height="@dimen/touch_screen_button_small_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/common_save"/>
+
+        <Button
+            android:id="@+id/probe_ts_save_as_btn"
+            style="@style/touch_screen_oneshot_button"
+            android:layout_height="@dimen/touch_screen_button_small_height"
+            android:layout_alignBottom="@+id/probe_ts_save_btn"
+            android:layout_marginEnd="@dimen/transducer_ts_button_spacing_horizontal"
+            android:layout_toStartOf="@+id/probe_ts_exit_btn"
+            android:text="@string/common_save_as"/>
+
+        <Button
+            android:id="@+id/probe_ts_exit_btn"
+            style="@style/touch_screen_oneshot_button"
+            android:layout_height="@dimen/touch_screen_button_small_height"
+            android:layout_alignBottom="@+id/probe_ts_save_btn"
+            android:layout_alignParentEnd="true"
+            android:text="@string/common_exit"/>
+    </RelativeLayout>
+    <!--</RelativeLayout>-->
+</edan.am57.bx4.transducer.TsTransducerLayout>

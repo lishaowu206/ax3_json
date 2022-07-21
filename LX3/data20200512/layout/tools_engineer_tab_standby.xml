@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true">
+
+    <!--android:layout_width="1280dp"-->
+    <!--android:layout_height="800dp"-->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tools_engineer_layoutborder">
+            <TextView
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:text="interval(min)"/>
+
+            <EditText
+                android:layout_width="240dp"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:id="@+id/tools_editview_exit_time"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tools_engineer_layoutborder">
+            <TextView
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:text="PowerSaving"/>
+            <Button
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:background="@drawable/ms_btn_toggle_selector"
+                android:text="Enter"
+                android:id="@+id/tools_btn_powerSaving_enter" />
+            <Button
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:background="@drawable/ms_btn_toggle_selector"
+                android:text="Exit"
+                android:id="@+id/tools_btn_powerSaving_exit" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tools_engineer_layoutborder">
+            <TextView
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:text="FPGA"/>
+            <Button
+                android:text="Enter"
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:background="@drawable/ms_btn_toggle_selector"
+                android:id="@+id/tools_btn_fpga_powerSaving_enter" />
+            <Button
+                android:text="Exit"
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:background="@drawable/ms_btn_toggle_selector"
+                android:id="@+id/tools_btn_fpga_powerSaving_exit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tools_engineer_layoutborder">
+            <TextView
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:text="LCD"/>
+            <Button
+                android:text="Enter"
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:background="@drawable/ms_btn_toggle_selector"
+                android:id="@+id/tools_btn_lcd_powerSaving_enter" />
+            <Button
+                android:text="Exit"
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:background="@drawable/ms_btn_toggle_selector"
+                android:id="@+id/tools_btn_lcd_powerSaving_exit" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tools_engineer_layoutborder">
+            <TextView
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:text="Device"/>
+            <Button
+                android:text="Enter"
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:background="@drawable/ms_btn_toggle_selector"
+                android:id="@+id/tools_btn_device_powerSaving_enter" />
+            <Button
+                android:text="Exit"
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:background="@drawable/ms_btn_toggle_selector"
+                android:id="@+id/tools_btn_device_powerSaving_exit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tools_engineer_layoutborder">
+            <TextView
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:text="Keyboard"/>
+            <Button
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:background="@drawable/ms_btn_toggle_selector"
+                android:text="Enter"
+                android:id="@+id/tools_btn_kbd_powerSaving_enter" />
+            <Button
+                android:text="Exit"
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:background="@drawable/ms_btn_toggle_selector"
+                android:id="@+id/tools_btn_kbd_powerSaving_exit" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tools_engineer_layoutborder">
+            <TextView
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:text="Power:HV"/>
+            <Button
+                android:text="Enter"
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:background="@drawable/ms_btn_toggle_selector"
+                android:id="@+id/tools_btn_powerHV_powerSaving_enter" />
+            <Button
+                android:text="Exit"
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:background="@drawable/ms_btn_toggle_selector"
+                android:id="@+id/tools_btn_powerHV_powerSaving_exit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tools_engineer_layoutborder">
+            <TextView
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:text="Power:N12V~5.5V"/>
+            <Button
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:background="@drawable/ms_btn_toggle_selector"
+                android:text="Enter"
+                android:id="@+id/tools_btn_PowerN12Vand5.5V_powerSaving_enter" />
+            <Button
+                android:text="Exit"
+                android:layout_width="@dimen/tools_engineer_btn_width"
+                android:layout_height="@dimen/tools_engineer_btn_height"
+                android:textColor="@color/White"
+                android:background="@drawable/ms_btn_toggle_selector"
+                android:id="@+id/tools_btn_PowerN12Vand5.5V_powerSaving_exit" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+

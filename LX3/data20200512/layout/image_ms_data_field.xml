@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="edan.am57.bx4.image.model.bean.ImageParameterBean"/>
+        <import type="java.lang.String"/>
+        <import type="java.util.Locale"/>
+        <import type="android.view.View"/>
+        <variable name="paras" type="ImageParameterBean"/>
+    </data>
+
+    <edan.am57.bx4.image.view.ImageDataField
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="6dp"
+        android:paddingEnd="0dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/image_parameter_bm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_bm_mode"
+                android:background="@drawable/image_data_field_item_group_bg"
+                android:text="@{paras.paras_bImageType}"
+                android:layout_marginBottom="3dp"
+                />
+
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_bm_freq"
+                android:text='@{String.format("F %s", paras.paras_bFrequency)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_bm_gain"
+                android:text='@{String.format("G %d", paras.paras_bGain)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_bm_fr"
+                android:text='@{String.format("FR %d", paras.paras_bFrameRate)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_bm_dr"
+                android:text='@{String.format("DR %d", paras.paras_bDynamicRange)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_b_zoom"
+                android:text='@{String.format(Locale.US,"Zoom %.1f", paras.paras_bZoomRate)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_bm_depth"
+                android:text='@{String.format(Locale.US,"D %.1f", (float)paras.paras_bDepth / 10)}'
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/image_parameter_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:visibility="@{paras.paras_cParasShown ? View.VISIBLE : View.GONE}">
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_c_mode"
+                android:background="@drawable/image_data_field_item_group_bg"
+                android:text="@{paras.paras_cFlowType}"
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_c_freq"
+                android:text='@{String.format("F %s", paras.paras_cFrequency)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_c_gain"
+                android:text='@{String.format("G %d", paras.paras_cGain)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_c_prf"
+                android:text='@{String.format("PRF %s", paras.paras_cPrf)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_c_wf"
+                android:text='@{String.format("WF %s", paras.paras_cFilter)}'
+                android:layout_marginBottom="3dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/image_parameter_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:visibility="@{paras.paras_mParasShown ? View.VISIBLE : View.GONE}">
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_m_mode"
+                android:background="@drawable/image_data_field_item_group_bg"
+                android:text="M"
+                android:layout_marginBottom="3dp"
+                tools:ignore="HardcodedText" />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_m_gain"
+                android:text='@{String.format("G %s", paras.paras_mGain)}'
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/image_parameter_volume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:visibility="@{paras.paras_volumeParasShown ? View.VISIBLE : View.GONE}">
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_volume_image_mode"
+                android:background="@drawable/image_data_field_item_group_bg"
+                android:text="@{paras.paras_volumeImageMode}"
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_volume_quality"
+                android:text='@{String.format("Q %s", paras.paras_volumeQuality)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_volume_scan_angle"
+                android:text='@{String.format("A %d°", paras.paras_volumeScanAngle)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_volume_Image_Type"
+                android:text='@{paras.paras_volumeImageType}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_volume_frame_rate"
+                android:text='@{String.format("FR %d", paras.paras_volumeFrameRate)}'
+                android:layout_marginBottom="3dp"
+                android:visibility="@{paras.paras_volumeFrameRateShow ? View.VISIBLE : View.GONE}"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_volume_zoom_rate"
+                android:text='@{String.format("Zoom %.1f", paras.paras_volumeZoomRate)}'
+                android:layout_marginBottom="3dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/image_parameter_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:orientation="vertical"
+            android:visibility="@{paras.paras_pwParasShown ? View.VISIBLE : View.GONE}">
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_pw_mode"
+                android:background="@drawable/image_data_field_item_group_bg"
+                android:text="@{paras.paras_pwFlowType}"
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_pw_freq"
+                android:text='@{String.format("F %s", paras.paras_pwFrequency)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_pw_gain"
+                android:text='@{String.format("G %d", paras.paras_pwGain)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_pw_prf"
+                android:text='@{String.format("PRF %s", paras.paras_pwPrf)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_pw_wf"
+                android:text='@{String.format("WF %s", paras.paras_pwFilter)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_pw_gd"
+                android:text='@{String.format(Locale.US,"GD %.1f", paras.paras_pwGateDepth)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_pw_gs"
+                android:text='@{String.format("GS %s", paras.paras_pwGateSize)}'
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/image_parameter_cw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical"
+            android:visibility="@{paras.paras_cwParasShown ? View.VISIBLE : View.GONE}">
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_cw_mode"
+                android:background="@drawable/image_data_field_item_group_bg"
+                android:text="@{paras.paras_cwFlowType}"
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_cw_gain"
+                android:text='@{String.format("G %d", paras.paras_cwGain)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_cw_prf"
+                android:text='@{String.format("PRF %s", paras.paras_cwPrf)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_cw_wf"
+                android:text='@{String.format("WF %s", paras.paras_cwFilter)}'
+                android:layout_marginBottom="3dp"
+                />
+            <edan.am57.bx4.common.widget.ColorAnimTextView
+                style="@style/image_data_field_text"
+                android:id="@+id/image_parameter_cw_fd"
+                android:text='@{String.format(Locale.US,"FD %.1f", paras.paras_cwFocusDepth)}'
+                />
+        </LinearLayout>
+    </edan.am57.bx4.image.view.ImageDataField>
+</layout>

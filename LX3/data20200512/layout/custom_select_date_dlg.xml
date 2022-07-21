@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#131319"
+    xmlns:customCalendar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/dialog_close"
+        android:padding="10dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        android:src="@drawable/tools_dialog_close"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/select_date_show_id"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_height="45dp"
+        android:text="1900/01/01"/>
+
+    <edan.am57.bx4.common.widget.datatime.CustomCalendar
+        android:layout_below="@+id/select_date_show_id"
+        android:foregroundGravity="center"
+        android:id="@+id/select_date_diag_calendar_id"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        customCalendar:mMonthRowL="@drawable/custom_calendar_row_left"
+        customCalendar:mMonthRowR="@drawable/custom_calendar_row_right"
+        customCalendar:mCurrentBg="#6E6E6E"
+        customCalendar:mCurrentBgStrokeWidth="2dip"
+        customCalendar:mLineSpac="2dip"
+        customCalendar:mMonthRowSpac="5dip"
+        customCalendar:mMonthSpac="4dip"
+        customCalendar:mSelectBg="#fe7f5c"
+        customCalendar:mSelectRadius="15dip"
+        customCalendar:mSelectTextColor="#fe7f5c"
+        customCalendar:todayColor="@color/TlYellow"
+        customCalendar:mTextColorDay="#e6e6e6"
+        customCalendar:mTextColorMonth="#e6e6e6"
+        customCalendar:mTextColorPreFinish="#e6e6e6"
+        customCalendar:mTextColorPreNull="#cecdcd"
+        customCalendar:mTextColorPreUnFinish="@color/main_screen_text_normal"
+        customCalendar:mTextColorWeek="#e6e6e6"
+        customCalendar:mTextSizeDay="17sp"
+        customCalendar:mTextSizeMonth="20sp"
+        customCalendar:mTextSizePre="10sp"
+        customCalendar:mTextSizeWeek="17sp"
+        customCalendar:mTextSpac="8dip"/>
+
+    <edan.am57.bx4.common.widget.datatime.CustomClockPicker
+        android:layout_below="@+id/select_date_show_id"
+        android:foregroundGravity="center"
+        android:visibility="gone"
+        android:id="@+id/select_date_diag_clockpicker_id"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        customCalendar:mMonthRowL="@drawable/custom_calendar_row_left"
+        customCalendar:mMonthRowR="@drawable/custom_calendar_row_right"
+        customCalendar:mCurrentBg="#6E6E6E"
+        customCalendar:mCurrentBgStrokeWidth="2dip"
+        customCalendar:mLineSpac="2dip"
+        customCalendar:mMonthRowSpac="5dip"
+        customCalendar:mMonthSpac="4dip"
+        customCalendar:mSelectBg="#fe7f5c"
+        customCalendar:mSelectRadius="15dip"
+        customCalendar:mSelectTextColor="#fe7f5c"
+        customCalendar:todayColor="@color/TlYellow"
+        customCalendar:mTextColorDay="#e6e6e6"
+        customCalendar:mTextColorMonth="#e6e6e6"
+        customCalendar:mTextColorPreFinish="#e6e6e6"
+        customCalendar:mTextColorPreNull="#cecdcd"
+        customCalendar:mTextColorPreUnFinish="@color/main_screen_text_normal"
+        customCalendar:mTextColorWeek="#e6e6e6"
+        customCalendar:mTextSizeDay="17sp"
+        customCalendar:mTextSizeMonth="20sp"
+        customCalendar:mTextSizePre="10sp"
+        customCalendar:mTextSizeWeek="17sp"
+        customCalendar:mTextSpac="8dip"/>
+
+
+
+</RelativeLayout>

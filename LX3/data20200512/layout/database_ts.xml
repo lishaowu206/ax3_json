@@ -1,0 +1,39 @@
+<edan.am57.bx4.workstation.view.TsDatabaseLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_review"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/exam_database_ts_margin_top"
+        android:layout_toStartOf="@+id/btn_restart"
+        android:text="@string/feature_review"/>
+
+    <Button
+        android:id="@+id/btn_restart"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_alignTop="@+id/btn_review"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/exam_database_ts_spacing_horizontal"
+        android:text="@string/db_exam_restart"/>
+
+    <Button
+        android:id="@+id/btn_delete"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_alignTop="@+id/btn_review"
+        android:layout_marginStart="@dimen/exam_database_ts_spacing_horizontal"
+        android:layout_toEndOf="@+id/btn_restart"
+        android:text="@string/common_delete"/>
+
+    <Button
+        android:id="@+id/btn_exit"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_height="@dimen/touch_screen_button_small_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/exam_database_ts_margin_bottom"
+        android:layout_marginEnd="@dimen/exam_database_ts_margin_right"
+        android:text="@string/common_exit"/>
+</edan.am57.bx4.workstation.view.TsDatabaseLayout>

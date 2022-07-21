@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.measurement.MeasMenu.layout.TsGenMeasLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:continuous="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <edan.am57.bx4.measurement.MeasMenu.layout.BaseTsMeasGridView
+        android:id="@+id/meas_group"
+        android:layout_width="850px"
+        android:layout_height="215px"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15px"
+        android:layout_marginStart="32px"
+        android:background="@drawable/measure_ms_data_field_normal_bg"/>
+    <edan.am57.bx4.measurement.MeasMenu.layout.BaseTsMeasGridView
+        android:id="@+id/meas_item"
+        android:layout_below="@id/meas_group"
+        android:layout_width="850px"
+        android:layout_height="215px"
+        android:layout_marginTop="5px"
+        android:layout_marginStart="32px"
+        android:background="@drawable/measure_ms_data_field_normal_bg"/>
+
+    <RelativeLayout
+        android:id = "@+id/rg_meas_attribute"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below = "@+id/meas_item"
+        android:layout_marginTop="10px"
+        android:layout_marginBottom="10px"
+        android:layout_marginStart="62px">
+        //todo
+        <!--Fetus属性,左侧位置-->
+        <edan.am57.bx4.common.widget.ContinuousControl
+            android:id="@+id/meas_fetus_attribute_cc"
+            style="@style/touch_screen_continuous_control"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            continuous:label="@string/report_worksheet_fetus"
+            continuous:type="adapter"
+            android:visibility="gone">
+        </edan.am57.bx4.common.widget.ContinuousControl>
+
+        <!--   <edan.am57.bx4.common.widget.ContinuousControl
+               android:id="@+id/meas_location_attribute_cc"
+               style="@style/touch_screen_continuous_control"
+               android:layout_alignParentBottom="true"
+               android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+               android:layout_toEndOf="@+id/rg_meas_fetus_attribute"
+               continuous:label="location"
+               continuous:type="adapter">
+           </edan.am57.bx4.common.widget.ContinuousControl>-->
+
+        <edan.am57.bx4.common.widget.ContinuousControl
+            android:id="@+id/meas_side_attribute_cc"
+            style="@style/touch_screen_continuous_control"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="83px"
+            android:layout_toEndOf="@+id/meas_fetus_attribute_cc"
+            continuous:label="Side"
+            continuous:type="adapter"
+            android:visibility="gone">
+        </edan.am57.bx4.common.widget.ContinuousControl>
+
+        <edan.am57.bx4.common.widget.ContinuousControl
+            android:id="@+id/meas_pos_attribute_cc"
+            style="@style/touch_screen_continuous_control"
+            android:layout_marginStart="83px"
+            continuous:label="@string/needle_guide_calibration_pos"
+            continuous:type="adapter"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/meas_side_attribute_cc"
+            android:visibility="gone">
+        </edan.am57.bx4.common.widget.ContinuousControl>
+
+        <edan.am57.bx4.common.widget.ContinuousControl
+            android:id="@+id/meas_tool_cc"
+            style="@style/touch_screen_continuous_control"
+            android:layout_marginStart="83px"
+            continuous:label="@string/maintenance_Tool_tab"
+            continuous:type="adapter"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/meas_pos_attribute_cc">
+        </edan.am57.bx4.common.widget.ContinuousControl>
+    </RelativeLayout>
+
+    <!--工具按钮-->
+    <RelativeLayout
+        android:id="@+id/meas_menu_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30px"
+        android:layout_marginLeft="74px"
+        android:layout_toRightOf="@+id/meas_item">
+
+        <ToggleButton
+            android:id="@+id/btn_AppModeOption"
+            style="@style/touch_screen_on_off_button"
+            android:layout_alignParentTop="true"
+            android:textOff="@string/meas_app_btn"
+            android:textOn="@string/meas_app_btn"/>
+
+        <Button
+            android:id="@+id/btn_exit"
+            style="@style/touch_screen_oneshot_button"
+            android:layout_marginTop="30px"
+            android:layout_below="@+id/btn_AppModeOption"
+            android:text="@string/common_exit"/>
+
+        <Button
+            android:id="@+id/btn_undo"
+            style="@style/touch_screen_oneshot_button"
+            android:layout_marginTop="30px"
+            android:layout_below="@+id/btn_exit"
+            android:text="@string/meas_operation_undo"/>
+
+        <Button
+            android:id="@+id/btn_delete_last"
+            style="@style/touch_screen_oneshot_button"
+            android:layout_marginTop="30px"
+            android:layout_below="@+id/btn_undo"
+            android:text="@string/meas_delete_last"/>
+
+
+    </RelativeLayout>
+</edan.am57.bx4.measurement.MeasMenu.layout.TsGenMeasLayout>

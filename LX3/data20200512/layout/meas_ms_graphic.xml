@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.measurement.MeasureFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <edan.am57.bx4.measurement.MeasGraphicSurfaceView
+        android:id="@+id/meas_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_screen_graphic_bg"/>
+
+    <include
+        android:id="@+id/meas_result_window"
+        layout="@layout/meas_custom_result_wd_layout"
+    />
+
+</edan.am57.bx4.measurement.MeasureFrameLayout>

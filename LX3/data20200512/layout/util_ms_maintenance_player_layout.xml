@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/util_ms_maintence_player_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <FrameLayout
+        android:id="@+id/demo_playview_frame"
+        android:background="#FF000000"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/capture_area_width"
+        android:layout_height="@dimen/capture_area_height" >
+
+        <com.sdl2.SDLPlay.SDLSurfaceView
+            android:id="@+id/pv_video"
+            android:layout_width="@dimen/capture_area_width"
+            android:layout_height="@dimen/capture_area_height" />
+
+    </FrameLayout>
+
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/demo_progress_waitbar" />
+
+    <!--图像区域和状态栏之间的电影回放进度条-->
+    <edan.am57.bx4.common.widget.ProgressCineBar
+        android:layout_above="@+id/demo_progress_txt"
+        android:id="@+id/demo_progress_cinebar"
+        android:layout_width="1280dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/demo_progress_txt"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100sp"-->
+        <!--android:visibility="gone"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:orientation="horizontal" >-->
+
+        <!--<Button-->
+            <!--android:id="@+id/demo_player_play_bt"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="5sp"-->
+            <!--android:background="@drawable/ms_demo_btn_selector"-->
+            <!--android:text="play"-->
+            <!--android:textSize="18dp" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/demo_player_pause_bt"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="5sp"-->
+            <!--android:layout_toRightOf="@+id/demo_player_play_bt"-->
+            <!--android:background="@drawable/ms_demo_btn_selector"-->
+            <!--android:text="pause"-->
+            <!--android:textSize="18dp" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/demo_player_cannel_bt"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="5sp"-->
+            <!--android:background="@drawable/ms_demo_btn_selector"-->
+            <!--android:text="cannel"-->
+            <!--android:textSize="18dp" />-->
+    <!--</LinearLayout>-->
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.utility.preset.layout.TsPresetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ToggleButton
+        android:id="@+id/preset_exam_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/preset_comment_btn"
+        android:layout_marginEnd="@dimen/utility_buttons_spacing_horizontal"
+        android:layout_toLeftOf="@+id/preset_image_btn"
+        android:textOff="@string/feature_exam"
+        android:textOn="@string/feature_exam"/>
+
+    <ToggleButton
+        android:id="@+id/preset_image_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/preset_comment_btn"
+        android:layout_marginEnd="@dimen/utility_buttons_spacing_horizontal"
+        android:layout_toLeftOf="@+id/preset_comment_btn"
+        android:textOff="@string/feature_image"
+        android:textOn="@string/feature_image"/>
+
+    <ToggleButton
+        android:id="@+id/preset_comment_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/utility_ts_margin_top"
+        android:textOff="@string/feature_comment"
+        android:textOn="@string/feature_comment"/>
+
+    <ToggleButton
+        android:id="@+id/preset_bodymark_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/preset_comment_btn"
+        android:layout_marginStart="@dimen/utility_buttons_spacing_horizontal"
+        android:layout_toEndOf="@+id/preset_comment_btn"
+        android:textOff="@string/feature_body_mark"
+        android:textOn="@string/feature_body_mark"/>
+
+    <ToggleButton
+        android:id="@+id/preset_measure_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/preset_comment_btn"
+        android:layout_marginStart="@dimen/utility_buttons_spacing_horizontal"
+        android:layout_toEndOf="@+id/preset_bodymark_btn"
+        android:textOff="@string/feature_measure"
+        android:textOn="@string/feature_measure"/>
+
+    <include layout="@layout/util_ts_util_bottom_layout"/>
+
+</edan.am57.bx4.utility.preset.layout.TsPresetLayout>

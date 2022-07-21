@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/system_report_logo_layout"
+        android:layout_width="850dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/utils_title_report_logo">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="45sp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:alpha="1"
+                android:textStyle="bold"
+                android:text="." />
+
+            <TextView
+                style="@style/main_screen_second_tittle_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:text="@string/setup_system_reportlogo"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/utils_title_report_logo"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="35dp">
+
+            <edan.asp.view.RecycleImageView
+                android:id="@+id/system_report_logo_imgview"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@color/dialogBg"/>
+
+            <Button
+                style="@style/main_screen_oneshot_button"
+                android:id="@+id/system_report_import_btn"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/system_report_delete_btn"
+                android:layout_marginBottom="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/system_report_logo_imgview"
+                android:text="@string/common_import" />
+
+            <Button
+                style="@style/main_screen_oneshot_button"
+                android:id="@+id/system_report_delete_btn"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/system_report_logo_imgview"
+                android:layout_alignBottom="@+id/system_report_logo_imgview"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/system_report_logo_imgview"
+                android:text="@string/common_delete" />
+
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/system_report_logopos_title"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/system_report_import_btn"
+                android:layout_alignTop="@+id/system_report_logo_imgview"
+                android:layout_marginLeft="80dp"
+                android:text="@string/setup_system_logo_pos" />
+
+            <RadioGroup
+                android:id="@+id/system_report_logopos_rg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@id/system_report_logopos_title"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    style="@style/main_screen_radio_button_style"
+                    android:id="@+id/system_report_left_side_rb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:text="@string/setup_system_report_headerleft"/>
+
+                <RadioButton
+                    style="@style/main_screen_radio_button_style"
+                    android:id="@+id/system_report_right_side_rb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:text="@string/setup_system_report_headerright" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/system_report_logosize_title"
+                android:layout_width="wrap_content"
+                android:layout_alignBottom="@+id/system_report_logo_imgview"
+                android:layout_marginTop="5dp"
+                android:layout_alignLeft="@+id/system_report_logopos_title"
+                android:text="@string/setup_system_logo_size" />
+
+            <RadioGroup
+                android:id="@+id/system_report_logosize_rg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/system_report_logo_imgview"
+                android:layout_toRightOf="@id/system_report_logosize_title"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    style="@style/main_screen_radio_button_style"
+                    android:id="@+id/system_report_small_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:text="@string/setup_system_small"/>
+
+                <RadioButton
+                    style="@style/main_screen_radio_button_style"
+                    android:id="@+id/system_report_large_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:text="@string/setup_system_large"/>
+            </RadioGroup>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/system_report_logo_layout"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:id="@+id/report_printer_relativeLayout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:id="@+id/utils_title_report_printer">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="45sp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:alpha="1"
+                android:textStyle="bold"
+                android:text="." />
+
+            <TextView
+                style="@style/main_screen_second_tittle_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/setup_system_reportprinter" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/default_printer_layout"
+            android:layout_below="@+id/utils_title_report_printer"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="35dp"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/default_printer"
+                android:layout_width="260dp"
+                android:text="@string/setup_system_defaultprinter" />
+
+            <edan.am57.bx4.common.widget.CustomSpinner
+                style="@style/general_spinner_style"
+                android:id="@+id/system_storetab_retport_printer_spinner"
+                android:layout_width="360dp"
+                android:layout_marginStart="5dp"/>
+
+            <Button
+                style="@style/main_screen_oneshot_button"
+                android:text="@string/setup_system_install_driver"
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="50dp"
+                android:id="@+id/system_install_printer_driver_btn"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/default_printer_layout"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="35dp"
+            android:id="@+id/network_printer_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id = "@+id/searchPrinter_choose_type">
+
+                <TextView
+                    style="@style/general_text_style"
+                    android:id="@+id/utils_title_network_printer"
+                    android:layout_width="260dp"
+                    android:text="@string/setup_system_networkprinter" />
+
+                <edan.am57.bx4.common.widget.CustomSpinner
+                    style="@style/general_spinner_style"
+                    android:id="@+id/add_printer_type_spinner"
+                    android:layout_width="360dp"
+                    android:layout_marginStart="5dp"
+                    customSpinner:entries="@array/add_printer_options" />
+
+                <Button
+                    style="@style/main_screen_oneshot_button"
+                    android:text="@string/setup_system_search_network_printer"
+                    android:layout_width="260dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="50dp"
+                    android:id="@+id/system_search_network_printer_btn" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/searchPrinter_choose_type"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="260dp"
+                android:id = "@+id/ip_layout">
+                <TextView
+                    style="@style/general_text_style"
+                    android:id="@+id/system_printer_ip_label"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:text="@string/tcp_ip_wired_address_forshot" />
+
+                <edan.am57.bx4.common.widget.IPEditText
+                    style="@style/general_edit_style"
+                    android:id="@+id/system_printer_ip_edit"
+                    android:layout_width="360dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ip_layout"
+                android:id = "@+id/driver_layout"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="260dp"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/general_text_style"
+                    android:id="@+id/system_printer_model_label"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:text="@string/setup_system_driver"/>
+
+                <edan.am57.bx4.common.widget.CustomSpinner
+                    style="@style/general_spinner_style"
+                    android:id="@+id/system_printer_model_spinner"
+                    android:layout_width="360dp"
+                    android:layout_marginLeft="40dp"/>
+            </LinearLayout>
+
+            <Button
+                style="@style/main_screen_oneshot_button"
+                android:text="@string/setup_system_print_test_paper"
+                android:layout_width="210dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/driver_layout"
+                android:id="@+id/system_test_printer_btn"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/search_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone">
+        <ProgressBar
+            android:id="@+id/search_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="360dp"
+            android:layout_marginLeft="400dp"/>
+    </RelativeLayout>
+</RelativeLayout>

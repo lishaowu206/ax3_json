@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ScrollBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <edan.am57.bx4.common.ViewWithScrollBar.ScrollBarWithIndicator
+        android:id="@+id/scrollbarwithindicator"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        ScrollBar:bar_orentation="VERTICAL"
+        android:visibility="gone"
+        ScrollBar:bar_size="40dp" />
+
+<!--    <edan.asp.view.ArrowScrollBar
+        android:id="@+id/scrollbarwithindicator"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        ScrollBar:bar_orentation="VERTICAL"
+        ScrollBar:bar_size="30dp"/>-->
+
+    <edan.am57.bx4.measurement.minireport.CustomExpandableListView
+        android:id="@+id/expand_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_toLeftOf="@id/scrollbarwithindicator"
+        android:layout_marginRight="10dp"
+        android:divider="@null"
+        android:transcriptMode="alwaysScroll"
+        ></edan.am57.bx4.measurement.minireport.CustomExpandableListView>
+</RelativeLayout>

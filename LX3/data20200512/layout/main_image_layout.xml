@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--主界面布局文件,包括病人信息区/MiniReport区/缩略图区/状态栏和图像相关区域-->
+<RelativeLayout
+    android:id="@+id/ms_image_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_screen_image_bg">
+
+    <!--底部状态栏区域-->
+    <include
+        android:id="@+id/status_bar_area"
+        layout="@layout/status_bar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_screen_status_bottom_bg"/>
+
+    <!--左侧MiniReport区域-->
+    <FrameLayout
+        android:id="@+id/mini_report_area"
+        android:layout_width="@dimen/mini_report_width"
+        android:layout_height="@dimen/mini_report_height"
+        android:layout_above="@id/status_bar_area"
+        android:background="@color/measure_mini_report_view_pager"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+        <include
+            android:id="@+id/meas_ms_menu"
+            layout="@layout/meas_ms_menu_layout"/>
+    </FrameLayout>
+
+    <!--右侧缩略图区域-->
+    <edan.am57.bx4.thumbnailarea.ImageThumbnail
+        android:id="@+id/thumbnail_area"
+        android:layout_width="@dimen/thumbnail_width"
+        android:layout_height="match_parent"
+        android:layout_above="@id/status_bar_area"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"/>
+
+    <!--顶部病人信息区域:LOGO/医院名称/病人信息/检查信息(探头和检查模式)/系统日期和时间-->
+    <include
+        android:id="@+id/patient_info_area"
+        layout="@layout/status_bar_top"
+        android:layout_width="@dimen/patient_info_area_width"
+        android:layout_height="@dimen/patient_info_area_height"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/mini_report_area"
+        android:layout_toStartOf="@+id/thumbnail_area"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:background="@color/patient_info_field_bg"/>
+
+    <!--顶部病人信息扩展区域:(future:LMP/EDD)和MITI-->
+    <include
+        android:id="@+id/patient_info_extend_area"
+        layout="@layout/status_bar_top_extend"
+        android:layout_width="@dimen/patient_info_area_width"
+        android:layout_height="@dimen/patient_info_extend_area_height"
+        android:layout_below="@+id/patient_info_area"
+        android:layout_toEndOf="@+id/mini_report_area"
+        android:layout_toStartOf="@+id/thumbnail_area"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@color/main_screen_image_bg"/>
+
+    <!--图像区域,包括图像参数区域/ColorBar区域/图像显示区域-->
+    <include
+        android:id="@+id/image_area"
+        layout="@layout/ms_image_area"
+        android:layout_width="@dimen/image_area_width"
+        android:layout_height="@dimen/image_area_height"
+        android:layout_toEndOf="@+id/mini_report_area"
+        android:layout_below="@+id/patient_info_extend_area"/>
+
+    <!--图像参数区域-->
+    <FrameLayout
+        android:id="@+id/image_param_area"
+        android:layout_width="160dp"
+        android:layout_height="@dimen/image_area_height"
+        android:layout_below="@+id/patient_info_extend_area"
+        android:layout_toEndOf="@+id/image_area"
+        android:layout_toStartOf="@id/thumbnail_area">
+        <edan.am57.bx4.image.view.ImageColorBar
+            android:id="@+id/color_bar_area"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <include
+            android:id="@+id/image_data_field"
+            layout="@layout/image_ms_data_field"
+            android:layout_width="@dimen/image_parameter_width"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/color_bar_width"
+            android:orientation="vertical"/>
+
+        <edan.am57.bx4.image.view.VolumeScanIndicator
+            android:id="@+id/volume_scan_indicator_area"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+    <!--图像底部提示信息以及功能区域-->
+    <include
+        android:id="@+id/image_hint_area"
+        layout="@layout/main_image_hint_and_fun_layout"
+        android:layout_width="@dimen/main_image_hint_area_width"
+        android:layout_height="@dimen/main_image_hint_area_height"
+        android:layout_above="@id/status_bar_area"
+        android:layout_below="@+id/image_area"
+        android:layout_toEndOf="@+id/mini_report_area"
+        android:layout_toStartOf="@id/thumbnail_area"/>
+
+    <!--缩略图回放区域-->
+    <edan.asp.view.RecycleImageView
+        android:id="@+id/thumbnail_review_view"
+        android:layout_width="@dimen/capture_area_width"
+        android:layout_height="@dimen/capture_area_height"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/thumbnail_area"
+        android:layout_toLeftOf="@id/mini_report_area"
+        android:layout_above="@id/image_hint_area"
+        android:contentDescription="@null"
+        android:visibility="invisible"/>
+	
+	<!--&lt;!&ndash;AutoEF区域&ndash;&gt;-->
+	<!--<edan.am57.bx4.tools.test.AutoEFTestLayout-->
+        <!--android:id="@+id/auto_ef_test_area"-->
+        <!--android:layout_width="@dimen/self_define_key_area_width"-->
+        <!--android:layout_height="@dimen/self_define_key_area_height"-->
+        <!--android:layout_above="@id/status_bar_area"-->
+        <!--android:layout_below="@+id/screen_capture_area"-->
+        <!--android:layout_toStartOf="@+id/image_cine_bar"-->
+        <!--android:layout_toEndOf="@+id/mini_report_area">-->
+
+        <!--<CheckBox-->
+            <!--android:id="@+id/test_auto_ef_cut_border_chb"-->
+            <!--android:text="CutBorder"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<CheckBox-->
+            <!--android:id="@+id/test_auto_ef_add_border_chb"-->
+            <!--android:text="AddBorder"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_toEndOf="@+id/test_auto_ef_cut_border_chb"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<ToggleButton-->
+            <!--android:id="@+id/test_auto_ef_start_btn"-->
+            <!--android:layout_below="@+id/test_auto_ef_cut_border_chb"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:textOn="Exit AutoEF"-->
+            <!--android:textOff="Start AutoEF"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:checked="false"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="50dp" />-->
+        <!--<Spinner-->
+            <!--android:id="@+id/test_auto_ef_beat_spn"-->
+            <!--android:layout_below="@+id/test_auto_ef_cut_border_chb"-->
+            <!--android:layout_toEndOf="@+id/test_auto_ef_start_btn"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="50dp"/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/test_auto_ef_result_tv"-->
+            <!--android:layout_alignStart="@+id/test_auto_ef_start_btn"-->
+            <!--android:layout_alignEnd="@+id/test_auto_ef_beat_spn"-->
+            <!--android:layout_below="@+id/test_auto_ef_start_btn"-->
+            <!--android:textSize="20sp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+
+        <!--<edan.am57.bx4.tools.test.VolumeCurveView-->
+            <!--android:id="@+id/test_auto_ef_curve_view"-->
+            <!--android:layout_toEndOf="@+id/test_auto_ef_beat_spn"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"/>-->
+    <!--</edan.am57.bx4.tools.test.AutoEFTestLayout>-->
+</RelativeLayout>

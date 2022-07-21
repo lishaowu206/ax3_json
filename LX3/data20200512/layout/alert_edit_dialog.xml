@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:background="@drawable/user_title_raduis_background"
+        style="@style/main_screen_text_style"
+        android:id="@+id/alert_edit_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        tools:text="提示文字" />
+
+    <LinearLayout
+        android:id="@+id/alert_edit_dialog_liner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alert_edit_dialog_title"
+        android:layout_margin="30dp"
+        android:orientation="vertical" />
+
+    <Button
+        style="@style/main_screen_oneshot_small_button"
+        android:id="@+id/alert_edit_dialog_btn2"
+        android:layout_width="@dimen/util_setup_btn_width"
+        android:layout_below="@+id/alert_edit_dialog_liner"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/common_no" />
+
+    <Button
+        style="@style/main_screen_oneshot_small_button"
+        android:id="@+id/alert_edit_dialog_btn3"
+        android:layout_width="@dimen/util_setup_btn_width"
+        android:layout_below="@+id/alert_edit_dialog_liner"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentRight="true"
+        android:text="@string/common_cancel" />
+
+</RelativeLayout>

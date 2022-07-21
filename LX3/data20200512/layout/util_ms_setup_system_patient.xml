@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dp"
+    android:orientation="vertical">
+
+    <!--第一行-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/row_margin"
+        android:layout_marginLeft="13dp"
+        android:gravity="center_horizontal"
+        android:weightSum="5">
+        <!--Time -->
+        <TextView
+            style="@style/general_text_style"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:paddingLeft="13dp"
+            android:layout_weight="1.7"
+            android:text="@string/setup_system_weightuint" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            style="@style/general_spinner_style"
+            android:id="@+id/system_patient_weightuint_spinner"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="2.3"
+            customSpinner:entries="@array/patient_weight_unit_array"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!--第二行-->
+    <LinearLayout
+        android:id="@+id/system_patient_height_vg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/row_margin"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="13dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+        <!--第1列-->
+        <TextView
+            style="@style/general_text_style"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:paddingLeft="13dp"
+            android:layout_weight="1.7"
+            android:text="@string/setup_system_heightuint" />
+
+        <!--第2 列-->
+        <edan.am57.bx4.common.widget.CustomSpinner
+            style="@style/general_spinner_style"
+            android:id="@+id/system_patient_heightuint_spinner"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="2.3"
+            customSpinner:entries="@array/patient_hight_unit_array"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+    <!--第三行-->
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/row_margin"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="13dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+        <!--第1列-->
+
+        <TextView
+            style="@style/general_text_style"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:paddingLeft="13dp"
+            android:layout_weight="1.7"
+            android:text="@string/setup_system_titlefield1" />
+
+        <!--第2 列-->
+        <edan.asp.inputmethod.view.ImEditText
+            style="@style/general_edit_style"
+            android:id="@+id/system_patient_custom_title1_edit"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="2.3"
+            android:hint=""
+            android:maxLength="10"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!--第四行-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/row_margin"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="13dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <!--第1列-->
+        <TextView
+            style="@style/general_text_style"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:paddingLeft="13dp"
+            android:layout_weight="1.7"
+            android:text="@string/setup_system_titlefield2"/>
+
+        <!--第2 列-->
+        <edan.asp.inputmethod.view.ImEditText
+            style="@style/general_edit_style"
+            android:id="@+id/system_patient_custom_title2_edit"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="2.3"
+            android:maxLength="10"
+            android:hint="" />
+
+        <View
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!--第五行-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/row_margin"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="13dp"
+        android:gravity="center_horizontal"
+        android:weightSum="5">
+
+        <!--Time format-->
+        <TextView
+            style="@style/general_text_style"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1.7"
+            android:paddingLeft="13dp"
+            android:text="@string/setup_system_exam_restart_limit_time" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            style="@style/general_spinner_style"
+            android:id="@+id/system_patient_exam_timerestart_spinner"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="2.3"
+            customSpinner:entries="@array/patient_time_limit_restart_array"/>
+
+        <TextView
+            style="@style/general_text_style"
+            android:layout_width="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0.5"
+            android:gravity="left|center_vertical"
+            android:text="@string/setup_system_exam_restart_uint" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5" />
+
+    </LinearLayout>
+
+    <!--第6行-->
+    <LinearLayout
+        android:id="@+id/system_patient_name_display_option_vg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/row_margin"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="13dp"
+        android:gravity="center_horizontal"
+        android:weightSum="5">
+
+        <!--Time -->
+        <TextView
+            style="@style/general_text_style"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1.7"
+            android:paddingLeft="13dp"
+            android:text="@string/setup_system_patient_name_display" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            style="@style/general_spinner_style"
+            android:id="@+id/system_patient_namedisplay_option_spinner"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="2.3"
+            customSpinner:entries="@array/patient_patient_name_display_array"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

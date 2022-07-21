@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.tools.engineer.RegistersView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <RadioGroup
+        android:id="@+id/engineer_register_type"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_screen_tabs_height"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/engineer_register_type_dsp"
+            android:layout_width="@dimen/main_screen_tabs_width"
+            android:layout_height="wrap_content"
+            android:text="@string/engineer_register_dsp" />
+
+        <RadioButton
+            android:id="@+id/engineer_register_type_dbf"
+            android:layout_width="@dimen/main_screen_tabs_width"
+            android:layout_height="wrap_content"
+            android:text="@string/engineer_register_dbf" />
+    </RadioGroup>
+
+    <include
+        android:id="@+id/engineer_registers_area"
+        layout="@layout/tools_engineer_registers_dsp_dbf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/engineer_register_save_dsp_regs_btn"
+        android:layout_below="@+id/engineer_register_type" />
+
+    <Button
+        android:id="@+id/engineer_register_save_dsp_regs_btn"
+        style="@style/engineer_oneshot_button"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/engineer_register_save_dbf_regs_btn"
+        android:text="@string/engineer_register_save_dsp_regs" />
+
+    <Button
+        android:id="@+id/engineer_register_save_dbf_regs_btn"
+        style="@style/engineer_oneshot_button"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/engineer_register_save_sct_btn"
+        android:text="@string/engineer_register_save_dbf_regs" />
+
+    <Button
+        android:id="@+id/engineer_register_save_sct_btn"
+        style="@style/engineer_oneshot_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/engineer_register_save_sct" />
+</edan.am57.bx4.tools.engineer.RegistersView>

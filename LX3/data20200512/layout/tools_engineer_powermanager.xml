@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@drawable/tools_engineer_layoutborder"
+        android:layout_height="556dp">
+
+        <TabHost
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pmTabHost"
+            android:background="@drawable/tools_engineer_layoutborder">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tools_engineer_layoutborder">
+
+                    <LinearLayout
+                        android:id="@+id/SpecialVol"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:text="Enable manual voltage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/enableManualVoltageCb" />
+
+                        <CheckBox
+                            android:text="Onekey set VPP and VNN"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/enableOnekeyVPPVNN" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:text="VPP1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/pmVPP1Radio"
+                                android:layout_weight="1" />
+
+                            <RadioButton
+                                android:text="VNN1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/pmVNN1Radio"
+                                android:layout_weight="1" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp">
+
+                            <RadioButton
+                                android:text="VPP2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/pmVPP2Radio"
+                                android:layout_weight="1" />
+
+                            <RadioButton
+                                android:text="VNN2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/pmVNN2Radio"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:text="Voltage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:id="@+id/textView28" />
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/voltageSpinner" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/tools_engineer_layoutborder"
+                            android:layout_height="150dp">
+
+                            <TextView
+                                android:text="Quick Setting"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="24sp"
+                                android:id="@+id/textView29" />
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:text="5V"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/pm5VRadioBtn"
+                                    android:layout_weight="1" />
+
+                                <RadioButton
+                                    android:text="10V"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/pm10VRadioBtn"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:text="30V"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/pm30VRadioBtn"
+                                    android:layout_weight="1" />
+
+                                <RadioButton
+                                    android:text="60V"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/pm60VRadioBtn"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:text="TextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/VPPVNNInfo"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ModeVol"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+        </TabHost>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/engineer_voltage_refresh"
+            android:text="autoRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/engineer_voltage_stopRefresh"
+            android:text="stopRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tools_engineer_layoutborder">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="268dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/tools_engineer_layoutborder">
+
+            <CheckBox
+                android:text="Disable PW PRF limitation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox4" />
+
+            <CheckBox
+                android:text="Disable C interpolation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox3" />
+
+            <CheckBox
+                android:text="Set TxSymType to 0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="421dp"
+            android:layout_height="match_parent">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="2"
+                android:rowCount="5"
+                android:background="@drawable/tools_engineer_layoutborder">
+
+                <TextView
+                    android:text="Device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:textSize="30sp"
+                    android:gravity="left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:id="@+id/textView2" />
+
+                <TextView
+                    android:text="System serial no:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView14"
+                    android:layout_gravity="right"
+                    android:textSize="24sp"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView13" />
+
+                <TextView
+                    android:text="Software Version:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView12"
+                    android:layout_gravity="right"
+                    android:textSize="24sp"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView11" />
+
+                <TextView
+                    android:text="Hardware MB Version:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView10"
+                    android:layout_gravity="right"
+                    android:textSize="24sp"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView9" />
+
+                <TextView
+                    android:text="Hardware PB version:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textSize="24sp"
+                    android:id="@+id/textView8"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView7" />
+
+            </GridLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tools_engineer_layoutborder">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:rowCount="5"
+                android:columnCount="2">
+
+                <TextView
+                    android:text="Probe:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView24"
+                    android:layout_gravity="right"
+                    android:textSize="30sp"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:id="@+id/pmProbeNameTv" />
+
+                <TextView
+                    android:text="Physical size:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView22"
+                    android:layout_gravity="right"
+                    android:textSize="24sp"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:id="@+id/pmPhysicalSizeTv" />
+
+                <TextView
+                    android:text="Elevationa focus depth:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView20"
+                    android:layout_gravity="right"
+                    android:textSize="24sp"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:id="@+id/pmFocusDepthTv" />
+
+                <TextView
+                    android:text="Radius of curvature:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textSize="24sp"
+                    android:id="@+id/textView18"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:id="@+id/pmRadiusTv" />
+
+                <TextView
+                    android:text="Pitch size:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textSize="24sp"
+                    android:id="@+id/textView16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:id="@+id/pmPitchSizeTv" />
+            </GridLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

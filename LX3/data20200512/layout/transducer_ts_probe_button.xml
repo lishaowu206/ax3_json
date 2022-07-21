@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/transducer_ts_probe_btn_width"
+    android:layout_height="@dimen/transducer_ts_probe_btn_height"
+    android:background="@drawable/touch_screen_btn_available">
+
+    <ImageView
+        android:id="@+id/probe_button_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"/>
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:id="@+id/probe_button_text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/touch_screen_btn_text"
+        android:gravity="center"/>
+</merge>

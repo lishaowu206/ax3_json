@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.bodymark.customview.BodyMarkLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:continuous="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/view_pager_indicator"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="@dimen/touch_screen_page_indicator_height"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_below="@+id/view_pager_indicator"
+        android:layout_above="@+id/body_mark_reserved_area"
+        android:layout_marginTop="@dimen/body_mark_ts_padding_items_top"
+        android:layout_marginStart="@dimen/body_mark_ts_padding_items_left"
+        android:layout_marginEnd="@dimen/body_mark_ts_padding_items_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+    <View
+        android:id="@+id/generic_calc_sep"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_screen_tab_content_sep"
+        android:layout_above="@+id/body_mark_reserved_area"
+        android:layout_marginEnd="@dimen/body_mark_ts_padding_right"
+        android:layout_marginStart="@dimen/body_mark_ts_padding_left"
+        android:layout_marginBottom="@dimen/body_mark_ts_button_half_spacing_vertical"
+        android:background="@color/touch_screen_tab_content_sep"/>
+
+    <RelativeLayout
+        android:id="@+id/body_mark_reserved_area"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_screen_button_small_height"
+        android:layout_above="@+id/body_mark_operation_buttons"
+        android:layout_marginBottom="@dimen/body_mark_ts_tools_spacing_vertical"/>
+
+    <RelativeLayout
+        android:id="@+id/body_mark_operation_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/body_mark_ts_padding_bottom"
+        android:layout_marginEnd="@dimen/body_mark_ts_padding_tools_right"
+        android:layout_marginStart="@dimen/body_mark_ts_padding_tools_left">
+
+        <Button
+            android:id="@+id/delete_bodymark"
+            style="@style/touch_screen_oneshot_button"
+            android:layout_height="@dimen/touch_screen_button_small_height"
+            android:layout_marginEnd="@dimen/body_mark_ts_tools_spacing_horizontal"
+            android:layout_toStartOf="@+id/exit_bodymark"
+            android:text="@string/common_delete"/>
+
+        <Button
+            android:id="@+id/exit_bodymark"
+            style="@style/touch_screen_oneshot_button"
+            android:layout_height="@dimen/touch_screen_button_small_height"
+            android:layout_alignParentEnd="true"
+            android:text="@string/common_exit"/>
+    </RelativeLayout>
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/bodymark_angle_control_TCon"
+        style="@style/touch_screen_continuous_control"
+        android:layout_width="80dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        continuous:label="Angle"
+        continuous:maxvalue="359"
+        continuous:minvalue="0"
+        continuous:step="1"
+        continuous:type="number"
+        continuous:value="0"
+        continuous:wrapped="true"/>
+</edan.am57.bx4.bodymark.customview.BodyMarkLayout>

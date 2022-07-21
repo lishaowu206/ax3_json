@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/main_screen_listview_head_bg">
+
+    <ImageView
+        android:id="@+id/login_user_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/user_accounts_logout" />
+
+    <TextView
+        android:background="@android:color/darker_gray"
+        style="@style/main_screen_list_view_divider_style"
+        android:layout_height="15dp"
+        android:textSize="18px"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/login_user_icon" />
+
+    <TextView
+        android:layout_marginStart="5dp"
+        android:id="@+id/login_user_name"
+        style="@style/main_screen_list_view_title_style"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textSize="18px"
+        android:text="user"
+        android:layout_alignParentEnd="true"
+        android:gravity="start|center_vertical"
+        android:layout_toEndOf="@id/login_user_icon"/>
+
+    <ImageView
+        android:id="@+id/login_user_login_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:src="@drawable/body_mark_selected" />
+
+</RelativeLayout>

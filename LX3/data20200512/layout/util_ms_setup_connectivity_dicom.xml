@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/dicomfragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:EditRegion="http://schemas.android.com/apk/res-auto">
+
+    <!--TODO 需要根据UI实际标记数据再调整这里的界面-->
+    <!--Local Settings设置区域-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/local_settings_label">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="45sp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:alpha="1"
+            android:textStyle="bold"
+            android:text="." />
+
+        <TextView
+            style="@style/main_screen_second_tittle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:text="@string/dicom_local_setting"/>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/local_ae_title_label"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/local_settings_label"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:paddingLeft="10dp"
+        android:labelFor="@+id/dicom_local_ae_title_edit"
+        android:text="@string/dicom_local_ae_title"/>
+
+    <edan.asp.inputmethod.view.ImEditText
+        style="@style/general_edit_style"
+        android:id="@+id/dicom_local_ae_title_edit"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/local_settings_label"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@+id/local_ae_title_label"
+        android:ems="10"
+        android:maxLength="16"
+        android:inputType="textPersonName"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/local_timeout_label"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/dicom_local_ae_title_edit"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:paddingLeft="10dp"
+        android:labelFor="@+id/dicom_local_timeout_edit"
+        android:text="@string/dicom_local_timeout"/>
+
+    <edan.am57.bx4.common.widget.RegionNumberEditText
+        style="@style/general_edit_style"
+        android:id="@+id/dicom_local_timeout_edit"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignStart="@+id/dicom_local_ae_title_edit"
+        android:layout_alignEnd="@+id/dicom_local_ae_title_edit"
+        android:layout_below="@+id/dicom_local_ae_title_edit"
+        android:layout_gravity="center_vertical"
+        android:layout_toEndOf="@+id/local_timeout_label"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="2"
+        EditRegion:MaxNumber="99"
+        EditRegion:MinNumber="0"
+        EditRegion:ShotTips="false"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:visibility="invisible"
+        android:id="@+id/local_transfer_label"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/local_settings_label"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:layout_toStartOf="@+id/dicom_local_transfer_spinner"
+        android:text="@string/dicom_local_transfer"/>
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/main_screen_spinner_style"
+        android:visibility="invisible"
+        android:id="@+id/dicom_local_transfer_spinner"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/local_settings_label"
+        android:layout_margin="5dp"
+        android:layout_alignParentEnd="true"
+        customSpinner:entries="@array/dicom_local_transfer_options"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/local_store_label"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/local_transfer_label"
+        android:layout_alignEnd="@+id/local_transfer_label"
+        android:layout_below="@+id/dicom_local_transfer_spinner"
+        android:layout_gravity="center_vertical"
+        android:text="@string/dicom_local_store"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/local_multi_dcm_hint"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content"
+        android:textSize="18px"
+        android:gravity="left"
+        android:singleLine="false"
+        android:maxLines="2"
+        android:layout_alignEnd="@+id/dicom_local_store_spinner"
+        android:layout_alignStart="@+id/dicom_local_store_spinner"
+        android:layout_below="@+id/local_store_label"
+        android:layout_gravity="center_vertical"
+        android:text="@string/dicom_local_multi_dcm_hint"/>
+
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/main_screen_spinner_style"
+        android:id="@+id/dicom_local_store_spinner"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/dicom_local_transfer_spinner"
+        android:layout_toEndOf="@+id/local_store_label"
+        customSpinner:entries="@array/dicom_local_store_options"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dicom_local_timeout_edit"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/storage_transfer_heading">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="45sp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:alpha="1"
+            android:textStyle="bold"
+            android:text="." />
+
+        <TextView
+            style="@style/main_screen_second_tittle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:text="@string/dicom_server_setting"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/storage_transfer_heading"
+
+        android:layout_above="@+id/dicom_server_add_btn"
+        android:padding="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ms_patient_grey_frame_bg">
+        <!--android:layout_toStartOf="@+id/dicom_server_verify_btn"-->
+
+        <include
+            android:id="@+id/table_title"
+            layout="@layout/util_ms_setup_connectivity_server_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <edan.am57.bx4.common.ViewWithScrollBar.ArrowScrollListView
+            style="@style/main_screen_list_view_style"
+            android:id="@+id/dicom_server_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/table_title"
+            android:layout_alignParentStart="true"
+            android:divider="@android:color/black"
+            android:dividerHeight="1dp"
+            android:fadeScrollbars="false"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"/>
+    </RelativeLayout>
+
+    <!--Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@+id/dicom_server_ping_btn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/storage_transfer_heading"
+        android:layout_margin="5dp"
+        android:layout_toStartOf="@+id/dicom_server_verify_btn"
+        android:text="@string/dicom_server_ping" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@+id/dicom_server_verify_btn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/dicom_server_ping_btn"
+        android:layout_margin="5dp"
+        android:text="@string/dicom_server_verify" /-->
+
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@+id/dicom_server_add_btn"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/worklist_settings_grp_layout"
+        android:layout_toStartOf="@+id/dicom_server_edit_btn"
+        android:enabled="true"
+        android:text="@string/common_add" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@+id/dicom_server_edit_btn"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignBottom="@+id/dicom_server_add_btn"
+        android:layout_toStartOf="@+id/dicom_server_delete_btn"
+        android:text="@string/common_edit" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@+id/dicom_server_delete_btn"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignBottom="@+id/dicom_server_add_btn"
+        android:layout_toStartOf="@+id/dicom_server_default_btn"
+        android:text="@string/common_delete" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@+id/dicom_server_default_btn"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignBottom="@+id/dicom_server_add_btn"
+        android:layout_toStartOf="@+id/dicom_server_ping_btn"
+        android:text="@string/common_default" />
+    <!--android:layout_toStartOf="@+id/dicom_server_verify_btn"
+        android:layout_above="@+id/worklist_settings_grp_layout"-->
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@+id/dicom_server_ping_btn"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignBottom="@+id/dicom_server_add_btn"
+        android:layout_toStartOf="@+id/dicom_server_verify_btn"
+        android:text="@string/dicom_server_ping" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@+id/dicom_server_verify_btn"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignBottom="@+id/dicom_server_add_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:text="@string/dicom_server_verify" />
+
+
+    <RelativeLayout
+        android:id="@+id/worklist_settings_grp_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            style="@style/main_screen_text_style"
+            android:id="@+id/worklist_settings_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:minWidth="200dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentStart="true"
+            android:text="@string/dicom_worklist_setting" />
+
+        <CheckBox
+            style="@style/main_screen_checkbox_style"
+            android:id="@+id/worklist_enable_chk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_alignBaseline="@+id/worklist_settings_label"
+            android:layout_toEndOf="@+id/worklist_settings_label"/>
+
+        <TextView
+            style="@style/general_text_style"
+            android:id="@+id/worklist_update_label"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/worklist_settings_label"
+            android:layout_alignLeft="@+id/worklist_settings_label"
+            android:text="@string/dicom_worklist_update"/>
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            style="@style/main_screen_spinner_style"
+            android:id="@+id/worklist_update_spinner"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="22dp"
+            android:layout_alignBottom="@+id/worklist_update_label"
+            android:layout_toEndOf="@+id/worklist_update_label"
+            customSpinner:entries="@array/worklist_update_options"/>
+
+        <TextView
+            style="@style/general_text_style"
+            android:id="@+id/worklist_comment_label"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/worklist_update_label"
+            android:layout_toEndOf="@+id/worklist_update_spinner"
+            android:layout_marginLeft="15dp"
+            android:text="@string/dicom_worklist_study_descript_source"/>
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            style="@style/main_screen_spinner_style"
+            android:id="@+id/worklist_comment_spinner"
+            android:layout_width="389dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="1dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/worklist_update_label"
+            customSpinner:entries="@array/worklist_comments_options" />
+
+        <TextView
+            style="@style/general_text_style"
+            android:id="@+id/worklist_server_label"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/worklist_update_label"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@+id/worklist_settings_label"
+            android:text="@string/dicom_worklist_server"/>
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            style="@style/main_screen_spinner_style"
+            android:id="@+id/worklist_server_spinner"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@+id/worklist_update_spinner"
+            android:layout_alignBottom="@+id/worklist_server_label"
+            android:layout_toEndOf="@+id/worklist_server_label"/>
+
+        <TextView
+            style="@style/general_text_style"
+            android:id="@+id/worklist_range_label"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/worklist_server_spinner"
+            android:layout_below="@+id/worklist_comment_label"
+            android:paddingRight="10dp"
+            android:layout_alignLeft="@+id/worklist_comment_label"
+            android:text="@string/dicom_worklist_range"/>
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            style="@style/main_screen_spinner_style"
+            android:id="@+id/worklist_query_range_spinner"
+            android:layout_width="389dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="1dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignLeft="@+id/worklist_comment_spinner"
+            android:layout_alignBottom="@+id/worklist_server_label"
+            customSpinner:entries="@array/worklist_query_date_range" />
+    </RelativeLayout>
+</RelativeLayout>

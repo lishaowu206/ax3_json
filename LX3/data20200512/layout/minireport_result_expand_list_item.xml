@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--mini report区域expand控件的item项,例如羊水指数测量项包含多个测量结果的情况-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/measure_ms_mini_report_items_height"
+    android:background="@color/measure_mini_report_area_bg">
+
+    <TextView
+        android:id="@+id/mr_result_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="@dimen/measure_ms_mini_report_items_interval"
+        android:layout_marginStart="@dimen/measure_ms_mini_report_items_margin_left"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_toStartOf="@+id/mr_result_value"
+        android:textColor="@color/measure_mini_report_content_text"
+        android:textSize="@dimen/measure_ms_mini_report_text_size"/>
+
+    <TextView
+        android:id="@+id/mr_result_value"
+        android:layout_width="@dimen/measure_ms_mini_report_items_value_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/measure_mini_report_content_text"
+        android:textSize="@dimen/measure_ms_mini_report_text_size"/>
+</RelativeLayout>

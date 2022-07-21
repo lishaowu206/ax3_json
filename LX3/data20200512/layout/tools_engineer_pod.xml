@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.tools.engineer.PodEditorView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/pod_info_area"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:background="@drawable/tools_engineer_layoutborder">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/podShowPathInfoTv"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/filePathInfoTv"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/engineer_pod_probe_spinner"
+        android:layout_below="@+id/pod_info_area"
+        android:layout_alignParentStart="true"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:spinnerMode="dropdown"
+        android:visibility="invisible"
+        android:textSize="20sp"/>
+
+    <Spinner
+        android:id="@+id/engineer_pod_dataset_spinner"
+        android:layout_alignBottom="@+id/engineer_pod_probe_spinner"
+        android:layout_toEndOf="@+id/engineer_pod_probe_spinner"
+        android:layout_marginStart="10dp"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:spinnerMode="dropdown"
+        android:visibility="invisible"
+        android:textSize="20sp"/>
+
+    <Spinner
+        android:id="@+id/engineer_pod_xml_spinner"
+        android:layout_alignBottom="@+id/engineer_pod_probe_spinner"
+        android:layout_toEndOf="@+id/engineer_pod_dataset_spinner"
+        android:layout_marginStart="10dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:spinnerMode="dropdown"
+        android:visibility="invisible"
+        android:textSize="20sp"/>
+
+    <GridLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/pod_info_area"
+        android:id="@+id/PODProbeBtnLayout"
+        android:layout_height="wrap_content"
+        android:columnCount="12"
+        android:background="@drawable/tools_engineer_layoutborder"/>
+
+    <GridLayout
+        android:layout_below="@+id/PODProbeBtnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="12"
+        android:id="@+id/PODDatasetBtnLayout"/>
+
+    <GridLayout
+        android:layout_below="@+id/PODDatasetBtnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="10"
+        android:id="@+id/PODFileBtnGridLayout"
+        android:background="@drawable/tools_engineer_layoutborder">
+    </GridLayout>
+
+    <EditText
+        android:layout_below="@+id/PODFileBtnGridLayout"
+        android:layout_above="@+id/hard_key_save_podeditor_btn"
+        android:layout_width="match_parent"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/podEditText"
+        android:scrollbars="horizontal|vertical"
+        android:textSize="14sp"
+        android:gravity="top|start"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:text="@string/engineer_register_save"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/hard_key_save_podeditor_btn" />
+
+</edan.am57.bx4.tools.engineer.PodEditorView>

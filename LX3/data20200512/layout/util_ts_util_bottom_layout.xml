@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/util_ts_bottom_area"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/touch_screen_button_small_height"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="@dimen/utility_ts_margin_bottom"
+    android:layout_marginEnd="@dimen/utility_ts_margin_right">
+
+    <Button
+        android:id="@+id/util_ts_return_pre_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/util_ts_return_image_btn"
+        android:layout_marginEnd="@dimen/utility_buttons_spacing_horizontal"
+        android:layout_toStartOf="@+id/util_ts_return_image_btn"
+        android:text="@string/common_back"/>
+
+    <Button
+        android:id="@+id/util_ts_return_image_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/common_exit"/>
+</RelativeLayout>
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:gravity="right"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical">
+        <edan.am57.bx4.common.widget.CustomSpinner
+            style="@style/report_spinner_style"
+            android:id="@+id/growth_curve_item_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:textSize="20sp"
+            android:enabled="false"/>
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            style="@style/report_spinner_style"
+            android:id="@+id/growth_curve_refer_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@+id/growth_curve_item_spinner"
+            android:layout_alignStart="@+id/growth_curve_item_spinner"
+            android:textSize="20sp"
+            android:enabled="false"/>
+
+        <CheckBox
+            android:id="@+id/graph_print"
+            style="@style/main_screen_checkbox_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/growth_curve_refer_spinner"
+            android:textSize="22sp"
+            android:textColor="@color/main_screen_text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            android:text="Print"/>
+
+    </RelativeLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="8">-->
+
+        <edan.am57.bx4.report.growthCurve.widget.GrowthCurveView
+            android:id="@+id/custom_growth_curve_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7.5"/>
+
+    <!--</RelativeLayout>-->
+
+
+
+
+    <!--<RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8">
+
+    </RelativeLayout>-->
+
+</LinearLayout>

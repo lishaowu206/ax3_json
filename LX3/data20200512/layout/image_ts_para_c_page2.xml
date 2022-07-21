@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:continuous="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/cmode_baseline_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/image_ts_padding_sliders_left"
+        continuous:label="@string/para_baseline"
+        continuous:maxvalue="120"
+        continuous:minvalue="-120"
+        continuous:step="10"
+        continuous:type="number">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/cmode_fr_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/cmode_baseline_slider"
+        continuous:adapter="@array/line_density_options"
+        continuous:label="@string/para_line_density"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/cmode_filter_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/cmode_fr_slider"
+        continuous:adapter="@array/wall_filter_options"
+        continuous:label="@string/para_wall_filter"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <Button
+        android:id="@+id/cmode_reserved1"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/image_ts_padding_left"
+        android:layout_marginTop="@dimen/touch_screen_button_group_padding"
+        android:textOff="@string/para_invert"
+        android:textOn="@string/para_invert"
+        android:visibility="invisible"/>
+
+    <ToggleButton
+        android:id="@+id/cmode_invert_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal"
+        android:layout_marginTop="@dimen/touch_screen_button_group_padding"
+        android:layout_toEndOf="@+id/cmode_reserved1"
+        android:textOff="@string/para_invert"
+        android:textOn="@string/para_invert"/>
+</RelativeLayout>

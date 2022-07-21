@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="655dp"
+    android:layout_marginLeft="16dp">
+
+    <!--定义两条基准线，然后将页面四等分-->
+    <!--android:background="@color/colorAccent"-->
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/viewV" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/viewH" />
+
+    <!--<RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/viewV"
+        android:layout_above="@+id/viewH"
+        android:background="@color/colorAccent">-->
+
+        <include
+            android:id="@+id/quad_a"
+            layout="@layout/report_growth_curve_group_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/viewV"
+            android:layout_above="@+id/viewH"/>
+
+    <!--</RelativeLayout>-->
+
+    <!--<TextView
+        android:text="A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:id="@+id/textView8"
+        android:layout_toStartOf="@+id/viewV"
+        android:layout_above="@+id/viewH"
+        android:visibility="gone"/>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_toEndOf="@+id/viewV"-->
+        <!--android:layout_above="@+id/viewH">-->
+
+        <include
+            android:id="@+id/quad_b"
+            layout="@layout/report_growth_curve_group_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/viewV"
+            android:layout_above="@+id/viewH"/>
+
+    <!--</RelativeLayout>-->
+
+    <!--<TextView
+        android:text="B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/textView9"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/viewV"
+        android:layout_above="@+id/viewH" />-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_below="@+id/viewH"-->
+        <!--android:layout_toStartOf="@+id/viewV">-->
+
+        <include
+            android:id="@+id/quad_c"
+            layout="@layout/report_growth_curve_group_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/viewH"
+            android:layout_toStartOf="@+id/viewV"/>
+
+
+
+    <!--</RelativeLayout>-->
+
+    <!--<TextView
+        android:text="C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:id="@+id/textView10"
+        android:layout_below="@+id/viewH"
+        android:layout_toStartOf="@+id/viewV"
+        android:visibility="gone"/>-->
+
+    <!--<RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/viewV"
+        android:layout_below="@+id/viewH">-->
+
+        <include
+            android:id="@+id/quad_d"
+            layout="@layout/report_growth_curve_group_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/viewV"
+            android:layout_below="@+id/viewH"/>
+
+    <!--</RelativeLayout>-->
+
+    <!--<TextView
+        android:text="D"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:id="@+id/textView11"
+        android:layout_toEndOf="@+id/viewV"
+        android:layout_below="@+id/viewH"
+        android:visibility="gone"/>-->
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CustomSpinner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/netPrinter_picker_dialog_title"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/setup_system_networkprinter" />
+
+
+    <RelativeLayout
+        android:layout_above="@+id/filepicker_dialog_oprate"
+        android:id="@+id/filepicker_storge_info_frame"
+        android:layout_below="@+id/netPrinter_picker_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:gravity="center">
+        <edan.am57.bx4.common.ViewWithScrollBar.VListview
+            android:scrollbarSize="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:scrollbars="vertical"
+            android:gravity="top|left"
+            android:fadeScrollbars="false"
+            android:dividerHeight="1dp"
+            android:id="@+id/netPrinter_picker_dialog_file_list"
+            android:layout_width="match_parent"
+            android:divider="@color/main_screen_frame_line"
+            android:background="@color/main_screen_listview_odd_line_bg"
+            android:layout_height="match_parent"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"/>
+
+        <edan.am57.bx4.common.ViewWithScrollBar.VScrollBar
+            android:layout_width="20dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/edan_list_vscrol"
+            android:background="@android:color/background_dark"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/filepicker_dialog_oprate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/util_ms_btn_height"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp">
+
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:id="@+id/netPrinter_picker_dialog_ok"
+            android:layout_width="0dp"
+            android:layout_marginRight="@dimen/util_setup_btn_margin"
+            android:layout_weight="1"
+            android:text="@string/common_ok" />
+
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:id="@+id/netPrinter_picker_dialog_cannel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/util_setup_btn_margin"
+            android:text="@string/common_cancel"/>
+    </LinearLayout>
+</RelativeLayout>

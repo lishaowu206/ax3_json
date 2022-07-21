@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_marginTop="30dp"
+        android:id="@+id/wifi_settings_ssid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="SSID" />
+
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@+id/wifi_settings_password_et"
+        style="@style/general_edit_style"
+        android:visibility="gone"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/wifi_settings_ssid"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="120dp"
+        android:inputType="textPassword"/>
+
+    <TextView
+        android:id="@+id/wifi_settings_pwd_tv"
+        style="@style/general_text_style"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/wifi_settings_ssid"
+        android:layout_toStartOf="@+id/wifi_settings_password_et"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:text="@string/bottom_status_bar_wireless_password" />
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/wifi_settings_password_cb"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/wifi_settings_pwd_tv"
+        android:layout_below="@+id/wifi_settings_pwd_tv"
+        android:layout_gravity="center_vertical"
+        android:gravity="end|center_vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/bottom_status_bar_wireless_show_password"
+        android:textSize="18px" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/wifi_settings_ip_type_spinner"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/wifi_settings_password_cb"
+        android:layout_alignStart="@+id/wifi_settings_password_et"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="120dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical|center"
+        android:minHeight="30dp"
+        android:minWidth="100dp"
+        android:prompt="@string/tcp_ip_wired_local_ip"
+        customSpinner:entries="@array/tcp_ip_local_ip_options" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/wifi_settings_method_label"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/wifi_settings_password_cb"
+        android:layout_toStartOf="@+id/wifi_settings_ip_type_spinner"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:gravity="end|center_vertical"
+        android:text="@string/tcp_ip_wired_method"/>
+
+    <edan.am57.bx4.common.widget.IPEditText
+        android:id="@+id/wifi_settings_address_edit"
+        style="@style/general_edit_style"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/wifi_settings_method_label"
+        android:layout_alignStart="@+id/wifi_settings_ip_type_spinner"
+        android:layout_gravity="center_vertical"
+        android:layout_toEndOf="@+id/wifi_settings_address_label" />
+
+    <TextView
+        android:id="@+id/wifi_settings_address_label"
+        style="@style/general_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/wifi_settings_method_label"
+        android:layout_below="@+id/wifi_settings_method_label"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/tcp_ip_wired_address" />
+
+    <edan.am57.bx4.common.widget.IPEditText
+        android:id="@+id/wifi_settings_gateway_edit"
+        style="@style/general_edit_style"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/wifi_settings_address_edit"
+        android:layout_alignStart="@+id/wifi_settings_address_edit"
+        android:layout_below="@+id/wifi_settings_address_label"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/wifi_settings_gateway_label"
+        style="@style/general_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/wifi_settings_method_label"
+        android:layout_below="@+id/wifi_settings_address_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="end|center_vertical"
+        android:text="@string/tcp_ip_wired_gateway" />
+
+    <edan.am57.bx4.common.widget.IPEditText
+        android:id="@+id/wifi_settings_mask_edit"
+        style="@style/general_edit_style"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/wifi_settings_gateway_edit"
+        android:layout_alignStart="@+id/wifi_settings_gateway_edit"
+        android:layout_below="@+id/wifi_settings_gateway_label"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/wifi_settings_mask_label"
+        style="@style/general_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/wifi_settings_gateway_label"
+        android:layout_below="@+id/wifi_settings_gateway_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/tcp_ip_wired_mask"/>
+
+    <edan.am57.bx4.common.widget.IPEditText
+        android:id="@+id/wifi_settings_dns_edit"
+        style="@style/general_edit_style"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/wifi_settings_mask_edit"
+        android:layout_alignStart="@+id/wifi_settings_mask_edit"
+        android:layout_below="@+id/wifi_settings_mask_label"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/wired_dns_label"
+        style="@style/general_text_style"
+
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/wifi_settings_gateway_label"
+        android:layout_below="@+id/wifi_settings_mask_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/tcp_ip_wired_dns"/>
+
+    <Button
+        style="@style/main_screen_oneshot_small_button"
+        android:id="@+id/wifi_settings_ensure_btn"
+        android:layout_width="@dimen/util_setup_btn_width"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="120dp"
+        android:gravity="center"
+        android:text="@string/common_ok"/>
+
+    <Button
+        style="@style/main_screen_oneshot_small_button"
+        android:id="@+id/wifi_settings_cannel_btn"
+        android:layout_width="@dimen/util_setup_btn_width"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="120dp"
+        android:gravity="center"
+        android:text="@string/common_cancel" />
+
+</RelativeLayout>

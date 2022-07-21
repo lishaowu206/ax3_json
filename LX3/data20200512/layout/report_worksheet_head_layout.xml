@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="15dp">
+
+    <include
+        android:visibility="visible"
+        android:id="@+id/common_title_bar"
+        layout="@layout/status_bar_top"
+        android:layout_width="@dimen/patient_info_area_width"
+        android:layout_height="@dimen/patient_info_area_height"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"/>
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_below="@id/common_title_bar"-->
+        <!--android:layout_alignEnd="@id/common_title_bar"-->
+        <!--android:id="@+id/worksheet_page_linear"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:gravity="right|center_vertical"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:orientation="horizontal">-->
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:id="@+id/worksheet_head_current_page"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/common_title_bar"
+        android:layout_alignEnd="@id/common_title_bar"
+        android:gravity="right|center_vertical"
+        android:textSize="20px"
+        android:text="0/0"/>
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:id="@+id/worksheet_head_current_page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/common_title_bar"
+        android:layout_toLeftOf="@id/worksheet_head_current_page"
+        android:textSize="20px"
+        android:text="@string/report_worksheet_ms_page"
+        android:gravity="center_vertical"/>
+
+
+    <!--</LinearLayout>-->
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:id="@+id/worksheet_head_fetus"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/common_title_bar"
+        android:layout_toStartOf="@+id/worksheet_head_current_page_title"
+        android:gravity="center_vertical|left"
+        android:textSize="20px"
+        android:layout_marginRight="140dp"
+        android:text=""/>
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:id="@+id/exam_time"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/common_title_bar"
+        android:layout_toStartOf="@+id/worksheet_head_fetus"
+        android:gravity="center_vertical"
+        android:textSize="20px"
+        android:layout_marginRight="140dp"
+        android:text=""/>
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:UserDef="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pdf_view_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <edan.asp.pdfprint.pdfviewer.ASPPdfViewer
+        android:id="@+id/report_pdf_preview_apv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        UserDef:pdf_view_back_color="@color/main_screen_bg"
+        UserDef:enable_zoom="true"
+        UserDef:enable_doubletap_zoom="false"
+        UserDef:enable_swipe="true"
+        UserDef:enable_horswipe="false"
+        UserDef:enable_scrollbar="true"
+        UserDef:bar_size="@dimen/main_screen_scroll_bar_width"
+        UserDef:bar_back_size="@dimen/main_screen_scroll_bg_width"
+        UserDef:bar_color="@color/main_screen_spinner_scrollbar_bar"
+        UserDef:bar_back_color="@color/main_screen_spinner_scrollbar_bg"
+        UserDef:arrow_btn_color="@color/main_screen_spinner_scrollbar_arrow"
+        UserDef:arrow_btn_back_ground="@color/main_screen_spinner_scrollbar_arrow_bg"/>
+
+</RelativeLayout>

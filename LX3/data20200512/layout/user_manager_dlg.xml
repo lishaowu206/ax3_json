@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/manager_user_title_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/user_title_raduis_background"
+        android:gravity="center_vertical|left"
+        android:text="User Manager" />
+
+    <View
+        android:id="@+id/manager_user_center"
+        android:layout_width="100dp"
+        android:layout_height="10dp"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/manager_user_name_lable"
+        android:layout_width="250dp"
+        android:layout_alignBottom="@+id/manager_user_et"
+        android:layout_alignTop="@+id/manager_user_et"
+        android:layout_below="@+id/manager_user_title_id"
+        android:layout_margin="@dimen/row_margin"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/manager_user_et"
+        android:gravity="center_vertical"
+        android:text="@string/user_username"/>
+
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@+id/manager_user_et"
+        style="@style/general_edit_style"
+        android:layout_width="235dp"
+        android:layout_alignStart="@+id/manager_user_center"
+        android:layout_below="@+id/manager_user_title_id"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/login_edit_background"
+        android:maxLength="64"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/manager_user_type_label"
+        android:layout_width="wrap_content"
+        style="@style/general_text_style"
+        android:visibility="gone"
+        android:layout_alignBottom="@+id/manager_user_type_et"
+        android:layout_alignEnd="@+id/manager_user_name_lable"
+        android:layout_alignStart="@+id/manager_user_name_lable"
+        android:layout_alignTop="@+id/manager_user_type_et"
+        android:layout_below="@+id/manager_user_et"
+        android:gravity="center_vertical"
+        android:text="@string/user_type" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/manager_user_type_et"
+        style="@style/general_spinner_style"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:visibility="gone"
+        android:layout_alignEnd="@+id/manager_user_et"
+        android:layout_alignStart="@+id/manager_user_et"
+        android:layout_below="@+id/manager_user_et"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        customSpinner:entries="@array/system_user_type" />
+
+    <TextView
+        android:id="@+id/manager_user_oprate_sign_label"
+        android:layout_width="wrap_content"
+        android:layout_alignBottom="@+id/manager_user_operator_sign_input_et"
+        android:layout_alignEnd="@+id/manager_user_name_lable"
+        android:layout_alignStart="@+id/manager_user_name_lable"
+        android:layout_alignTop="@+id/manager_user_operator_sign_input_et"
+        android:layout_below="@+id/manager_user_type_et"
+        android:gravity="center_vertical"
+        android:text="@string/user_operator_signature"
+        style="@style/general_text_style" />
+
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@+id/manager_user_operator_sign_input_et"
+        style="@style/general_edit_style"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignEnd="@+id/manager_user_et"
+        android:layout_alignStart="@+id/manager_user_et"
+        android:layout_below="@+id/manager_user_type_et"
+        android:layout_marginBottom="5dp"
+        android:maxLength="64"
+        android:background="@drawable/login_edit_background"
+        android:textSize="22px"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/manager_user_passwd_input_label"
+        android:layout_width="wrap_content"
+        android:layout_alignBottom="@+id/manager_user_passwd_input_et"
+        android:layout_alignEnd="@+id/manager_user_name_lable"
+        android:layout_alignStart="@+id/manager_user_name_lable"
+        android:layout_alignTop="@+id/manager_user_passwd_input_et"
+        android:layout_below="@+id/manager_user_type_et"
+        android:gravity="center_vertical"
+        android:text="@string/user_password"/>
+
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@+id/manager_user_passwd_input_et"
+        style="@style/general_edit_style"
+        android:layout_width="wrap_content"
+        android:layout_alignEnd="@+id/manager_user_et"
+        android:layout_alignStart="@+id/manager_user_et"
+        android:layout_below="@+id/manager_user_operator_sign_input_et"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/login_edit_background"
+        android:maxLength="16"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/manager_user_cur_passwd_input_label"
+        android:layout_width="wrap_content"
+        android:layout_alignBottom="@+id/manager_user_cur_passwd_input_et"
+        android:layout_alignEnd="@+id/manager_user_name_lable"
+        android:layout_alignStart="@+id/manager_user_name_lable"
+        android:layout_alignTop="@+id/manager_user_cur_passwd_input_et"
+        android:layout_below="@+id/manager_user_type_et"
+        android:gravity="center_vertical"
+        android:text="@string/user_cur_password"
+        style="@style/general_text_style" />
+
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@+id/manager_user_cur_passwd_input_et"
+        style="@style/general_edit_style"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignEnd="@+id/manager_user_et"
+        android:layout_alignStart="@+id/manager_user_et"
+        android:layout_below="@+id/manager_user_passwd_input_et"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/login_edit_background"
+        android:layout_marginTop="5dp"
+        android:maxLength="16"
+        android:inputType="textPassword" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/manager_user_new_passwd_input_label"
+        android:layout_width="wrap_content"
+        android:layout_alignBottom="@+id/manager_user_new_passwd_input_et"
+        android:layout_alignEnd="@+id/manager_user_name_lable"
+        android:layout_alignStart="@+id/manager_user_name_lable"
+        android:layout_alignTop="@+id/manager_user_new_passwd_input_et"
+        android:layout_below="@+id/manager_user_type_et"
+        android:gravity="center_vertical"
+        android:text="@string/user_new_password" />
+
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@+id/manager_user_new_passwd_input_et"
+        style="@style/general_edit_style"
+        android:layout_width="wrap_content"
+        android:layout_alignEnd="@+id/manager_user_et"
+        android:layout_alignStart="@+id/manager_user_et"
+        android:layout_below="@+id/manager_user_cur_passwd_input_et"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/login_edit_background"
+        android:layout_marginTop="5dp"
+        android:maxLength="16"
+        android:inputType="textPassword" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/manager_user_confirm_passwd_input_label"
+        android:layout_width="wrap_content"
+        android:layout_alignBottom="@+id/manager_user_confirm_passwd_input_et"
+        android:layout_alignEnd="@+id/manager_user_name_lable"
+        android:layout_alignStart="@+id/manager_user_name_lable"
+        android:layout_alignTop="@+id/manager_user_confirm_passwd_input_et"
+        android:layout_below="@+id/manager_user_type_et"
+        android:gravity="center_vertical"
+        android:text="@string/user_confirm_password"
+        />
+
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@+id/manager_user_confirm_passwd_input_et"
+        style="@style/general_edit_style"
+        android:layout_width="wrap_content"
+        android:layout_alignEnd="@+id/manager_user_et"
+        android:layout_alignStart="@+id/manager_user_et"
+        android:layout_below="@+id/manager_user_new_passwd_input_et"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/login_edit_background"
+        android:maxLength="16"
+        android:inputType="textPassword" />
+
+    <CheckBox
+        android:id="@+id/manager_user_show_password_cb"
+        style="@style/main_screen_checkbox_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/manager_user_confirm_passwd_input_et"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="18px"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:layout_alignStart="@+id/manager_user_center"
+        android:layout_toEndOf="@+id/manager_user_center"
+        android:text="@string/bottom_status_bar_wireless_show_password" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/manager_user_show_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/manager_user_name_lable"
+        android:layout_below="@+id/manager_user_show_password_cb"
+        android:gravity="center_vertical"
+        android:maxLines="3"
+        android:singleLine="false"
+        android:text="@string/user_password_note"
+        android:textSize="16px" />
+
+    <Button
+        android:id="@+id/manager_user_ok"
+        style="@style/main_screen_oneshot_button"
+        android:layout_below="@+id/manager_user_show_note"
+        android:layout_margin="10dp"
+        android:layout_toStartOf="@+id/manager_user_cannel"
+        android:text="@string/common_ok" />
+
+    <Button
+        android:id="@+id/manager_user_cannel"
+        style="@style/main_screen_oneshot_button"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/manager_user_show_note"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="18dp"
+        android:text="@string/common_cancel" />
+
+</RelativeLayout>

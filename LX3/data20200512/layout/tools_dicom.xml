@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/dicom_debug_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="800dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/dicom_image_to_dcm"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="静态图片存储"/>
+
+    <Button
+        android:id="@+id/dicom_clip_to_dcm"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="动态图片存储"/>
+    <Button
+        android:id="@+id/dicom_query_worklist"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="查询病人列表"/>
+
+    <Button
+        android:id="@+id/dicom_archieve_files"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="归档影像文件"/>
+
+    <Button
+        android:id="@+id/dicom_create_dicom_dir"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="创建影像索引"/>
+
+    <Button
+        android:id="@+id/dicom_create_sr"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="生成结构化报告"/>
+
+    <Button
+        android:id="@+id/dicom_dcm_to_image"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="提取单帧图像"/>
+
+    <Button
+        android:id="@+id/dicom_dcm_to_clip"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="提取多帧图像"/>
+
+    <Button
+        android:id="@+id/dicom_exit_dlg"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="退出"/>
+</LinearLayout>

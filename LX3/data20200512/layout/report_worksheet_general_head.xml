@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <TextView
+        style="@style/report_measure_title_text_style"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4.7"/>
+
+    <TextView
+        style="@style/report_measure_title_text_style"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="@string/report_worksheet_head_value" />
+
+    <TextView
+        style="@style/report_measure_title_text_style"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <TextView
+        style="@style/report_measure_title_text_style"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.95"
+        android:text="@string/report_worksheet_head_value_1" />
+
+    <TextView
+        style="@style/report_measure_title_text_style"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.95"
+        android:text="@string/report_worksheet_head_value_2" />
+
+    <TextView
+        style="@style/report_measure_title_text_style"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.95"
+        android:text="@string/report_worksheet_head_value_3" />
+
+    <TextView
+        style="@style/report_measure_title_text_style"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.95"
+        android:text="@string/report_worksheet_head_value_4" />
+
+    <TextView
+        style="@style/report_measure_title_text_style"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.8"
+        android:text="@string/report_worksheet_head_method" />
+
+    <TextView
+        style="@style/report_measure_title_text_style"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3.5"/>
+
+</LinearLayout>

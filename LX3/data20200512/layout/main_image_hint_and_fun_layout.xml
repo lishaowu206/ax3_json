@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--图像下面提示信息区域-->
+<edan.am57.bx4.statusbar.ImageHintArea
+    android:id="@+id/image_hint_area"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/main_screen_image_bg">
+
+    <!--自定义按键提示区域-->
+    <RelativeLayout
+        android:id="@+id/self_define_key_area"
+        android:layout_width="@dimen/self_define_key_area_width"
+        android:layout_height="@dimen/self_define_key_area_height"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="70dp">
+
+        <TextView
+            android:id="@+id/f1_key_tv"
+            style="@style/main_screen_text_style"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:text="F1"
+            android:gravity="center"
+            android:textSize="@dimen/self_define_key_text_size"
+            android:background="@color/main_screen_status_bottom_bg"/>
+
+        <TextView
+            android:id="@+id/f2_key_tv"
+            style="@style/main_screen_text_style"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/f1_key_tv"
+            android:layout_marginTop="10dp"
+            android:text="F2"
+            android:gravity="center"
+            android:textSize="@dimen/self_define_key_text_size"
+            android:background="@color/main_screen_status_bottom_bg"/>
+
+        <TextView
+            android:id="@+id/f1_fun_indicator_tv"
+            style="@style/main_screen_text_style"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/f1_key_tv"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:text="F1XX"
+            android:textSize="@dimen/self_define_key_text_size"/>
+
+        <TextView
+            android:id="@+id/f2_fun_indicator_tv"
+            style="@style/main_screen_text_style"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/f1_fun_indicator_tv"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/f2_key_tv"
+            android:layout_marginLeft="20dp"
+            android:text="F2XX"
+            android:textSize="@dimen/self_define_key_text_size"/>
+
+
+    </RelativeLayout>
+
+    <!--图像区域和状态栏之间的轨迹球指示区域,显示轨迹球和Set等按键作用-->
+    <RelativeLayout
+        android:id="@+id/trackball_indicator_area"
+        android:layout_width="@dimen/trackball_indicator_area_width"
+        android:layout_height="@dimen/trackball_indicator_area_height"
+        android:layout_toRightOf="@id/self_define_key_area">
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/trackball_indicator"
+            android:alpha="0.6"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/trackball_indicator_update_tv"
+            android:layout_width="@dimen/trackball_indicator_update_width"
+            android:layout_height="@dimen/trackball_indicator_update_height"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/trackball_indicator_text"
+            android:text="@string/trackball_indicator_update"
+            android:textSize="@dimen/trackball_indicator_text_size"/>
+        <TextView
+            android:gravity="center"
+            android:id="@+id/trackball_indicator_left_set_tv"
+            android:layout_width="@dimen/trackball_indicator_set_width"
+            android:layout_height="@dimen/trackball_indicator_set_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="7dp"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/trackball_indicator_text"
+            android:layout_marginStart="85dp"
+            android:text="@string/trackball_indicator_set"
+            android:textSize="@dimen/trackball_indicator_text_size"/>
+        <TextView
+            android:id="@+id/trackball_indicator_right_set_tv"
+            android:layout_width="@dimen/trackball_indicator_set_width"
+            android:gravity="center"
+            android:layout_height="@dimen/trackball_indicator_set_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="7dp"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/trackball_indicator_text"
+            android:layout_marginEnd="85dp"
+            android:text="@string/trackball_indicator_set"
+            android:textSize="@dimen/trackball_indicator_text_size"/>
+    </RelativeLayout>
+
+    <!--图像区域和状态栏之间的电影回放进度条-->
+    <edan.am57.bx4.image.view.ImageCineBar
+        android:id="@+id/image_cine_bar"
+        android:layout_width="@dimen/cine_bar_area_width"
+        android:layout_height="@dimen/cine_bar_area_height"
+        android:layout_toEndOf="@id/trackball_indicator_area"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/raw_data_btn_area"
+        android:layout_width="@dimen/raw_data_btn_area_width"
+        android:layout_height="@dimen/raw_data_btn_area_height"
+        android:layout_alignParentRight="true">
+
+        <Button
+            android:id="@+id/raw_data_exit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/raw_data_exit_button"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</edan.am57.bx4.statusbar.ImageHintArea>

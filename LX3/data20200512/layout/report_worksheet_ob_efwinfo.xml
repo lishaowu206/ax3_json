@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="4dp">
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="8"-->
+        <!--android:orientation="horizontal">-->
+        <TextView
+            style="@style/report_measure_item_text_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.7"/>
+        <TextView
+            style="@style/report_measure_item_text_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="@string/report_worksheet_ob_efw"/>
+
+        <TextView
+            style="@style/report_measure_item_text_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"/>
+        <!--±-->
+        <TextView
+            style="@style/report_measure_item_text_style"
+            android:id="@+id/efw_value_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"/>
+    <!--</LinearLayout>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="14"-->
+        <!--android:orientation="horizontal">-->
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            style="@style/report_spinner_style"
+            android:id="@+id/ob_efw_customSpinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:layout_margin="1dp"
+            android:enabled="false"/>
+    <!--</RelativeLayout>-->
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="6.8"/>
+
+</LinearLayout>

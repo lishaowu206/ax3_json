@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<edan.am57.bx4.thumbnailarea.CustomRecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/thumbnail_image_area"
+        android:layout_margin="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+</edan.am57.bx4.thumbnailarea.CustomRecyclerView>
+
+

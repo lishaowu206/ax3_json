@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.measurement.MeasPresetParamsLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <TextView
+            style="@style/main_screen_text_style"
+            android:id="@+id/meas_type_spinner_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/us_application"/>
+
+        <edan.am57.bx4.measurement.MeasSpinner
+            style="@style/main_screen_spinner_style"
+            android:id="@+id/exam_type_spinner"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/meas_type_spinner_title"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignBaseline="@+id/meas_type_spinner_title"/>
+
+        <TextView
+            style="@style/main_screen_text_style"
+            android:id="@+id/meas_doppler_trace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/meas_type_spinner_title"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/main_screen_spinner_list_bg"
+            android:text="Doppler Trace"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/meas_doppler_trace">
+            <LinearLayout
+                android:id="@+id/params_area1"
+                android:layout_width="200dp"
+                 android:layout_height="800dp"
+                 android:layout_gravity = "center_horizontal"
+                 android:orientation="vertical">
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/params_area2"
+                    android:layout_width="200dp"
+                    android:layout_height="800dp"
+                    android:layout_gravity = "center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/meas_type_spinner_title"
+                    android:layout_marginLeft="320dp">
+            </LinearLayout>
+        </LinearLayout>
+
+</edan.am57.bx4.measurement.MeasPresetParamsLayout>

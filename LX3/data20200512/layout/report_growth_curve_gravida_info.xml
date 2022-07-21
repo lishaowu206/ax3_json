@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="95dp">
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/growth_curve_LMP_tv"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:text="@string/report_worksheet_ob_lmp"/>
+
+    <EditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/growth_curve_LMP_edit"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/growth_curve_LMP_tv"/>
+
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/growth_curve_ClinicalGA_tv"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/growth_curve_LMP_edit"
+        android:layout_marginLeft="35dp"
+        android:text="@string/report_worksheet_ob_clinicalga"/>
+
+    <EditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/growth_curve_ClinicalGA_edit"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/growth_curve_ClinicalGA_tv"/>
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/growth_curve_ClinicalEDD_tv"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/growth_curve_ClinicalGA_edit"
+        android:layout_marginLeft="35dp"
+        android:text="@string/report_worksheet_ob_clinicaledd"/>
+
+    <EditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/growth_curve_ClinicalEDD_edit"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/growth_curve_ClinicalEDD_tv"/>
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/growth_curve_fetus_tv"
+        android:layout_below="@id/growth_curve_LMP_tv"
+        android:layout_alignEnd="@id/growth_curve_LMP_tv"
+        android:layout_marginTop="5dp"
+        android:text="@string/report_growth_curve_fetus"/>
+
+    <EditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/growth_curve_fetus_edit"
+        android:layout_below="@id/growth_curve_LMP_tv"
+        android:layout_toRightOf="@id/growth_curve_fetus_tv"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/growth_curve_fetuspos_tv"
+        android:layout_below="@id/growth_curve_LMP_tv"
+        android:layout_toRightOf="@id/growth_curve_fetus_edit"
+        android:layout_alignStart="@id/growth_curve_ClinicalGA_tv"
+        android:layout_marginTop="5dp"
+        android:text="@string/report_worksheet_ob_fetuspos"/>
+
+    <EditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/growth_curve_fetuspos_edit"
+        android:layout_below="@id/growth_curve_LMP_tv"
+        android:layout_toRightOf="@id/growth_curve_fetuspos_tv"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/growth_curve_plac_tv"
+        android:layout_below="@id/growth_curve_LMP_tv"
+        android:layout_toRightOf="@id/growth_curve_fetuspos_edit"
+        android:layout_alignStart="@id/growth_curve_ClinicalEDD_tv"
+        android:layout_marginTop="5dp"
+        android:text="@string/report_worksheet_ob_plac"
+        android:visibility="visible"/>
+
+    <EditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/growth_curve_plac_edit"
+        android:layout_below="@id/growth_curve_LMP_tv"
+        android:layout_toRightOf="@id/growth_curve_plac_tv"
+        android:layout_marginTop="5dp"/>
+
+
+</merge>

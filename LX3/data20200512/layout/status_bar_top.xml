@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="edan.am57.bx4.statusbar.TopStatusInfoBean"/>
+        <import type="edan.am57.bx4.utility.setup.model.DateFormatBean"/>
+        <import type="java.lang.String"/>
+        <import type="android.view.View"/>
+        <import type="android.text.format.DateFormat"/>
+        <variable name="info" type="TopStatusInfoBean"/>
+        <variable name="date" type="DateFormatBean"/>
+    </data>
+    <edan.am57.bx4.statusbar.TopStatusBar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/patient_info_field_bg">
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="1dp"
+            android:background="@color/measure_mini_report_sep"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:layout_width="@dimen/patient_info_logo_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/patient_info_logo"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter"
+            android:visibility="visible"/>
+
+        <!--日期和时间控件也可以合并为一个,format为yyyy/MM/dd\nhh:mm-->
+        <!--注意MM表示月,mm表示分,HH表示24小时,hh表示12小时-->
+        <FrameLayout
+            android:id="@+id/patient_info_date"
+            android:layout_width="@dimen/patient_info_date_time_width"
+            android:layout_height="@dimen/patient_info_half_height"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="10dp">
+            <TextClock
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:format12Hour='@{date.info_dateFormat}'
+                android:format24Hour='@{date.info_dateFormat}'
+                android:gravity="center_vertical|end"
+                android:textColor="@color/main_screen_status_top_field_text"
+                android:textSize="@dimen/main_screen_status_top_text_size"
+                android:visibility='@{info.info_timeFrozen ? View.INVISIBLE : View.VISIBLE}'/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|end"
+                android:text='@{DateFormat.format(date.info_dateFormat, info.info_examDateTime)}'
+                android:textColor="@color/main_screen_status_top_field_text"
+                android:textSize="@dimen/main_screen_status_top_text_size"
+                android:visibility='@{info.info_timeFrozen ? View.VISIBLE : View.INVISIBLE}'/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/patient_info_time"
+            android:layout_width="@dimen/patient_info_date_time_width"
+            android:layout_height="@dimen/patient_info_half_height"
+            android:layout_alignStart="@+id/patient_info_date"
+            android:layout_below="@+id/patient_info_date">
+            <TextClock
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:format12Hour='@{date.info_timeFormat}'
+                android:format24Hour='@{date.info_timeFormat}'
+                android:gravity="center_vertical|end"
+                android:textColor="@color/main_screen_status_top_field_text"
+                android:textSize="@dimen/main_screen_status_top_text_size"
+                android:visibility='@{info.info_timeFrozen ? View.INVISIBLE : View.VISIBLE}'/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|end"
+                android:text='@{DateFormat.format(date.info_timeFormat, info.info_examDateTime)}'
+                android:textColor="@color/main_screen_status_top_field_text"
+                android:textSize="@dimen/main_screen_status_top_text_size"
+                android:visibility='@{info.info_timeFrozen ? View.VISIBLE : View.INVISIBLE}'/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="@dimen/patient_info_probe_exam_width"
+            android:layout_height="@dimen/patient_info_half_height"
+            android:layout_alignBottom="@+id/patient_info_date"
+            android:layout_toStartOf="@+id/patient_info_date"
+            android:layout_marginEnd="2dp"
+            android:gravity="center"
+            android:id="@+id/patient_info_probe"
+            android:visibility="visible"
+            android:text='@{info.info_curProbeName}'
+            android:textColor="@color/main_screen_status_top_field_text"
+            android:textSize="@dimen/main_screen_status_top_text_size"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"/>
+
+        <TextView
+            android:layout_width="@dimen/patient_info_probe_exam_width"
+            android:layout_height="@dimen/patient_info_half_height"
+            android:layout_below="@+id/patient_info_date"
+            android:layout_toStartOf="@+id/patient_info_time"
+            android:gravity="center"
+            android:layout_marginEnd="2dp"
+            android:id="@+id/patient_info_exam"
+            android:visibility="visible"
+            android:text='@{info.info_curExamName}'
+            android:textColor="@color/main_screen_status_top_field_text"
+            android:textSize="@dimen/main_screen_status_top_text_size"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/patient_info_half_height"
+            android:id="@+id/patient_info_hospital"
+            android:gravity="center_vertical|start"
+            android:layout_marginStart="32dp"
+            android:layout_toStartOf="@+id/patient_info_probe"
+            android:layout_toEndOf="@+id/patient_info_logo"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:visibility="visible"
+            android:text='@{info.info_hospitalName}'
+            android:textColor="@color/main_screen_status_top_field_text"
+            android:textSize="@dimen/main_screen_status_top_text_size"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/patient_info_half_height"
+            android:gravity="center_vertical|start"
+            android:layout_marginStart="32dp"
+            android:id="@+id/patient_info_name"
+            android:minWidth="128dp"
+            android:maxWidth="350dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/patient_info_logo"
+            android:text='@{info.info_patientName}'
+            android:textColor="@color/main_screen_status_top_field_name_text"
+            android:textSize="@dimen/main_screen_status_top_text_size"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/patient_info_half_height"
+            android:gravity="center_vertical|start"
+            android:layout_alignTop="@+id/patient_info_name"
+            android:layout_toEndOf="@+id/patient_info_name"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:id="@+id/patient_info_gender"
+            android:text='@{info.info_patientGender}'
+            android:textColor="@color/main_screen_status_top_field_text"
+            android:textSize="@dimen/main_screen_status_top_text_size"/>
+
+        <TextView
+            android:text='@{info.info_patientAge}'
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/patient_info_half_height"
+            android:gravity="center_vertical|start"
+            android:layout_alignTop="@+id/patient_info_gender"
+            android:layout_toEndOf="@+id/patient_info_gender"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:id="@+id/patient_info_age"
+            android:textColor="@color/main_screen_status_top_field_text"
+            android:textSize="@dimen/main_screen_status_top_text_size"/>
+
+        <TextView
+            android:text='@{info.info_patientId}'
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/patient_info_half_height"
+            android:gravity="center_vertical|start"
+            android:layout_alignTop="@+id/patient_info_age"
+            android:layout_toEndOf="@+id/patient_info_age"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:minWidth="128dp"
+            android:singleLine="true"
+            android:ellipsize="start"
+            android:id="@+id/patient_info_id"
+            android:layout_toStartOf="@+id/patient_info_exam"
+            android:textColor="@color/main_screen_status_top_field_text"
+            android:textSize="@dimen/main_screen_status_top_text_size"/>
+
+    </edan.am57.bx4.statusbar.TopStatusBar>
+</layout>

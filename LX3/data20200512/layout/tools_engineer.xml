@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.common.widget.TabLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/tab_layout"
+    style="@style/EngineerTabLayout"
+    android:layout_width="1280dp"
+    android:layout_height="800dp"
+    android:orientation="vertical">
+    <edan.am57.bx4.common.widget.TabIndicator
+        android:id="@id/tab_indicator"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="1100dp">
+    </edan.am57.bx4.common.widget.TabIndicator>
+    <FrameLayout
+        android:id="@id/tab_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+</edan.am57.bx4.common.widget.TabLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--主屏界面注释图层-->
+<edan.am57.bx4.comment.CommentView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comment_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:focusable="false"
+	android:focusableInTouchMode="false"/>

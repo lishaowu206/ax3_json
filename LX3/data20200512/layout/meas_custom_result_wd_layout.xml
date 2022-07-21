@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.measurement.CustomMeasResultWindow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    >
+
+    <!--    &lt;!&ndash;android:layout_marginTop="16dp"空出探头标识&ndash;&gt;
+    <ToggleButton
+        android:id="@+id/meas_result_togglebtn"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="-"
+        android:textOff="-"
+        android:textOn="+"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        android:background="@color/DarkGray"
+        android:padding="0dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:layout_margin="0dp"
+        android:button="@null"
+        android:visibility="gone"
+    />
+        &lt;!&ndash;android:textSize="20sp"&ndash;&gt;
+    <View
+        android:id="@+id/segment"
+        android:layout_width="2dp"
+        android:layout_height="25dp"
+        android:layout_toRightOf="@id/meas_result_togglebtn"
+        android:background="@color/Black"/>
+        &lt;!&ndash;android:button="@null"&ndash;&gt;
+        &lt;!&ndash;android:background="@drawable/meas_result_window_btn_selector"&ndash;&gt;
+    <ToggleButton
+        android:id="@+id/meas_result_title"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:text=""
+        android:textOff=""
+        android:textOn=""
+        android:textSize="20sp"
+        android:button="@null"
+        android:textColor="@color/White"
+        android:background="@color/DarkGray"
+        android:gravity="center"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        android:layout_toRightOf="@id/segment"
+    />
+        &lt;!&ndash;android:background="@drawable/touch_screen_btn_active"&ndash;&gt;
+
+    -->
+    <LinearLayout
+        android:id="@+id/meas_result_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:stackFromBottom="false"
+        android:listSelector="@color/measure_ms_data_field_sep"
+        android:transcriptMode="alwaysScroll"
+        android:divider="#00050505"
+    />
+        <!--android:background="@drawable/touch_screen_btn_active"-->
+
+</edan.am57.bx4.measurement.CustomMeasResultWindow>

@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:scrollbar="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/main_screen_bg_full_blue_ver_line"
+    android:layout_height="match_parent">
+    <!--android:layout_marginStart="@dimen/mini_report_width"-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/database_ms_thumbnail_area"
+        android:layout_marginLeft="@dimen/main_screen_gui_bg_left_line_left"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <TextView
+            style="@style/main_screen_big_text_style"
+            android:id="@+id/database_ms_dialog_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/main_screen_gui_bg_top_line_top"
+            android:text="@string/db_exam_database"
+            android:gravity="left|center_vertical"/>
+
+        <!--TextClock的宽度不能设置为wrap_content，否则每刷新一次时间，就会导致整个relativelayout的刷新 -->
+        <TextClock
+            style="@style/main_screen_big_text_style"
+            android:id="@+id/database_ms_dialog_title_clock"
+            android:layout_width="400dp"
+            android:layout_height="@dimen/main_screen_gui_bg_top_line_top"
+            android:layout_alignParentRight="true"
+            android:gravity="right|center_vertical"/>
+
+
+
+        <include
+            android:id="@+id/database_ms_dialog_filter_layout"
+            layout="@layout/database_ms_dialog_top"
+            android:layout_height="45dp"
+            android:paddingTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/database_ms_dialog_title_tv"/>
+
+        <RelativeLayout
+            android:id="@+id/database_ms_dialog_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="1dp"
+            android:layout_below="@+id/database_ms_dialog_filter_layout"
+            android:background="@drawable/ms_patient_grey_frame_bg">
+
+            <ProgressBar
+                android:layout_centerInParent="true"
+                android:id="@+id/tips_progress_bar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"/>
+
+            <include
+                layout="@layout/database_ms_exam_item"
+                android:id="@+id/database_ms_dialog_list_head_item"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/main_screen_listview_head_bg"/>
+
+            <edan.am57.bx4.common.ViewWithScrollBar.ArrowScrollListView
+                style="@style/main_screen_list_view_style"
+                android:id="@id/lv_database_table"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/exam_database_ms_listview_height"
+                android:layout_below="@+id/database_ms_dialog_list_head_item"
+                android:divider="#101010"
+                android:dividerHeight="1dp"
+                android:fadeScrollbars="false"
+                android:footerDividersEnabled="true"
+                android:headerDividersEnabled="true" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/review_ms_database_left"
+            layout="@layout/database_ms_dialog_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/database_ms_dialog_list_view"/>
+
+        <include android:id="@+id/review_ms_database_right"
+            android:layout_alignParentEnd="true"
+            layout="@layout/database_ms_dialog_bottom_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/database_ms_dialog_list_view"/>
+
+    </RelativeLayout>
+
+    <!--右侧缩略图区域-->
+    <edan.am57.bx4.thumbnailarea.DatabaseThumbnail
+        android:id="@+id/database_ms_thumbnail_area"
+        android:layout_width="@dimen/thumbnail_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
+

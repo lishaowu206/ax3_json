@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_screen_bg_full_blue_capture">
+
+    <RelativeLayout
+        android:id="@+id/view_left"
+        android:layout_width="@dimen/report_pdf_ui_preview_left_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/black"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/main_screen_text_style"
+            android:id="@+id/report_image_column_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reports_image_column_number_settings"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="30dp"/>
+
+        <CheckBox
+            style="@style/main_screen_checkbox_style"
+            android:id="@+id/auto_adjust_column_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/report_image_column_settings"
+            android:layout_alignStart="@+id/report_image_column_settings"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/reports_image_auto_adjust_column"
+            android:layout_gravity="center"
+            android:checked="true"/>
+
+        <TextView
+            style="@style/main_screen_text_style"
+            android:id="@+id/hand_adjust_image_column"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/auto_adjust_column_checkbox"
+            android:layout_alignStart="@+id/auto_adjust_column_checkbox"
+            android:layout_marginTop="8dp"
+            android:text="@string/reports_image_column"/>
+
+        <edan.am57.bx4.common.widget.GridRadioGroup
+            android:id="@+id/reports_image_column_gridradiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_alignBottom="@+id/hand_adjust_image_column"
+            android:layout_toEndOf="@+id/hand_adjust_image_column"
+            android:columnCount="3"
+            android:background="@drawable/round_rectangle_graybg"
+            android:rowCount="1">
+
+            <RadioButton
+                style="@style/main_screen_text_style"
+                android:id="@+id/image_column_one"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:background="@drawable/reports_graphic_btn_toggle_selector"
+                android:button="@null"
+                android:checked="false"
+                android:enabled="true"
+                android:gravity="center"
+                android:text="1"
+                />
+
+            <RadioButton
+                style="@style/main_screen_text_style"
+                android:id="@+id/image_column_two"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:button="@null"
+                android:background="@drawable/reports_graphic_btn_toggle_selector"
+                android:gravity="center"
+                android:checked="true"
+                android:enabled="true"
+                android:text="2"
+                android:layout_marginLeft="8dp"/>
+
+            <RadioButton
+                style="@style/main_screen_text_style"
+                android:id="@+id/image_column_three"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_column="2"
+                android:layout_row="0"
+                android:background="@drawable/reports_graphic_btn_toggle_selector"
+                android:button="@null"
+                android:checked="false"
+                android:enabled="true"
+                android:gravity="center"
+                android:text="3"
+                android:layout_marginLeft="8dp"/>
+
+
+        </edan.am57.bx4.common.widget.GridRadioGroup>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/report_mode_field"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/view_left"
+        android:layout_toStartOf="@+id/relative_right"
+        android:layout_alignParentTop="true"
+        android:visibility="visible"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_right"
+        android:layout_width="@dimen/report_pdf_ui_preview_right_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/Black">
+
+        <TextView
+            style="@style/main_screen_text_style"
+            android:text="@string/reports_image_field_select_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical|left"
+            android:id="@+id/reports_storage_image_instruction"
+            />
+
+        <edan.am57.bx4.common.widget.ScrollBar
+            android:id="@+id/reports_storage_image_scrollbar"
+            android:layout_width="@dimen/thumbnail_scrollbar_width"
+            android:layout_height="match_parent"
+            android:background="@color/main_screen_scrollbar_bg"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/reports_storage_image_instruction"/>
+
+        <edan.am57.bx4.thumbnailarea.CustomRecyclerView
+            android:id="@+id/reports_storage_image_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:numColumns="2"
+            android:horizontalSpacing="2dp"
+            android:verticalSpacing="4dp"
+            android:listSelector="@color/transparent"
+            android:layout_below="@+id/reports_storage_image_instruction"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/reports_storage_image_scrollbar"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

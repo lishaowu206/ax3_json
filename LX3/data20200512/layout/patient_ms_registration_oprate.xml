@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/capture_area_width"
+    android:layout_height="wrap_content">
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="10px"
+        android:layout_toLeftOf="@+id/patient_ms_registration_clear_btn"
+        android:id="@+id/patient_ms_registration_ok_btn"
+        android:text="@string/common_ok"
+        android:layout_height="60px" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="10px"
+        android:layout_toLeftOf="@+id/patient_ms_registration_cannel_btn"
+        android:id="@+id/patient_ms_registration_clear_btn"
+        android:text="@string/common_clear_all"
+        android:layout_height="60px" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10px"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/patient_ms_registration_cannel_btn"
+        android:text="@string/common_cancel"
+        android:layout_height="60px" />
+
+</RelativeLayout>

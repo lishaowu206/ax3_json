@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="150dp"
+    android:paddingEnd="150dp"
+    android:paddingTop="30dp"
+    android:paddingBottom="50dp"
+    android:background="@drawable/main_screen_tab_content">
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="@dimen/ms_tool_btn_width"
+        android:layout_height="@dimen/ms_tool_btn_height"
+        android:text="@string/maintenance_tool_model_area"
+        android:id="@+id/ms_tools_btn_model_area_setting" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:layout_width="@dimen/ms_tool_btn_width"
+        android:layout_height="@dimen/ms_tool_btn_height"
+        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/ms_tools_btn_model_area_setting"
+        android:layout_below="@+id/ms_tools_btn_model_area_setting"
+        android:text="@string/maintenance_tool_tender"
+        android:id="@+id/ms_tools_btn_tender_setting" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:layout_width="@dimen/ms_tool_btn_width"
+        android:layout_height="@dimen/ms_tool_btn_height"
+        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/ms_tools_btn_model_area_setting"
+        android:layout_below="@+id/ms_tools_btn_tender_setting"
+        android:text="@string/maintenance_tool_restory_factory"
+        android:id="@+id/ms_tools_btn_restory_factory" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:layout_width="@dimen/ms_tool_btn_width"
+        android:layout_height="@dimen/ms_tool_btn_height"
+        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/ms_tools_btn_model_area_setting"
+        android:layout_below="@+id/ms_tools_btn_restory_factory"
+        android:text="@string/maintenance_tool_restory_all_settings"
+        android:id="@+id/ms_tools_btn_restory_all_settings" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:layout_width="@dimen/ms_tool_btn_width"
+        android:layout_alignStart="@+id/ms_tools_btn_model_area_setting"
+        android:layout_below="@+id/ms_tools_btn_restory_all_settings"
+        android:layout_height="@dimen/ms_tool_btn_height"
+        android:layout_marginTop="20dp"
+        android:text="@string/maintenance_tool_restory_admin_password"
+        android:id="@+id/ms_tools_btn_restory_admimn_settings" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:layout_width="@dimen/ms_tool_btn_width"
+        android:layout_height="@dimen/ms_tool_btn_height"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/maintenance_tool_gamma"
+        android:id="@+id/ms_tools_btn_gamma_setting" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:layout_width="@dimen/ms_tool_btn_width"
+        android:layout_height="@dimen/ms_tool_btn_height"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/ms_tools_btn_gamma_setting"
+        android:text="@string/maintenance_tool_import_obtables"
+        android:id="@+id/ms_tools_btn_import_meas_ob_table" />
+
+    <!--<CheckBox-->
+        <!--style="@style/main_screen_checkbox_style"-->
+        <!--android:id="@+id/ms_tools_chb_enable_usb_debug"-->
+        <!--android:text="@string/maintenance_tool_enable_usb_debug"-->
+        <!--android:layout_width="@dimen/ms_tool_btn_width"-->
+        <!--android:layout_height="@dimen/ms_tool_btn_height"-->
+        <!--android:layout_marginTop="20dp"/>-->
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/ms_tools_chb_enable_engineer_tool"
+        android:text="@string/maintenance_tool_enable_engineer_tool"
+        android:layout_width="@dimen/ms_tool_btn_width"
+        android:layout_height="@dimen/ms_tool_btn_height"
+        android:layout_above="@+id/ms_tools_chb_enable_sim_keyboard"
+        android:layout_alignStart="@+id/ms_tools_btn_model_area_setting"
+        android:layout_marginTop="20dp"/>
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/ms_tools_chb_enable_doctor_tool"
+        android:text="@string/maintenance_tool_enable_doctor_tool"
+        android:layout_width="@dimen/ms_tool_btn_width"
+        android:layout_above="@+id/ms_tools_chb_enable_screenshot"
+        android:layout_alignEnd="@+id/ms_tools_btn_import_meas_ob_table"
+        android:layout_height="@dimen/ms_tool_btn_height"
+        android:layout_marginTop="20dp"/>
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/ms_tools_chb_enable_sim_keyboard"
+        android:text="@string/maintenance_tool_enable_sim_keyboard"
+        android:layout_width="@dimen/ms_tool_btn_width"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@id/ms_tools_btn_model_area_setting"
+        android:layout_height="@dimen/ms_tool_btn_height"
+        android:layout_marginTop="20dp"/>
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/ms_tools_chb_enable_screenshot"
+        android:text="@string/maintenance_tool_enable_screenshot"
+        android:layout_width="@dimen/ms_tool_btn_width"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/ms_tools_btn_import_meas_ob_table"
+        android:layout_height="@dimen/ms_tool_btn_height"
+        android:layout_marginTop="20dp"/>
+</RelativeLayout>

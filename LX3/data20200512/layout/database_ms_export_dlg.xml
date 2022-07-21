@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tv_info_title"
+        style="@style/general_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="false"
+        android:maxLines="2"
+        android:text="Do you want to send selected exam(s)?"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/tv_info_title2"
+        style="@style/general_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="false"
+        android:layout_below="@id/tv_info_title"
+        android:maxLines="2"
+        android:textSize="20dp" />
+
+    <edan.am57.bx4.common.widget.HorizontalProgressBar
+        android:id="@id/custom_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        android:layout_below="@id/tv_info_title2"
+        app:borderColor="@color/gray_text_color"
+        app:textColor="@color/white" />
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/tips_progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_progress_percent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custom_progress_bar"
+        android:gravity="center"
+        android:text="" />
+
+    <View
+        android:id="@+id/center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/tv_progress_percent"
+        android:layout_centerInParent="true" />
+
+    <Button
+        style="@style/main_screen_oneshot_small_button"
+        android:id="@id/btn_ok"
+        android:layout_width="@dimen/util_setup_btn_width"
+        android:layout_height="@dimen/util_setup_btn_height"
+        android:layout_below="@id/tv_progress_percent"
+        android:layout_marginTop="@dimen/util_setup_btn_margin"
+        android:layout_marginBottom="@dimen/util_setup_btn_margin"
+        android:layout_marginRight="100dp"
+        android:layout_toLeftOf="@id/center"
+        android:layout_toStartOf="@id/center"
+        android:text="@string/common_yes" />
+
+    <Button
+        style="@style/main_screen_oneshot_small_button"
+        android:id="@+id/btn_cancel"
+        android:layout_width="@dimen/util_setup_btn_width"
+        android:layout_height="@dimen/util_setup_btn_height"
+        android:layout_below="@id/tv_progress_percent"
+        android:layout_marginTop="@dimen/util_setup_btn_margin"
+        android:layout_marginBottom="@dimen/util_setup_btn_margin"
+        android:layout_marginLeft="100dp"
+        android:layout_toEndOf="@id/center"
+        android:layout_toRightOf="@id/center"
+        android:text="@string/common_cancel" />
+</RelativeLayout>

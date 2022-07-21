@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dp"
+    android:weightSum="5"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!--Auto-freeze-->
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/system_general_auto_freeze_tv"
+        android:layout_width="240dp"
+        android:layout_marginStart="25dp"
+        android:layout_alignParentStart="true"
+        android:text="@string/setup_system_auto_freeze" />
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/system_power_freeze_cbox"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@+id/system_general_auto_freeze_tv"
+        android:layout_toEndOf="@+id/system_general_auto_freeze_tv"/>
+
+    <!--auto freeze wait time-->
+    <!--<TextView-->
+        <!--style="@style/general_text_style"-->
+        <!--android:layout_below="@+id/system_general_freeze_cbox"-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:layout_alignStart="@+id/system_general_freeze_cbox"-->
+        <!--android:text="@string/setup_system_waittime" />-->
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/system_power_freeze_spinner"
+        android:layout_width="230dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/system_power_freeze_cbox"
+        customSpinner:entries="@array/system_sleep_time_array"/>
+
+    <!--Auto-ScreenSave-->
+    <TextView
+        style="@style/general_text_style"
+        android:layout_below="@+id/system_general_auto_freeze_tv"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/system_general_auto_screen_save_tv"
+        android:layout_alignStart="@+id/system_general_auto_freeze_tv"
+        android:layout_alignEnd="@+id/system_general_auto_freeze_tv"
+        android:text="@string/setup_system_auto_screen_save" />
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/system_power_screen_save_cbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/system_power_freeze_cbox"
+        android:layout_alignBaseline="@+id/system_general_auto_screen_save_tv"
+        android:layout_marginTop="15dp"/>
+
+    <!--Auto Screen Save Wait time-->
+    <!--<TextView-->
+        <!--style="@style/general_text_style"-->
+        <!--android:layout_below="@+id/system_general_screen_save_cbox"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:layout_alignStart="@+id/system_general_auto_freeze_tv"-->
+        <!--android:text="@string/setup_system_waittime" />-->
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/system_power_screen_save_spinner"
+        android:layout_alignStart="@+id/system_power_freeze_spinner"
+        android:layout_alignEnd="@+id/system_power_freeze_spinner"
+        android:layout_below="@+id/system_power_freeze_spinner"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_sleep_time_array"/>
+
+    <!--auto sleep-->
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/system_general_auto_sleep_tv"
+        android:layout_below="@+id/system_general_auto_screen_save_tv"
+        android:layout_marginTop="15dp"
+        android:layout_alignStart="@+id/system_general_auto_freeze_tv"
+        android:layout_alignEnd="@+id/system_general_auto_freeze_tv"
+        android:text="@string/setup_system_auto_sleep" />
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/system_power_sleep_cbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/system_power_freeze_cbox"
+        android:layout_alignBaseline="@+id/system_general_auto_sleep_tv"
+        android:layout_marginTop="15dp"/>
+
+    <!--Auto Sleep Wait time-->
+    <!--<TextView-->
+        <!--style="@style/general_text_style"-->
+        <!--android:layout_below="@+id/system_general_sleep_cbox"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:layout_alignStart="@+id/system_general_auto_freeze_tv"-->
+        <!--android:text="@string/setup_system_waittime" />-->
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/system_power_sleep_spinner"
+        android:layout_alignStart="@+id/system_power_freeze_spinner"
+        android:layout_alignEnd="@+id/system_power_freeze_spinner"
+        android:layout_below="@+id/system_power_screen_save_spinner"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_sleep_time_array"/>
+
+    <!--Sleep Mode-->
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/system_general_sleep_mode_tv"
+        android:layout_below="@+id/system_general_auto_sleep_tv"
+        android:layout_marginTop="15dp"
+        android:layout_alignStart="@+id/system_general_auto_freeze_tv"
+        android:layout_alignEnd="@+id/system_general_auto_freeze_tv"
+        android:text="@string/setup_system_sleep_mode" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/system_power_sleep_mode_spinner"
+        android:layout_alignStart="@+id/system_power_freeze_spinner"
+        android:layout_alignEnd="@+id/system_power_freeze_spinner"
+        android:layout_below="@+id/system_power_sleep_spinner"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_sleep_mode_array"/>
+
+    <!--Sleep Mode When Transfer-->
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/system_general_sleep_mode_when_transfer_tv"
+        android:layout_below="@+id/system_general_sleep_mode_tv"
+        android:layout_marginTop="15dp"
+        android:layout_alignStart="@+id/system_general_auto_freeze_tv"
+        android:layout_alignEnd="@+id/system_general_auto_freeze_tv"
+        android:visibility="invisible"
+        android:text="@string/setup_system_sleep_mode_when_transfer" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/system_power_sleep_mode_when_transfer_spinner"
+        android:layout_alignStart="@+id/system_power_freeze_spinner"
+        android:layout_alignEnd="@+id/system_power_freeze_spinner"
+        android:layout_below="@+id/system_power_sleep_mode_spinner"
+        android:layout_marginTop="15dp"
+        android:visibility="invisible"
+        customSpinner:entries="@array/system_sleep_mode_when_transfer_array"/>
+</RelativeLayout>

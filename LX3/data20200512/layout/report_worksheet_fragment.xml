@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/view_left"
+        android:layout_width="365dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <include
+            android:id="@+id/worksheet_report_type"
+            layout="@layout/worksheet_left_type"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        style="@style/utility_dlg_layout_style"
+        android:layout_toEndOf="@+id/view_left"
+        android:layout_toStartOf="@+id/view_right"
+        android:id="@+id/worksheet_main_srceen_layout"
+        android:background="@drawable/main_screen_worksheet_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <!--android:background="@drawable/main_screen_worksheet_content"-->
+
+        <include
+            android:id="@+id/head_layout"
+            layout="@layout/report_worksheet_head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"/>
+
+        <!--<include-->
+        <!--android:id="@+id/report_worksheet_devider_view"-->
+        <!--layout="@layout/report_worksheet_devider"/>-->
+
+        <edan.am57.bx4.report.worksheet.worksheetDataManage.itemLayout.WorksheetOBBodyInfoLayout
+            android:id="@+id/linear_ob_body_container"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_marginTop="25dp"
+            android:visibility="gone"/>
+
+        <edan.am57.bx4.report.worksheet.worksheetDataManage.itemLayout.WorksheetCardiacInfoLayout
+            android:id="@+id/linear_cardiac_container"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="25dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/linear_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_right"
+        android:layout_width="365dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="@color/transparent"
+        android:visibility="invisible"
+        android:layout_alignParentEnd="true">
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

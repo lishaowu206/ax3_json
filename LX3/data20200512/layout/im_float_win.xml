@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.asp.inputmethod.floatwin.FloatWinLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:userdefine="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	userdefine:fw_height="100px"
+	userdefine:fw_width="640px"
+	userdefine:fw_backcolor="@color/im_float_window_backcolor"
+	userdefine:cand_preview_textcolor="@color/white"
+	userdefine:cand_preview_textsize="20sp"
+	userdefine:cand_candword_btn_textcolor="@color/white"
+	userdefine:cand_candword_btn_background="@drawable/key_bg"
+	userdefine:cand_candword_btn_textsize="20sp"
+	userdefine:cand_page_btn_textsize="20sp"
+	userdefine:cand_page_btn_width="70px"
+/>

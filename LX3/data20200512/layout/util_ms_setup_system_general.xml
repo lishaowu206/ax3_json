@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dp"
+    android:weightSum="5"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!--hospital-->
+    <edan.asp.inputmethod.view.ImEditText
+        style="@style/general_edit_style"
+        android:id="@+id/system_general_hospital_et"
+        android:layout_width="840dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="120dp"
+        android:maxLength="50"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/system_general_hospital_tv"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:text="@string/setup_system_hospital" />
+
+    <!--Language-->
+    <TextView
+        style="@style/general_text_style"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/system_general_hospital_tv"
+        android:layout_marginTop="15dp"
+        android:layout_alignLeft="@+id/system_general_hospital_tv"
+        android:text="@string/setup_system_language" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/system_general_language_spinner"
+        android:layout_width="280dp"
+        android:layout_alignLeft="@+id/system_general_hospital_et"
+        android:layout_below="@+id/system_general_hospital_tv"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_language_array"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/system_general_btnf1_label"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/system_general_hospital_tv"
+        android:layout_toStartOf="@+id/system_general_btnf1_spinner"
+        android:text="@string/setup_system_btnf1" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/system_general_btnf1_spinner"
+        android:layout_width="280dp"
+        android:layout_alignEnd="@+id/system_general_hospital_et"
+        android:layout_below="@+id/system_general_hospital_tv"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        customSpinner:entries="@array/system_f1f2_array" />
+
+    <!--Date format-->
+    <TextView
+        style="@style/general_text_style"
+        android:layout_below="@+id/system_general_language_spinner"
+        android:layout_marginTop="15dp"
+        android:layout_alignLeft="@+id/system_general_hospital_tv"
+        android:text="@string/setup_system_dateformat" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/system_general_dateformat_spinner"
+        android:layout_alignStart="@+id/system_general_language_spinner"
+        android:layout_alignEnd="@+id/system_general_language_spinner"
+        android:layout_below="@+id/system_general_language_spinner"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_date_format_array"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_alignEnd="@+id/system_general_btnf1_label"
+        android:layout_below="@+id/system_general_language_spinner"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="50dp"
+        android:text="@string/setup_system_btnf2"/>
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/system_general_btnf2_spinner"
+        android:layout_alignStart="@+id/system_general_btnf1_spinner"
+        android:layout_alignEnd="@+id/system_general_btnf1_spinner"
+        android:layout_below="@+id/system_general_language_spinner"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_f1f2_array" />
+
+    <!--Date -->
+    <TextView
+        style="@style/general_text_style"
+        android:layout_below="@+id/system_general_dateformat_spinner"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignLeft="@+id/system_general_hospital_tv"
+        android:text="@string/setup_system_date" />
+
+    <edan.am57.bx4.common.widget.datatime.DatePickerView
+        android:id="@+id/system_general_date_picker"
+        android:layout_alignStart="@+id/system_general_language_spinner"
+        android:layout_alignEnd="@+id/system_general_language_spinner"
+        android:layout_below="@+id/system_general_dateformat_spinner"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/patient_ms_edit_height"
+        android:orientation="vertical" />
+
+    <!--Time zone-->
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/system_general_timezone_label"
+        android:layout_alignEnd="@+id/system_general_btnf1_label"
+        android:layout_below="@+id/system_general_dateformat_spinner"
+        android:layout_marginTop="15dp"
+        android:text="@string/setup_system_timezone" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/system_general_timezone_spinner"
+        android:layout_alignStart="@+id/system_general_btnf1_spinner"
+        android:layout_alignEnd="@+id/system_general_btnf1_spinner"
+        android:layout_below="@+id/system_general_dateformat_spinner"
+        android:layout_marginTop="15dp"
+        android:ellipsize="start"
+        customSpinner:entries="@array/system_timezone_array"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/system_general_timezone_offset_label"
+        android:textSize="18px"
+        android:layout_toEndOf="@+id/system_general_timezone_spinner"
+        android:layout_below="@+id/system_general_dateformat_spinner"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"/>
+
+    <!--Time format-->
+    <TextView
+        style="@style/general_text_style"
+        android:layout_below="@+id/system_general_timezone_offset_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignLeft="@+id/system_general_hospital_tv"
+        android:text="@string/setup_system_timeformat" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/system_general_timeformat_spinner"
+        android:layout_alignStart="@+id/system_general_language_spinner"
+        android:layout_alignEnd="@+id/system_general_language_spinner"
+        android:layout_below="@+id/system_general_timezone_offset_label"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_time_format_array"/>
+
+    <!--Mute-->
+    <TextView
+        style="@style/general_text_style"
+        android:layout_below="@+id/system_general_timezone_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignLeft="@+id/system_general_hospital_tv"
+        android:visibility="invisible"
+        android:text="@string/setup_system_mute" />
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/system_general_mute_cbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_alignStart="@+id/system_general_btnf1_spinner"
+        android:layout_alignEnd="@+id/system_general_btnf1_spinner"
+        android:layout_below="@+id/system_general_timezone_label"
+        android:layout_marginTop="15dp"/>
+
+    <!--Time -->
+    <TextView
+        style="@style/general_text_style"
+        android:layout_below="@+id/system_general_timeformat_spinner"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignStart="@+id/system_general_hospital_tv"
+        android:text="@string/setup_system_time" />
+
+    <edan.am57.bx4.common.widget.datatime.TimePickerView
+        android:id="@+id/system_general_time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/patient_ms_edit_height"
+        android:layout_alignStart="@+id/system_general_language_spinner"
+        android:layout_alignEnd="@+id/system_general_language_spinner"
+        android:layout_below="@+id/system_general_timeformat_spinner"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" />
+
+    <!--Video mode-->
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/system_general_videomode_text"
+        android:layout_alignEnd="@+id/system_general_btnf1_label"
+        android:layout_below="@+id/system_general_timeformat_spinner"
+        android:layout_marginTop="15dp"
+        android:paddingStart="50dp"
+        android:text="@string/setup_system_videomode" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/system_general_videomode_spinner"
+        android:layout_alignStart="@+id/system_general_btnf1_spinner"
+        android:layout_alignEnd="@+id/system_general_btnf1_spinner"
+        android:layout_below="@+id/system_general_timeformat_spinner"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_videomode_array" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/system_general_footswitch_label"
+        android:layout_marginTop="15dp"
+        android:layout_toStartOf="@+id/system_general_left_key"
+        android:layout_below="@+id/system_general_videomode_spinner"
+        android:layout_width="wrap_content"
+        android:paddingLeft="8dp"
+        android:text="@string/setup_system_footswitch"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_alignEnd="@+id/system_general_btnf1_label"
+        android:layout_below="@+id/system_general_videomode_spinner"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/system_general_left_key"
+        android:text="@string/setup_system_leftkey"/>
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/system_general_leftkey_spinner"
+        android:layout_alignStart="@+id/system_general_btnf1_spinner"
+        android:layout_alignEnd="@+id/system_general_btnf1_spinner"
+        android:layout_below="@+id/system_general_videomode_spinner"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_footswitch_array"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_alignEnd="@+id/system_general_btnf1_label"
+        android:layout_below="@+id/system_general_leftkey_spinner"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="50dp"
+        android:text="@string/setup_system_rightkey" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@+id/system_general_rightkey_spinner"
+        android:layout_alignStart="@+id/system_general_btnf1_spinner"
+        android:layout_alignEnd="@+id/system_general_btnf1_spinner"
+        android:layout_below="@+id/system_general_leftkey_spinner"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_footswitch_array"/>
+
+    <TextView
+        android:id="@+id/system_general_btn1_tv"
+        style="@style/general_text_style"
+        android:layout_alignStart="@+id/system_general_hospital_tv"
+        android:layout_below="@+id/system_general_time_picker"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/setup_system_btn1" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/system_general_btn1_spinner"
+        style="@style/general_spinner_style"
+        android:layout_width="280dp"
+        android:layout_alignStart="@+id/system_general_language_spinner"
+        android:layout_below="@+id/system_general_time_picker"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_f1f2_array" />
+
+    <TextView
+        android:id="@+id/system_general_btn2_tv"
+        style="@style/general_text_style"
+        android:layout_alignStart="@+id/system_general_hospital_tv"
+        android:layout_below="@+id/system_general_btn1_spinner"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/setup_system_btn2" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/system_general_btn2_spinner"
+        style="@style/general_spinner_style"
+        android:layout_width="280dp"
+        android:layout_alignStart="@+id/system_general_language_spinner"
+        android:layout_below="@+id/system_general_btn1_spinner"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_f1f2_array" />
+
+    <TextView
+        android:id="@+id/system_general_btn3_tv"
+        style="@style/general_text_style"
+        android:layout_alignStart="@+id/system_general_hospital_tv"
+        android:layout_below="@+id/system_general_btn2_spinner"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/setup_system_btn3" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/system_general_btn3_spinner"
+        style="@style/general_spinner_style"
+        android:layout_width="280dp"
+        android:layout_alignStart="@+id/system_general_language_spinner"
+        android:layout_below="@+id/system_general_btn2_spinner"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_f1f2_array" />
+
+    <TextView
+        android:id="@+id/system_general_btn4_tv"
+        style="@style/general_text_style"
+        android:layout_alignStart="@+id/system_general_hospital_tv"
+        android:layout_below="@+id/system_general_btn3_spinner"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/setup_system_btn4" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/system_general_btn4_spinner"
+        style="@style/general_spinner_style"
+        android:layout_width="280dp"
+        android:layout_alignStart="@+id/system_general_language_spinner"
+        android:layout_below="@+id/system_general_btn3_spinner"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_f1f2_array" />
+
+    <TextView
+        android:id="@+id/system_general_btn5_tv"
+        style="@style/general_text_style"
+        android:layout_alignStart="@+id/system_general_hospital_tv"
+        android:layout_below="@+id/system_general_btn4_spinner"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/setup_system_btn5" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/system_general_btn5_spinner"
+        style="@style/general_spinner_style"
+        android:layout_width="280dp"
+        android:layout_alignStart="@+id/system_general_language_spinner"
+        android:layout_below="@+id/system_general_btn4_spinner"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_f1f2_array" />
+
+    <TextView
+        android:id="@+id/system_general_btn6_tv"
+        style="@style/general_text_style"
+        android:layout_alignStart="@+id/system_general_hospital_tv"
+        android:layout_below="@+id/system_general_btn5_spinner"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/setup_system_btn6" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/system_general_btn6_spinner"
+        style="@style/general_spinner_style"
+        android:layout_width="280dp"
+        android:layout_alignStart="@+id/system_general_language_spinner"
+        android:layout_below="@+id/system_general_btn5_spinner"
+        android:layout_marginTop="15dp"
+        customSpinner:entries="@array/system_f1f2_array" />
+
+</RelativeLayout>

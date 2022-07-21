@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:id="@+id/transducer_spinner_title_tab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/feature_transducer"/>
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/main_screen_spinner_style"
+        android:id="@+id/transducer_spinner_tab2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/transducer_spinner_title_tab2"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignBaseline="@+id/transducer_spinner_title_tab2"/>
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:id="@+id/transducer_exam_list_title_tab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/transducer_spinner_title_tab2"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/exam_preset_exam_list"/>
+
+    <edan.am57.bx4.common.ViewWithScrollBar.ArrowScrollListView
+        style="@style/main_screen_list_view_style"
+        android:id="@+id/transducer_exam_list_listview_tab2"
+        android:layout_width="@dimen/util_preset_exam_list_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/transducer_exam_list_title_tab2"
+        android:layout_marginStart="10dp"
+        android:divider="@color/main_screen_tab_content_bg"
+        android:listSelector="@color/transparent"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:padding="1px"
+        android:background="@drawable/main_screen_content_bg"
+        android:fadeScrollbars="false"/>
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@+id/transducer_exam_list_add_disp_btn"
+        android:layout_width="@dimen/util_preset_exam_list_operate_btn_width"
+        android:layout_height="@dimen/util_preset_exam_list_operate_btn_height"
+        android:layout_toEndOf="@id/transducer_exam_list_listview_tab2"
+        android:layout_below="@+id/transducer_exam_list_title_tab2"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="30dp"
+        android:text="&gt;&gt;"/>
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@+id/transducer_exam_list_delete_disp_btn"
+        android:layout_width="@dimen/util_preset_exam_list_operate_btn_width"
+        android:layout_height="@dimen/util_preset_exam_list_operate_btn_height"
+        android:layout_toEndOf="@id/transducer_exam_list_listview_tab2"
+        android:layout_below="@+id/transducer_exam_list_add_disp_btn"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="30dp"
+        android:text="&lt;&lt;"/>
+
+    <RelativeLayout
+        android:layout_width="1200dp"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/transducer_exam_list_add_disp_btn"
+        android:layout_below="@id/transducer_exam_list_title_tab2"
+        android:layout_marginStart="60dp"
+        android:layout_alignTop="@id/transducer_exam_list_add_disp_btn"
+        android:background="@drawable/main_screen_content_bg">
+
+        <edan.am57.bx4.common.widget.GridRadioGroup
+            android:id="@+id/exam_name_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:columnCount="5"
+            android:rowCount="6">
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"
+                android:layout_marginTop="10dp"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"
+                android:layout_marginTop="10dp"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"
+                android:layout_marginTop="10dp"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"
+                android:layout_marginTop="10dp"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"
+                android:layout_marginTop="10dp"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"
+                android:layout_marginTop="@dimen/util_preset_exam_button_top_margin_2"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"
+                android:layout_marginTop="@dimen/util_preset_exam_button_top_margin_2"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"
+                android:layout_marginTop="@dimen/util_preset_exam_button_top_margin_2"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"
+                android:layout_marginTop="@dimen/util_preset_exam_button_top_margin_2"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"
+                android:layout_marginTop="@dimen/util_preset_exam_button_top_margin_2"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"/>
+
+            <RadioButton
+                style="@style/utility_preset_exam_display_btn_style"
+                android:layout_marginBottom="@dimen/util_preset_exam_button_top_margin"/>
+
+        </edan.am57.bx4.common.widget.GridRadioGroup>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/exam_name_area"
+            android:layout_marginTop="30dp"
+            android:layout_alignStart="@id/exam_name_area"
+            android:layout_alignEnd="@id/exam_name_area"
+            android:layout_marginStart="300dp">
+
+            <ImageButton
+                android:id="@+id/exam_up_button"
+                style="@style/main_screen_utility_operation_button_style"
+                android:layout_width="120px"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="50dp"
+                android:src="@drawable/exam_preset_order_up"/>
+
+            <ImageButton
+                android:id="@+id/exam_down_button"
+                style="@style/main_screen_utility_operation_button_style"
+                android:layout_width="120px"
+                android:layout_toEndOf="@id/exam_up_button"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="50dp"
+                android:src="@drawable/exam_preset_order_down"/>
+
+            <ImageButton
+                android:id="@+id/exam_left_button"
+                style="@style/main_screen_utility_operation_button_style"
+                android:layout_width="120px"
+                android:layout_toEndOf="@id/exam_down_button"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="50dp"
+                android:src="@drawable/exam_preset_order_left"/>
+
+            <ImageButton
+                android:id="@+id/exam_right_button"
+                style="@style/main_screen_utility_operation_button_style"
+                android:layout_width="120px"
+                android:layout_toEndOf="@id/exam_left_button"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="50dp"
+                android:src="@drawable/exam_preset_order_right"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

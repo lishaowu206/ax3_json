@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/main_screen_listview_head_bg">
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/storage_list_check_cb"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"/>
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/storage_list_id_tv_left_line"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_check_cb" />
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/storage_list_id_tv"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_id_tv_left_line"
+        android:text="@string/bottom_status_bar_storage_item_id"/>
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/storage_list_id_tv_line"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_id_tv" />
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/storage_list_patient_tv"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_id_tv_line"
+        android:text="@string/bottom_status_bar_storage_item_patient"/>
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/storage_list_patient_tv_line"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_patient_tv" />
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/storage_list_destination_tv"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_patient_tv_line"
+        android:text="@string/bottom_status_bar_storage_item_destination"/>
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/storage_list_destination_tv_line"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_destination_tv" />
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/storage_list_number_tv"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_destination_tv_line"
+        android:text="@string/bottom_status_bar_storage_item_number"/>
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/storage_list_number_tv_line"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_number_tv" />
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/storage_list_progress_tv"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_number_tv_line"
+        android:text="@string/bottom_status_bar_storage_item_progress"/>
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/storage_list_progress_tv_line"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_progress_tv" />
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/storage_list_status_tv"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_progress_tv_line"
+        android:text="@string/bottom_status_bar_storage_item_status"/>
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/storage_list_status_tv_line"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_status_tv" />
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/storage_list_examtime_tv"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_status_tv_line"
+        android:text="@string/bottom_status_bar_storage_item_examtime"/>
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/storage_list_examtime_tv_line"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_examtime_tv" />
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/storage_list_createtime_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/storage_list_examtime_tv_line"
+        android:text="@string/bottom_status_bar_storage_item_createtime"/>
+
+</RelativeLayout>

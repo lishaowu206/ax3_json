@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/power_off_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/power_dialog_width"
+    android:layout_height="@dimen/power_dialog_height"
+    android:background="@drawable/power_dialog_bg"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/auto_power_off_time_display_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/tips_auto_shut_down"
+        android:textColor="@color/main_screen_btn_text"
+        android:textSize="@dimen/main_screen_gui_text_size" />
+</RelativeLayout>

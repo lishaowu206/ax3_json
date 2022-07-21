@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageButton
+        android:id="@+id/thumbnail_tool_select"
+        android:layout_width="@dimen/thumbnail_tools_width"
+        android:layout_height="@dimen/thumbnail_tools_height"
+        android:background="@drawable/thumbnail_tools_btn"
+        android:contentDescription="@null"
+        android:src="@drawable/thumbnail_tool_select"/>
+    <ImageButton
+        android:id="@+id/thumbnail_tool_delete"
+        android:layout_width="@dimen/thumbnail_tools_width"
+        android:layout_height="@dimen/thumbnail_tools_height"
+        android:layout_marginStart="@dimen/thumbnail_tools_margin_interval"
+        android:layout_toEndOf="@+id/thumbnail_tool_select"
+        android:background="@drawable/thumbnail_tools_btn"
+        android:contentDescription="@null"
+        android:src="@drawable/thumbnail_tool_delete"/>
+    <ImageButton
+        android:id="@+id/thumbnail_tool_export"
+        android:layout_width="@dimen/thumbnail_tools_width"
+        android:layout_height="@dimen/thumbnail_tools_height"
+        android:layout_marginStart="@dimen/thumbnail_tools_margin_interval"
+        android:layout_toEndOf="@+id/thumbnail_tool_delete"
+        android:background="@drawable/thumbnail_tools_btn"
+        android:contentDescription="@null"
+        android:src="@drawable/thumbnail_tool_export"/>
+    <ImageButton
+        android:id="@+id/thumbnail_tool_page_up"
+        android:layout_width="@dimen/thumbnail_tools_width"
+        android:layout_height="@dimen/thumbnail_tools_height"
+        android:layout_marginStart="@dimen/thumbnail_tools_margin_interval"
+        android:layout_toEndOf="@+id/thumbnail_tool_export"
+        android:background="@drawable/thumbnail_tools_btn"
+        android:contentDescription="@null"
+        android:src="@drawable/thumbnail_tool_page_up"/>
+    <ImageButton
+        android:id="@+id/thumbnail_tool_page_down"
+        android:layout_width="@dimen/thumbnail_tools_width"
+        android:layout_height="@dimen/thumbnail_tools_height"
+        android:layout_marginStart="@dimen/thumbnail_tools_margin_interval"
+        android:layout_toEndOf="@+id/thumbnail_tool_page_up"
+        android:background="@drawable/thumbnail_tools_btn"
+        android:contentDescription="@null"
+        android:src="@drawable/thumbnail_tool_page_down"/>
+</merge>

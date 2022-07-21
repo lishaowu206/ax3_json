@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/util_ms_bottom_area"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_screen_gui_capture_area_bottom"
+    android:layout_alignParentBottom="true">
+
+    <Button
+        style="@style/main_screen_utility_operation_button_style"
+        android:id="@+id/util_ms_def_btn"
+        android:layout_width="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:text="@string/common_restore_factory"/>
+
+    <Button
+        style="@style/main_screen_utility_operation_button_style"
+        android:id="@+id/util_ms_def_all_btn"
+        android:layout_width="wrap_content"
+        android:layout_toEndOf="@+id/util_ms_def_btn"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        android:text="@string/common_restore_all_factory"/>
+
+    <Button
+        style="@style/main_screen_utility_operation_button_style"
+        android:id="@+id/util_ms_save_btn"
+        android:layout_toStartOf="@+id/util_ms_back_btn"
+        android:layout_centerVertical="true"
+        android:text="@string/common_save"
+        android:layout_width="120px" />
+
+    <Button
+        style="@style/main_screen_utility_operation_button_style"
+        android:id="@+id/util_ms_back_btn"
+        android:layout_toStartOf="@+id/util_ms_exit_btn"
+        android:layout_centerVertical="true"
+        android:text="@string/common_back"
+        android:layout_width="120px" />
+
+    <Button
+        style="@style/main_screen_utility_operation_button_style"
+        android:id="@+id/util_ms_exit_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="@string/common_exit"
+        android:layout_width="120px" />
+</RelativeLayout>

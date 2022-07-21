@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/patient_ms_none_preset_margin"
+    android:paddingRight="@dimen/patient_ms_none_preset_margin_right"
+    android:paddingTop="@dimen/patient_ms_none_preset_margin"
+    android:paddingBottom="@dimen/patient_ms_none_preset_margin">
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/patient_ms_registration_animal_name_tv"
+        android:layout_width="150dp"
+        android:layout_margin="5dp"
+        android:text="@string/db_patient_name" />
+
+    <edan.asp.inputmethod.view.ImEditText
+        style="@style/general_edit_style"
+        android:id="@id/et_animal_name"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="310dp"
+        android:maxLength="64"
+        android:inputType="textPersonName"
+        android:layout_toRightOf="@+id/patient_ms_registration_animal_name_tv"
+        tools:text="input animal name"/>
+
+    <edan.asp.inputmethod.view.ImEditText
+        style="@style/general_edit_style"
+        android:id="@id/et_owner_name"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="310dp"
+        android:maxLength="64"
+        android:inputType="textPersonName"
+        android:layout_alignParentEnd="true"
+        tools:hint="input owner name" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_margin="5dp"
+        android:layout_width="150dp"
+        android:id="@+id/patient_ms_registration_owner_tv"
+        android:layout_toLeftOf="@+id/et_owner_name"
+        android:text="@string/animal_owner" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/patient_ms_registration_lastname_tv"
+        android:layout_width="150dp"
+        android:layout_alignStart="@+id/patient_ms_registration_animal_name_tv"
+        android:layout_below="@+id/patient_ms_registration_animal_name_tv"
+        android:layout_margin="5dp"
+        android:text="@string/patient_last_name" />
+
+    <edan.asp.inputmethod.view.ImEditText
+        style="@style/general_edit_style"
+        android:id="@id/et_last_name"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="310dp"
+        android:maxLength="64"
+        android:inputType="textPersonName"
+        android:layout_alignEnd="@+id/et_animal_name"
+        android:layout_alignStart="@+id/et_animal_name"
+        android:layout_below="@+id/patient_ms_registration_animal_name_tv"
+        android:layout_toRightOf="@+id/patient_ms_registration_lastname_tv"
+        tools:text="input last name"/>
+
+    <edan.asp.inputmethod.view.ImEditText
+        style="@style/general_edit_style"
+        android:id="@id/et_first_name"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="310dp"
+        android:maxLength="64"
+        android:inputType="textPersonName"
+        android:layout_alignEnd="@+id/et_owner_name"
+        android:layout_alignStart="@+id/et_owner_name"
+        android:layout_below="@+id/patient_ms_registration_animal_name_tv"
+        android:layout_alignParentEnd="true"
+        tools:hint="input first name" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_margin="5dp"
+        android:layout_width="150dp"
+        android:id="@+id/patient_ms_registration_firstname_tv"
+        android:layout_alignStart="@+id/patient_ms_registration_owner_tv"
+        android:layout_below="@+id/patient_ms_registration_owner_tv"
+        android:layout_toLeftOf="@+id/et_first_name"
+        android:text="@string/patient_first_name" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/patient_ms_registration_id_tv"
+        android:layout_alignStart="@+id/patient_ms_registration_lastname_tv"
+        android:layout_below="@+id/patient_ms_registration_lastname_tv"
+        android:text="ID" />
+
+    <edan.asp.inputmethod.view.ImEditText
+        style="@style/general_edit_style"
+        android:id="@id/et_patient_id"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignEnd="@+id/et_last_name"
+        android:layout_alignStart="@+id/et_last_name"
+        android:layout_below="@+id/patient_ms_registration_lastname_tv"
+        android:maxLength="64"
+        tools:hint="input id" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/patient_ms_registration_accession_tv"
+        android:layout_alignStart="@+id/patient_ms_registration_firstname_tv"
+        android:layout_below="@+id/patient_ms_registration_firstname_tv"
+        android:labelFor="@id/et_accession"
+        android:text="@string/patient_accession" />
+
+    <edan.asp.inputmethod.view.ImEditText
+        style="@style/general_edit_style"
+        android:id="@id/et_accession"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:maxLength="16"
+        android:layout_alignEnd="@+id/et_first_name"
+        android:layout_alignStart="@+id/et_first_name"
+        android:layout_below="@+id/patient_ms_registration_lastname_tv"
+        tools:hint="input accession" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/patient_ms_registration_dob_tv"
+        android:layout_alignStart="@+id/patient_ms_registration_id_tv"
+        android:layout_below="@+id/patient_ms_registration_id_tv"
+        android:text="@string/patient_dob" />
+
+    <edan.am57.bx4.common.widget.datatime.DatePickerView
+        style="@style/general_edit_style"
+        android:id="@id/et_dob"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toStartOf="@+id/paitient_base_data_format_label"
+        android:layout_alignStart="@+id/et_last_name"
+        android:layout_below="@+id/patient_ms_registration_id_tv"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        tools:hint="dd/mm/yyyy" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/paitient_base_data_format_label"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_alignEnd="@+id/et_last_name"
+        android:layout_below="@+id/patient_ms_registration_id_tv"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="dd/mm/yyyy" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/patient_ms_registration_age_tv"
+        android:layout_alignStart="@+id/patient_ms_registration_firstname_tv"
+        android:layout_below="@+id/et_patient_id"
+        android:text="@string/patient_age" />
+
+    <edan.asp.inputmethod.view.ImEditText
+        style="@style/general_edit_style"
+        android:id="@id/et_age"
+        android:layout_width="150dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/patient_ms_registration_accession_tv"
+        android:layout_alignStart="@+id/et_accession"
+        android:digits="0987654321"
+        android:inputType="number"
+        android:maxLength="3"/>
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/general_spinner_style"
+        android:id="@id/cs_age_unit"
+        android:layout_width="150dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/patient_ms_registration_accession_tv"
+        android:layout_alignEnd="@+id/et_accession"
+        android:gravity="center_vertical"
+        customSpinner:displayFirstValue="true"
+        customSpinner:entries="@array/age_array" />
+
+</RelativeLayout>
+

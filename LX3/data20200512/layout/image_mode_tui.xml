@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/image_multi_slice"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/image_channel_tui_0" android:id="@+id/image_tui_0"/>
+    <include layout="@layout/image_channel_tui_1" android:id="@+id/image_tui_1"/>
+    <include layout="@layout/image_channel_tui_2" android:id="@+id/image_tui_2"/>
+    <include layout="@layout/image_channel_tui_3" android:id="@+id/image_tui_3"/>
+    <include layout="@layout/image_channel_tui_4" android:id="@+id/image_tui_4"/>
+    <include layout="@layout/image_channel_tui_5" android:id="@+id/image_tui_5"/>
+    <include layout="@layout/image_channel_tui_6" android:id="@+id/image_tui_6"/>
+    <include layout="@layout/image_channel_tui_7" android:id="@+id/image_tui_7"/>
+    <include layout="@layout/image_channel_tui_8" android:id="@+id/image_tui_8"/>
+</RelativeLayout>

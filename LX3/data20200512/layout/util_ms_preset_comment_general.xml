@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_screen_tab_content"
+    android:orientation="vertical"
+    android:gravity="left"
+    android:paddingTop="20dp"
+    android:paddingLeft="40dp">
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/comment_general_unfrozen_cb"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="20dp"
+        android:text="@string/comment_general_unfrozen"/>
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/comment_general_unfreeze_cb"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:paddingLeft="20dp"
+        android:text="@string/comment_general_unfreeze"/>
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/comment_general_arrow_flow"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="20dp"
+        android:text="@string/comment_general_arrow"/>
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/comment_general_keep_english"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="20dp"
+        android:text="@string/comment_general_keep_en_comment"/>
+</LinearLayout>

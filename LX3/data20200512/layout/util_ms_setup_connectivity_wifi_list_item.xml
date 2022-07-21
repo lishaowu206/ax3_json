@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical">
+
+    <TextView
+        style="@style/general_text_style"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip"
+        android:text="*"
+        android:id="@+id/wifi_connect_status_tv"
+        android:layout_width="30dp"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:text="name"
+        android:id="@+id/wifi_ap_name_tv"
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
+        android:layout_weight="1"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:text="saved"
+        android:id="@+id/wifi_ap_statues_tv"
+        android:layout_width="0sp"
+        android:gravity="left|center_vertical"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <ImageView
+        android:id="@+id/wifi_security_status_iv"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/icon"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/wifi_signal_level_tv"
+        android:layout_width="30dp"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"/>
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:background="@color/main_screen_frame_line"/>
+
+    <ImageView
+        android:id="@+id/wifi_signal_strength_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/icon"
+        android:contentDescription="@null"/>
+</LinearLayout>

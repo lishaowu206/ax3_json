@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:EditRegion="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/system_storetab_clip_linear"
+        android:layout_width="800dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/utils_title_clip">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="45sp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:alpha="1"
+                android:textStyle="bold"
+                android:text="." />
+
+            <TextView
+                style="@style/main_screen_second_tittle_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/setup_system_store_clip" />
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/first_row"
+            android:layout_width="match_parent"
+            android:weightSum="5"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/utils_title_clip"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/system_storetab_clip_porsepctive_label"
+                android:layout_width="0dp"
+                android:layout_weight="2.1"
+                android:layout_height="wrap_content"
+                android:text="@string/setup_system_porsepctive" />
+
+            <edan.am57.bx4.common.widget.RegionNumberEditText
+                style="@style/general_edit_style"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:id="@+id/system_storetab_clip_porsepctive_edit"
+                android:hint=""
+                android:layout_margin="5dp"
+                android:layout_marginLeft="20dp"
+                EditRegion:MaxNumber="120"
+                EditRegion:MinNumber="1"
+                android:inputType="number" />
+
+            <TextView
+                style="@style/general_text_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/setup_system_time_unit_sec" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_row"
+            android:layout_marginLeft="20dp"
+            android:weightSum="5"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/general_text_style"
+                android:layout_width="0dp"
+                android:layout_weight="2.1"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/system_storetab_clip_porsepctive_edit"
+                android:text="@string/setup_system_retrosepctive" />
+
+            <edan.am57.bx4.common.widget.RegionNumberEditText
+                style="@style/general_edit_style"
+                android:hint=""
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:id="@+id/system_storetab_clip_retrosepctive_edit"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="15dp"
+                EditRegion:MaxNumber="120"
+                EditRegion:MinNumber="1"
+                android:inputType="number" />
+
+            <TextView
+                style="@style/general_text_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/setup_system_time_unit_sec" />
+
+        </LinearLayout>
+
+        <CheckBox
+            style="@style/general_checkbox_style"
+            android:id="@+id/disp_store_time_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/second_row"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="40dp"
+            android:text="@string/setup_system_display_store_time"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="800dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/system_storetab_clip_linear">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/utils_title_printer">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="45sp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:alpha="1"
+                android:textStyle="bold"
+                android:text="." />
+
+            <TextView
+                style="@style/main_screen_second_tittle_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:text="@string/setup_system_video_printer" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/utils_title_printer"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/general_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:paddingRight="60dp"
+                android:text="@string/setup_system_defaultprinter" />
+
+            <edan.am57.bx4.common.widget.CustomSpinner
+                style="@style/general_spinner_style"
+                android:id="@+id/system_storetab_printer_spinner"
+                android:layout_width="300dp"
+                android:layout_margin="5dp"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

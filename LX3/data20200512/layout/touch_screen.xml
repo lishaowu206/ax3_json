@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.common.widget.TabLayout
+    android:id="@id/tab_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/touch_screen_tab_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/touch_screen_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/touch_screen_margins">
+
+    <edan.am57.bx4.common.widget.TabIndicator
+        android:id="@id/tab_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/touch_screen_tab_indicator"
+        android:divider="@drawable/touch_screen_tab_indicator_divider"
+        android:showDividers="middle">
+    </edan.am57.bx4.common.widget.TabIndicator>
+
+    <FrameLayout
+        android:id="@id/tab_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/touch_screen_tab_content">
+    </FrameLayout>
+</edan.am57.bx4.common.widget.TabLayout>

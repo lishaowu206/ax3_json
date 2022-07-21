@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/image_display_area"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ultrasound="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_screen_image_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentStart="true">
+
+    <!--图像区域-->
+    <edan.am57.bx4.image.view.image.ImageSurfaceLayout
+        android:id="@+id/image_surface_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--测量-->
+    <include
+        android:id="@+id/meas_fun"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/meas_ms_graphic" />
+
+    <!--这里增加一层FrameLayout将注释和体标放在一起,截取Overlay使用-->
+    <FrameLayout
+        android:id="@+id/image_overlay_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/bodymark_fun"
+            layout="@layout/bodymark_ms_graphic"/>
+        <include
+            android:id="@+id/comment_fun"
+            layout="@layout/comment_ms_graphic"/>
+
+        <edan.am57.bx4.image.view.image.GraphicSurfaceView
+            android:id="@+id/graphic_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layerType="software"
+            android:background="@color/main_screen_graphic_bg"/>
+    </FrameLayout>
+
+    <!--rawdata overlay-->
+    <edan.asp.view.RecycleImageView
+        android:id="@+id/raw_data_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"/>
+
+    <!--<edan.am57.bx4.tools.test.EndoCardialBorderView-->
+        <!--android:id="@+id/auto_ef_test_border_display"-->
+        <!--android:visibility="invisible"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+
+    <!--无探头提示信息区域-->
+    <TextView
+        android:id="@+id/no_probe_hint_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hint_no_act_transducer"
+        android:background="@color/black"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:visibility="invisible"/>
+</FrameLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#17181D"
+    android:layout_height="40dp">
+
+    <ImageView
+        android:id="@+id/iv_saved"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/save_normal"
+        android:scaleType="center"
+        android:visibility="invisible"/>
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/saved_right_line"
+        android:layout_toRightOf="@+id/iv_saved" />
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/cb_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/saved_right_line"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true"/>
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/select_right_line"
+        android:layout_toRightOf="@+id/cb_select" />
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/tv_patient_id"
+        android:layout_width="190dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/select_right_line"
+        android:text="@string/db_patient_id" />
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/id_right_line"
+        android:layout_toRightOf="@+id/tv_patient_id"/>
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/tv_patient_name"
+        android:layout_width="190dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/id_right_line"
+        android:text="@string/db_patient_name" />
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/name_right_line"
+        android:layout_toRightOf="@+id/tv_patient_name"/>
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/tv_preset"
+        android:layout_width="170dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/name_right_line"
+        android:text="@string/db_exam_preset" />
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/preset_right_line"
+        android:layout_toRightOf="@+id/tv_preset"/>
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/tv_media_size"
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/preset_right_line"
+        android:text="@string/db_exam_size" />
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/size_right_line"
+        android:layout_toRightOf="@+id/tv_media_size"/>
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/tv_exam_date"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/size_right_line"
+        android:text="@string/db_exam_date" />
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/date_right_line"
+        android:layout_toRightOf="@+id/tv_exam_date"/>
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/tv_date_of_birth"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/date_right_line"
+        android:text="@string/db_dob"/>
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/tv_species"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/date_right_line"
+        android:text="@string/common_species"/>
+
+
+
+</RelativeLayout>

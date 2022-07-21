@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <edan.am57.bx4.elearn.ELearnImageTipView
+        android:id="@+id/custom_position_body"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/elearn_edge_rl_interval"
+        android:visibility="visible"/>
+    <View
+        android:layout_width="@dimen/elearn_image_interval"
+        android:layout_height="match_parent"/>
+    <edan.am57.bx4.elearn.ELearnImageTipView
+        android:id="@+id/custom_position_ultra"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"/>
+</LinearLayout>

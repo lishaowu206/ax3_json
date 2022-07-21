@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/image_volume"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/image_channel_mpr_a" android:id="@+id/image_mpr_a"/>
+    <include layout="@layout/image_channel_mpr_b" android:id="@+id/image_mpr_b"/>
+    <include layout="@layout/image_channel_mpr_c" android:id="@+id/image_mpr_c"/>
+    <include layout="@layout/image_channel_volume" android:id="@+id/image_3d"/>
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ScrollBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <edan.am57.bx4.common.ViewWithScrollBar.VListview
+        android:scrollbarSize="0dp"
+        android:scrollbarThumbHorizontal="@color/colorAccent"
+        android:scrollbarTrackVertical="@color/colorAccent"
+        android:scrollbars="vertical"
+        android:gravity="top|left"
+        android:fadeScrollbars="false"
+        android:id="@+id/edan_popwin_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:divider="@android:color/black"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"/>
+
+    <edan.am57.bx4.common.ViewWithScrollBar.VScrollBar
+        android:layout_width="20dp"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/edan_list_vscrol"
+        android:background="@android:color/background_dark"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

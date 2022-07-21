@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="155dp">
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/report_worksheet_OB_LMP_tv"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="30dp"
+        android:text="@string/report_worksheet_ob_lmp"/>
+
+    <EditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/report_worksheet_OB_LMP_edit"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/report_worksheet_OB_LMP_tv"/>
+
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/report_worksheet_OB_ClinicalGA_tv"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/report_worksheet_OB_LMP_edit"
+        android:layout_marginLeft="50dp"
+        android:text="@string/report_worksheet_ob_clinicalga"/>
+
+    <EditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/report_worksheet_OB_ClinicalGA_edit"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/report_worksheet_OB_ClinicalGA_tv"/>
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/report_worksheet_OB_ClinicalEDD_tv"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/report_worksheet_OB_ClinicalGA_edit"
+        android:layout_marginLeft="50dp"
+        android:text="@string/report_worksheet_ob_clinicaledd"/>
+
+    <EditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/report_worksheet_OB_ClinicalEDD_edit"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/report_worksheet_OB_ClinicalEDD_tv"/>
+
+    <!--<TextView style="@style/report_top_info_text_style"-->
+        <!--android:id="@+id/example1_tv"-->
+        <!--android:layout_below="@id/report_worksheet_OB_LMP_tv"-->
+        <!--android:layout_alignEnd="@id/report_worksheet_OB_LMP_tv"-->
+        <!--android:text="@string/report_worksheet_ob_example_1"-->
+        <!--android:visibility="invisible"/>-->
+
+    <!--<EditText style="@style/report_top_info_edit_style"-->
+        <!--android:id="@+id/example1_edit"-->
+        <!--android:layout_below="@id/report_worksheet_OB_LMP_tv"-->
+        <!--android:layout_toRightOf="@id/example1_tv"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:visibility="invisible"/>-->
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/report_worksheet_OB_GACUA_tv"
+        android:layout_below="@id/report_worksheet_OB_LMP_tv"
+        android:layout_alignEnd="@id/report_worksheet_OB_ClinicalGA_tv"
+        android:text="@string/report_worksheet_ob_gacua"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/report_worksheet_OB_GACUA_edit"
+        android:layout_below="@id/report_worksheet_OB_LMP_tv"
+        android:layout_toRightOf="@id/report_worksheet_OB_GACUA_tv"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/report_worksheet_OB_EDDCUA_tv"
+        android:layout_below="@id/report_worksheet_OB_LMP_tv"
+        android:layout_toRightOf="@id/report_worksheet_OB_GACUA_edit"
+        android:layout_alignStart="@id/report_worksheet_OB_ClinicalEDD_tv"
+        android:layout_marginTop="5dp"
+        android:text="@string/report_worksheet_ob_eddcua"/>
+
+    <EditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/report_worksheet_OB_EDDCUA_edit"
+        android:layout_below="@id/report_worksheet_OB_LMP_tv"
+        android:layout_toRightOf="@id/report_worksheet_OB_EDDCUA_tv"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/report_worksheet_OB_fetuspos_tv"
+        android:layout_below="@id/report_worksheet_OB_GACUA_tv"
+        android:layout_alignEnd="@id/report_worksheet_OB_LMP_tv"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="30dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="@string/report_worksheet_ob_fetuspos"/>
+
+    <edan.am57.bx4.report.widget.CustomValueVaryEditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/report_worksheet_OB_fetuspos_edit"
+        android:layout_below="@id/report_worksheet_OB_GACUA_tv"
+        android:layout_toRightOf="@id/report_worksheet_OB_fetuspos_tv"
+        android:maxLength="64"
+        android:singleLine="true"
+        android:layout_marginTop="5dp"
+        android:enabled="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/report_worksheet_OB_plac_tv"
+        android:layout_below="@id/report_worksheet_OB_GACUA_tv"
+        android:layout_alignEnd="@id/report_worksheet_OB_ClinicalGA_tv"
+        android:layout_marginTop="5dp"
+        android:text="@string/report_worksheet_ob_plac"/>
+
+    <edan.am57.bx4.report.widget.CustomValueVaryEditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/report_worksheet_OB_plac_edit"
+        android:layout_below="@id/report_worksheet_OB_GACUA_tv"
+        android:layout_toRightOf="@id/report_worksheet_OB_plac_tv"
+        android:layout_marginTop="5dp"
+        android:maxLength="64"
+        android:singleLine="true"
+        android:enabled="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+    <include layout="@layout/report_worksheet_devider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/report_worksheet_OB_fetuspos_tv"/>
+
+</merge>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.statusbar.BottomStatusBar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/main_screen_status_bottom_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="15dp">
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="1dp"
+        android:background="@color/measure_mini_report_sep"
+        android:visibility="visible"/>
+
+    <ToggleButton
+        android:id="@+id/main_utility_btn"
+        android:textOn="@null"
+        android:textOff="@null"
+        android:background="@drawable/status_utility"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/status_demo_tip"
+        android:layout_toEndOf="@+id/main_utility_btn"
+        android:layout_width="wrap_content"
+        android:background="@color/main_screen_status_bottom_field_bg"
+        android:textColor="@color/main_screen_status_bottom_field_text"
+        android:textSize="@dimen/main_screen_status_bottom_text_size"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginStart="20dp"/>
+
+    <Button
+        android:id="@+id/tool_engineer_btn"
+        android:text="@string/debug_tool_engineer"
+        android:layout_toEndOf="@+id/status_demo_tip"
+        android:background="@color/main_screen_status_bottom_field_bg"
+        android:textColor="@color/main_screen_status_bottom_field_text"
+        android:textSize="@dimen/main_screen_status_bottom_text_size"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"/>
+
+    <Button
+        android:id="@+id/tool_doctor_btn"
+        android:text="@string/debug_tool_doctor"
+        android:background="@color/main_screen_status_bottom_field_bg"
+        android:textColor="@color/main_screen_status_bottom_field_text"
+        android:textSize="@dimen/main_screen_status_bottom_text_size"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/tool_engineer_btn"
+        android:layout_marginStart="20dp"/>
+
+    <Button
+        android:id="@+id/sim_keyboard_btn"
+        android:text="@string/debug_tool_sim_keyboard"
+        android:background="@color/main_screen_status_bottom_field_bg"
+        android:textColor="@color/main_screen_status_bottom_field_text"
+        android:textSize="@dimen/main_screen_status_bottom_text_size"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/tool_doctor_btn"
+        android:layout_marginStart="20dp"/>
+
+    <Button
+        android:id="@+id/tools_misc_btn"
+        android:text="@string/debug_tool_misc"
+        android:background="@color/main_screen_status_bottom_field_bg"
+        android:textColor="#A7A7A7"
+        android:textSize="@dimen/main_screen_status_bottom_text_size"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/sim_keyboard_btn"
+        android:visibility="gone"
+        android:layout_marginStart="20dp"/>
+
+    <ToggleButton
+        android:visibility="gone"
+        android:id="@+id/main_touchtest_btn"
+        android:textOn="Touch Test"
+        android:textOff="Touch Test"
+        android:background="@color/main_screen_status_bottom_field_bg"
+        android:textColor="@color/main_screen_status_bottom_field_text"
+        android:textSize="@dimen/main_screen_status_bottom_text_size"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/tools_misc_btn"
+        android:layout_marginStart="20dp"/>
+
+    <ImageButton
+        android:id="@+id/tools_power_btn"
+        android:background="@drawable/power_shutdown_selector"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:scaleType="fitCenter"
+        android:layout_toEndOf="@+id/main_touchtest_btn"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/status_usr_prompt"
+        android:textColor="@color/main_screen_status_bottom_field_text"
+        android:textSize="@dimen/main_screen_status_bottom_text_size"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/status_battery_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/status_battery_b"
+        android:background="@drawable/status_battery_removed"/>
+
+    <ImageView
+        android:id="@+id/status_battery_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@+id/status_battery_b"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/status_battery_a"
+        android:background="@drawable/status_battery_removed"/>
+    <ImageView
+        android:id="@+id/status_disk"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@+id/status_battery_a"
+        android:src="@drawable/status_disk_available"
+        android:scaleType="fitCenter"
+        android:contentDescription="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/store_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@+id/status_disk"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/status_store"
+            android:src="@drawable/status_store"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:id="@+id/s_tag_tv" />
+
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:id="@+id/c_tag_tv" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/status_network"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@+id/store_layout"
+        android:src="@drawable/status_network_unavailable"
+        android:scaleType="fitCenter"
+        android:contentDescription="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+
+    <ImageView
+        android:id="@+id/status_wifi"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@+id/status_network"
+        android:src="@drawable/status_wifi_available"
+        android:scaleType="fitCenter"
+        android:contentDescription="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/status_printer"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@+id/status_wifi"
+        android:src="@drawable/status_printer_available"
+        android:scaleType="fitCenter"
+        android:contentDescription="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="invisible"/>
+    <ImageView
+        android:id="@+id/status_usb"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@+id/status_printer"
+        android:src="@drawable/status_usb_available"
+        android:scaleType="fitCenter"
+        android:contentDescription="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="invisible"/>
+    <ImageView
+        android:id="@+id/status_dvd"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@+id/status_usb"
+        android:src="@drawable/status_dvd_ready"
+        android:scaleType="fitCenter"
+        android:contentDescription="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</edan.am57.bx4.statusbar.BottomStatusBar>

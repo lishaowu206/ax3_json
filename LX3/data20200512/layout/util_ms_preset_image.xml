@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    style="@style/utility_dlg_layout_style"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_height="match_parent"
+        android:background="@color/measure_mini_report_sep"
+        android:visibility="visible"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="match_parent"
+        android:background="@color/measure_mini_report_sep"
+        android:visibility="visible"/>
+
+    <include
+        android:id="@+id/util_ms_image_top_id"
+        layout="@layout/util_ms_util_top_layout" />
+
+    <!--标题Image Preset-->
+    <TextView
+        android:id="@+id/image_preset_title_tv"
+        style="@style/main_screen_big_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/util_ms_image_top_id"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:text="@string/feature_image_preset" />
+
+    <!--Transducer和Exam下拉菜单选择-->
+    <RelativeLayout
+        android:id="@+id/image_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_preset_title_tv"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/transducer_spinner_title"
+            style="@style/utility_preset_image_text"
+            android:layout_width="140dp"
+            android:layout_alignParentStart="true"
+            android:gravity="start"
+            android:text="@string/feature_transducer" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            android:id="@+id/util_transducer_spinner"
+            style="@style/general_spinner_style"
+            android:layout_width="210dp"
+            android:layout_toEndOf="@+id/transducer_spinner_title" />
+
+        <TextView
+            android:id="@+id/exam_spinner_title"
+            style="@style/utility_preset_image_text"
+            android:layout_width="120dp"
+            android:layout_toEndOf="@+id/util_transducer_spinner"
+            android:gravity="right|center_vertical"
+            android:text="@string/feature_exam" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            android:id="@+id/util_exam_spinner"
+            style="@style/general_spinner_style"
+            android:layout_width="225dp"
+            android:layout_toEndOf="@+id/exam_spinner_title" />
+
+        <TextView
+            android:id="@+id/preset_image_ti_type_title"
+            style="@style/utility_preset_image_text"
+            android:layout_width="60dp"
+            android:layout_toEndOf="@+id/util_exam_spinner"
+            android:gravity="right|center_vertical"
+            android:text="@string/exam_preset_ti" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            android:id="@+id/preset_image_ti_type"
+            style="@style/general_spinner_style"
+            android:layout_width="140dp"
+            android:layout_toEndOf="@+id/preset_image_ti_type_title" />
+
+        <TextView
+            android:id="@+id/preset_image_acoustic_power_title"
+            style="@style/utility_preset_image_text"
+            android:layout_width="120dp"
+            android:layout_toEndOf="@+id/preset_image_ti_type"
+            android:gravity="right|center_vertical"
+            android:text="@string/exam_preset_outpower" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            android:id="@+id/preset_image_acoustic_power"
+            style="@style/general_spinner_style"
+            android:layout_width="80dp"
+            android:layout_toEndOf="@+id/preset_image_acoustic_power_title"
+            customSpinner:entries="@array/acoustic_power_options" />
+    </RelativeLayout>
+
+    <!--图像预置Tab页面-->
+    <edan.am57.bx4.common.widget.TabLayout
+        android:id="@id/tab_layout"
+        style="@style/main_screen_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/util_ms_image_bottom_id"
+        android:layout_below="@+id/image_list_layout"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <edan.am57.bx4.common.widget.TabIndicator
+            android:id="@id/tab_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_screen_tabs_height"
+            android:background="@drawable/main_screen_tab_indicator"
+            android:divider="@drawable/main_screen_tab_indicator_divider"
+            android:showDividers="middle" />
+
+        <FrameLayout
+            android:id="@id/tab_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_screen_tab_content"
+            android:padding="20dp" />
+    </edan.am57.bx4.common.widget.TabLayout>
+
+    <include
+        android:id="@+id/util_ms_image_bottom_id"
+        layout="@layout/util_ms_dlg_bottom_layout" />
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:padding="5dp"
+        android:id="@+id/database_ms_dialog_filter_label_tv"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:text="@string/db_filter"/>
+
+    <edan.asp.inputmethod.view.ImEditText
+        style="@style/main_screen_edit_style"
+        android:padding="5dp"
+        android:id="@id/et_filter_database"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/database_ms_dialog_filter_label_tv"/>
+
+    <View
+        android:layout_alignTop="@id/database_ms_dialog_filter_label_tv"
+        android:id="@+id/database_ms_dialog_title_rightborder_v"
+        android:layout_height="45dp"
+        android:layout_width="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <edan.am57.bx4.common.widget.HorizontalProgressBar
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginLeft="30dp"
+        android:id="@id/custom_progress_bar"
+        android:layout_width="230dp"
+        android:layout_height="35dp"
+        app:enabledAutoColorFill="true"
+        android:layout_toStartOf="@+id/database_ms_dialog_title_rightborder_v"
+        android:layout_alignTop="@id/et_filter_database"
+        app:borderColor="#474747"
+        app:textColor="@color/white"/>
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignTop="@id/database_ms_dialog_filter_label_tv"
+        android:layout_toStartOf="@id/custom_progress_bar"
+        android:gravity="center_vertical"
+        android:text="@string/db_storage_area"/>
+</RelativeLayout>
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.tools.engineer.ScanTableView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hvScrollListView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <edan.am57.bx4.common.widget.HVScrollListView
+        android:id="@+id/tools_engineer_register_sct_lv"
+        style="@style/main_screen_list_view_style"
+        hvScrollListView:topTitle="@layout/tools_engineer_sct_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tools_engineer_sct_save_btn"
+        android:layout_margin="20dp"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:id="@+id/tools_engineer_sct_save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/engineer_register_sct_save" />
+
+    <Button
+        android:id="@+id/tools_engineer_sct_load_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/tools_engineer_sct_save_btn"
+        android:text="@string/engineer_register_sct_load" />
+
+    <Button
+        android:id="@+id/tools_engineer_sct_refresh_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/tools_engineer_sct_load_btn"
+        android:text="@string/engineer_register_sct_refresh" />
+
+    <Button
+        android:id="@+id/tools_engineer_sct_write_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/tools_engineer_sct_refresh_btn"
+        android:text="@string/engineer_register_sct_write" />
+
+    <Button
+        android:id="@+id/tools_engineer_sct_read_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/tools_engineer_sct_write_btn"
+        android:text="@string/engineer_register_sct_read" />
+</edan.am57.bx4.tools.engineer.ScanTableView>

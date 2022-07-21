@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/tools_engineer_register_list_area"
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ms_patient_grey_frame_bg">
+
+        <include
+            android:id="@+id/tool_engineer_register_list_header"
+            layout="@layout/tools_engineer_registers_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/main_screen_listview_head_bg" />
+
+        <edan.am57.bx4.common.ViewWithScrollBar.ArrowScrollListView
+            android:id="@+id/tool_engineer_register_list"
+            style="@style/main_screen_list_view_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tool_engineer_register_list_header"
+            android:background="@drawable/main_screen_content_bg"
+            android:divider="@color/main_screen_tab_content_bg"
+            android:dividerHeight="1dp"
+            android:fadeScrollbars="false"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:listSelector="@color/transparent"
+            android:padding="1px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/tools_engineer_register_list_area"
+        android:background="@drawable/tools_engineer_layoutborder">
+
+        <TextView
+            android:id="@+id/tools_engineer_register_name_label"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/tools_engineer_register_name_tv"
+            android:layout_alignTop="@+id/tools_engineer_register_name_tv"
+            android:gravity="end|bottom"
+            android:text="@string/engineer_register_name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tools_engineer_register_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@+id/tools_engineer_register_name_label"
+            android:gravity="start|bottom"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/tools_engineer_register_symbol_tv"
+            android:layout_alignTop="@+id/tools_engineer_register_symbol_tv"
+            android:layout_toStartOf="@+id/tools_engineer_register_symbol_tv"
+            android:gravity="end|bottom"
+            android:text="@string/engineer_register_symbol"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tools_engineer_register_symbol_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignStart="@+id/tools_engineer_register_name_tv"
+            android:layout_below="@+id/tools_engineer_register_name_tv"
+            android:layout_margin="5dp"
+            android:gravity="start|bottom"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/tools_engineer_register_address_edt"
+            android:layout_alignTop="@+id/tools_engineer_register_address_edt"
+            android:layout_toStartOf="@+id/tools_engineer_register_address_edt"
+            android:gravity="end|bottom"
+            android:labelFor="@+id/tools_engineer_register_address_edt"
+            android:text="@string/engineer_register_address"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/tools_engineer_register_address_edt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignStart="@+id/tools_engineer_register_name_tv"
+            android:layout_below="@+id/tools_engineer_register_symbol_tv"
+            android:layout_margin="5dp"
+            android:inputType="none" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/tools_engineer_register_bits_edt"
+            android:layout_alignTop="@+id/tools_engineer_register_bits_edt"
+            android:layout_toStartOf="@+id/tools_engineer_register_bits_edt"
+            android:gravity="end|bottom"
+            android:labelFor="@+id/tools_engineer_register_bits_edt"
+            android:text="@string/engineer_register_bits"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/tools_engineer_register_bits_edt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignStart="@+id/tools_engineer_register_name_tv"
+            android:layout_below="@+id/tools_engineer_register_address_edt"
+            android:layout_margin="5dp"
+            android:inputType="none" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/tools_engineer_register_data_hex_chb"
+            android:layout_alignTop="@+id/tools_engineer_register_data_hex_chb"
+            android:layout_toStartOf="@+id/tools_engineer_register_data_hex_chb"
+            android:gravity="end|bottom"
+            android:labelFor="@+id/tools_engineer_register_data_edt"
+            android:text="@string/engineer_register_data"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/tools_engineer_register_data_hex_chb"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignStart="@+id/tools_engineer_register_name_tv"
+            android:layout_below="@+id/tools_engineer_register_bits_edt"
+            android:layout_margin="5dp"
+            android:gravity="bottom"
+            android:checked="true"
+            android:text="@string/engineer_register_data_hex"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/tools_engineer_register_data_edt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tools_engineer_register_save_btn"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tools_engineer_register_data_hex_chb"
+            android:layout_margin="5dp"
+            android:inputType="none" />
+
+        <Button
+            android:id="@+id/tools_engineer_register_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/engineer_register_save" />
+
+        <Button
+            android:id="@+id/tools_engineer_register_plot_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/tools_engineer_register_save_btn"
+            android:text="@string/engineer_register_plot" />
+
+        <Button
+            android:id="@+id/tools_engineer_register_write_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/tools_engineer_register_plot_btn"
+            android:text="@string/engineer_register_write" />
+
+        <Button
+            android:id="@+id/tools_engineer_register_read_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/tools_engineer_register_write_btn"
+            android:text="@string/engineer_register_read" />
+
+        <Button
+            android:id="@+id/tools_engineer_register_clear_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/tools_engineer_register_read_btn"
+            android:text="@string/engineer_register_clear" />
+    </RelativeLayout>
+</RelativeLayout>

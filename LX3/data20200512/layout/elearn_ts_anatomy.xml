@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <edan.am57.bx4.elearn.ELearnImageTipView
+        android:id="@+id/custom_anatomy"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/elearn_edge_rl_interval"/>
+    <View
+        android:layout_width="@dimen/elearn_image_interval"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+        <TextView
+            android:id="@+id/tv_anatomy_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/elearn_tips_linesapce"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>

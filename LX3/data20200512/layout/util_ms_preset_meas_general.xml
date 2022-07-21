@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--edan.am57.bx4.measurement.MeasPresetGeneralLayout-->
+<edan.am57.bx4.measurement.MeasPresetGeneralLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_screen_tab_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/util_ms_padding">
+
+    <!--单位设置-->
+    <RelativeLayout
+        android:id="@+id/unit_settings_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:id="@+id/unit_settings_title">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="45sp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:alpha="1"
+                android:textStyle="bold"
+                android:text="." />
+
+            <TextView
+                style="@style/main_screen_second_tittle_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:text="@string/meas_general_unit_settings" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_below="@+id/unit_settings_title"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/general_text_style"
+                    android:id="@+id/tx_distance"
+                    android:text="@string/meas_general_unit_distance" />
+
+                <edan.am57.bx4.measurement.MeasSpinner
+                    android:id="@+id/sp_distance_unit"
+                    style="@style/utility_preset_measure_spinner_small"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/tx_distance"/>
+
+                <TextView
+                    style="@style/general_text_style"
+                    android:id="@+id/tx_area_unit"
+                    android:layout_alignLeft="@+id/tx_distance"
+                    android:layout_below="@+id/tx_distance"
+                    android:text="@string/meas_general_unit_area" />
+
+                <edan.am57.bx4.measurement.MeasSpinner
+                    android:id="@+id/sp_area_unit"
+                    style="@style/utility_preset_measure_spinner_small"
+                    android:layout_below="@+id/sp_distance_unit"
+                    android:layout_alignLeft="@+id/sp_distance_unit"/>
+
+                <TextView
+                    style="@style/general_text_style"
+                    android:id="@+id/tx_volume"
+                    android:layout_marginLeft="200dp"
+                    android:layout_toRightOf="@+id/sp_distance_unit"
+                    android:text="@string/meas_general_unit_volume" />
+
+                <edan.am57.bx4.measurement.MeasSpinner
+                    android:id="@+id/sp_volume_unit"
+                    style="@style/utility_preset_measure_spinner_small"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/tx_volume"/>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cardiac_settings_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/unit_settings_group">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:id="@+id/cardiac_settings_title">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="45sp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:alpha="1"
+                android:textStyle="bold"
+                android:text="." />
+
+            <TextView
+                style="@style/main_screen_second_tittle_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:text="@string/meas_general_cardiac_settings" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="6"
+            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardiac_settings_title"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/tx_EDV_ESV"
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="wrap_content"
+                android:text="@string/meas_general_cardiac_edv_esv" />
+
+            <edan.am57.bx4.measurement.MeasSpinner
+                android:id="@+id/sp_EDV_ESV"
+                style="@style/utility_preset_measure_spinner_big"
+                android:layout_width="0dp"
+                android:layout_weight="1.8"/>
+
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/tx_HR_Cycle"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_marginLeft="200dp"
+                android:text="@string/meas_general_cardiac_hr_cycle" />
+            <edan.am57.bx4.measurement.MeasSpinner
+                android:id="@+id/sp_HR_Cycle"
+                style="@style/utility_preset_measure_spinner_big"
+                android:layout_width="0dp"
+                android:layout_weight="1.8" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gyn_settings_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignEnd="@+id/cardiac_settings_group"
+        android:layout_alignStart="@+id/cardiac_settings_group"
+        android:layout_below="@+id/cardiac_settings_group">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:id="@+id/gyn_settings_title">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="45sp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:alpha="1"
+                android:textStyle="bold"
+                android:text="." />
+
+            <TextView
+                style="@style/main_screen_second_tittle_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:text="@string/meas_general_gyn_settings" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="6"
+            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gyn_settings_title"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/tx_follicle_method"
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="wrap_content"
+                android:text="@string/meas_general_gyn_follicle" />
+
+            <edan.am57.bx4.measurement.MeasSpinner
+                android:id="@+id/sp_follicle_method"
+                style="@style/utility_preset_measure_spinner_big"
+                android:layout_width="0dp"
+                android:layout_weight="1.8" />
+
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/tx_cyst_method"
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:text="@string/meas_general_gyn_cyst" />
+
+            <edan.am57.bx4.measurement.MeasSpinner
+                android:id="@+id/sp_cyst_method"
+                style="@style/utility_preset_measure_spinner_big"
+                android:layout_width="0dp"
+                android:layout_weight="1.8"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ob_settings_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cardiac_settings_group"
+        android:layout_alignStart="@+id/cardiac_settings_group"
+        android:layout_below="@+id/gyn_settings_group">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:id="@+id/ob_settings_title">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="45sp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:alpha="1"
+                android:textStyle="bold"
+                android:text="." />
+
+            <TextView
+                style="@style/main_screen_second_tittle_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:text="@string/meas_general_ob_settings" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ob_fetal_settings"
+            android:layout_width="match_parent"
+            android:weightSum="6"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ob_settings_title"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/tx_fetal_age_item_list"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/meas_general_ob_fetal_age" />
+
+            <edan.am57.bx4.measurement.MeasSpinner
+                android:id="@+id/sp_fetal_age_item_list"
+                style="@style/utility_preset_measure_spinner_small"
+                android:layout_width="0dp"
+                android:layout_weight="1"/>
+
+            <edan.am57.bx4.measurement.MeasSpinner
+                android:id="@+id/sp_fetal_age_formula_list"
+                style="@style/utility_preset_measure_spinner_small"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/tx_fetal_growth_item_list"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="190dp"
+                android:text="@string/meas_general_ob_fetal_growth" />
+
+            <edan.am57.bx4.measurement.MeasSpinner
+                android:id="@+id/sp_fetal_growth_item_list"
+                style="@style/utility_preset_measure_spinner_small"
+                android:layout_width="0dp"
+                android:layout_weight="1"/>
+
+            <edan.am57.bx4.measurement.MeasSpinner
+                android:id="@+id/sp_fetal_growth_formula_list"
+                style="@style/utility_preset_measure_spinner_small"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ob_fetus_weight_setting"
+            android:layout_width="match_parent"
+            android:weightSum="6"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ob_fetal_settings"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/tx_efw"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="@string/meas_general_ob_efw" />
+
+            <edan.am57.bx4.measurement.MeasSpinner
+                android:id="@+id/sp_efw"
+                style="@style/utility_preset_measure_spinner_big"
+                android:layout_width="0dp"
+                android:layout_weight="4"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ob_curve_settings"
+            android:layout_width="match_parent"
+            android:weightSum="6"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ob_fetus_weight_setting"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/tx_growth_curve_display"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="@string/meas_general_ob_growth_curve_display" />
+
+            <RadioGroup
+                android:id="@+id/rg_growth_curve_display"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_growth_curve_display_single"
+                    style="@style/main_screen_radio_button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/meas_general_ob_growth_curve_single" />
+
+                <RadioButton
+                    android:id="@+id/rb_growth_curve_display_quad"
+                    style="@style/main_screen_radio_button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:text="@string/meas_general_ob_growth_curve_quad" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ob_ga_settings"
+            android:layout_width="match_parent"
+            android:weightSum="6"
+            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ob_curve_settings"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/tx_default_ga_display"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="@string/meas_general_ob_default_ga" />
+
+            <RadioGroup
+                android:id="@+id/rg_default_ga_display"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_default_ga_display_CUA"
+                    style="@style/main_screen_radio_button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="@string/meas_general_ob_default_ga_cua" />
+
+                <RadioButton
+                    android:id="@+id/rb_default_ga_display_AUA"
+                    style="@style/main_screen_radio_button_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:text="@string/meas_general_ob_default_ga_aua" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!--<TextView-->
+            <!--style="@style/general_text_style"-->
+            <!--android:id="@+id/tx_default_ga_display"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@+id/rg_default_ga_display"-->
+            <!--android:layout_alignTop="@+id/rg_default_ga_display"-->
+            <!--android:layout_alignLeft="@+id/tx_growth_curve_display"-->
+            <!--android:layout_toStartOf="@+id/rg_default_ga_display"-->
+            <!--android:text="@string/meas_general_ob_default_ga" />-->
+
+        <!--<RadioGroup-->
+            <!--android:id="@+id/rg_default_ga_display"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignLeft="@+id/rg_growth_curve_display"-->
+            <!--android:layout_below="@+id/rg_growth_curve_display"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb_default_ga_display_CUA"-->
+                <!--style="@style/main_screen_radio_button_style"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:checked="true"-->
+                <!--android:text="@string/meas_general_ob_default_ga_cua" />-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb_default_ga_display_AUA"-->
+                <!--style="@style/main_screen_radio_button_style"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="20dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="@string/meas_general_ob_default_ga_aua" />-->
+        <!--</RadioGroup>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/general_settings_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ob_settings_group">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/general_settings_title">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="45sp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:alpha="1"
+                android:textStyle="bold"
+                android:text="." />
+            <TextView
+                style="@style/main_screen_second_tittle_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/main_screen_util_text_normal"
+                android:text="@string/meas_general_settings"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:weightSum="6"
+            android:layout_below="@+id/general_settings_title"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/tx_calc_method"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/meas_general_calcmethod" />
+
+            <edan.am57.bx4.measurement.MeasSpinner
+                android:id="@+id/sp_calc_method"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                style="@style/utility_preset_measure_spinner_big"/>
+            <TextView
+                style="@style/general_text_style"
+                android:id="@+id/tx_active_measure_type"
+                android:layout_marginLeft="190dp"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:text="@string/meas_general_activeMeasureType" />
+
+            <edan.am57.bx4.measurement.MeasSpinner
+                android:id="@+id/sp_active_meas_type"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                style="@style/utility_preset_measure_spinner_big"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/cb_suppress_measurement_on_unfreeze"
+        style="@style/main_screen_checkbox_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:text="@string/meas_general_unfreeze_suppress"
+        android:visibility="gone" />
+
+</edan.am57.bx4.measurement.MeasPresetGeneralLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.measurement.MeasMenu.layout.MsMeasLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+    <TextView
+        android:id="@+id/meas_pkg_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ms_pkg_height"
+        android:gravity="left"
+        android:layout_marginRight="1dp"
+        android:paddingLeft="@dimen/ms_meas_title_left_padding"
+        android:paddingTop="@dimen/ms_meas_title_top_padding"
+        android:background="@color/measure_ms_pkg_bg"
+        android:textColor="@color/ms_main_screen_text_normal"
+        android:textStyle="bold"
+        android:textSize="@dimen/measure_ms_mini_report_title_text_size"/>
+
+    <RadioGroup
+        android:id="@+id/preset_menu_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ms_meas_attr_widget_height"
+        android:layout_marginTop="@dimen/ms_meas_widget_interval"
+        android:layout_below="@id/meas_pkg_name"
+        android:background="@color/ms_meas_bg"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+    <RadioGroup
+        android:id="@+id/meas_pos_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ms_meas_attr_widget_height"
+        android:layout_marginTop="@dimen/ms_meas_widget_interval"
+        android:layout_below="@id/preset_menu_container"
+        android:background="@color/ms_meas_bg"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:orientation="horizontal" />
+        <!--android:background="@color/measure_mini_report_exam_name_bg"-->
+
+    <RadioGroup
+        android:id="@+id/meas_side_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ms_meas_attr_widget_height"
+        android:layout_marginTop="@dimen/ms_meas_widget_interval"
+        android:layout_below="@id/meas_pos_container"
+        android:background="@color/ms_meas_bg"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:orientation="horizontal" />
+        <!--android:background="@color/measure_mini_report_exam_name_bg"-->
+
+
+<!--    <RadioGroup
+        android:id="@+id/meas_fetus_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@id/meas_side_container"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        android:visibility="invisible"/>-->
+        <!--android:background="@color/measure_mini_report_exam_name_bg"-->
+    <LinearLayout
+        android:id="@+id/meas_group_title_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ms_meas_menu_title_height"
+        android:background="@color/ms_meas_bg"
+        android:layout_below="@id/meas_side_container"
+        android:orientation="horizontal"/>
+
+    <ListView
+        android:id="@+id/meas_group_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ms_meas_menu_total_item_height"
+        android:divider="@null"
+        android:background="@color/ms_meas_bg"
+        android:scrollbars="none"
+        android:layout_below="@id/meas_group_title_ll" />
+
+    <LinearLayout
+        android:id="@+id/meas_item_title_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ms_meas_menu_title_height"
+        android:layout_below="@id/meas_group_menu"
+        android:background="@color/ms_meas_bg"
+        android:orientation="horizontal"/>
+    <ListView
+        android:id="@+id/meas_item_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ms_meas_menu_total_item_height"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:layout_below="@id/meas_item_title_ll"
+        android:background="@color/tabBg"
+        />
+</edan.am57.bx4.measurement.MeasMenu.layout.MsMeasLayout>

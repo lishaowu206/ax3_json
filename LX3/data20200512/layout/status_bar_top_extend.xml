@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="edan.am57.bx4.statusbar.TopStatusInfoBean"/>
+        <import type="java.lang.String"/>
+        <import type="java.util.Locale"/>
+        <variable name="info" type="TopStatusInfoBean"/>
+    </data>
+    <edan.am57.bx4.statusbar.PatientInfoExtendArea
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_screen_image_bg">
+
+        <TextView
+            android:id="@+id/patient_info_species"
+            android:layout_width="260dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_toStartOf="@+id/patient_info_mi"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text='@{info.info_animalSpecies}'
+            android:textColor="@color/main_screen_status_top_field_text"
+            android:textSize="24px"/>
+
+        <TextView
+            android:id="@+id/patient_info_mi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|left"
+            android:layout_toStartOf="@+id/patient_info_ti"
+            android:layout_marginRight="20dp"
+            android:gravity="center|left"
+            android:text='@{String.format(Locale.US,"MI:%.1f", info.info_curMI)}'
+            android:textColor="@color/main_screen_status_top_field_text"
+            android:textSize="20px"/>
+        <TextView
+            android:id="@+id/patient_info_ti"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_vertical|left"
+            android:gravity="center"
+            android:text='@{String.format(Locale.US,"%s:%.1f", info.info_curTIType, info.info_curTI)}'
+            android:textColor="@color/main_screen_status_top_field_text"
+            android:textSize="20px"/>
+    </edan.am57.bx4.statusbar.PatientInfoExtendArea>
+</layout>

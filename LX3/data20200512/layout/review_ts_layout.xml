@@ -1,0 +1,115 @@
+<edan.am57.bx4.review.TsReviewLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:continuous="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RadioGroup
+        android:id="@+id/rg_review_image_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/image_review_ts_margin_left"
+        android:layout_marginTop="@dimen/image_review_ts_margin_top"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_review_image_2_2"
+            style="@style/touch_screen_on_off_button"
+            android:checked="true"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="2*2"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rb_review_image_2_3"
+            style="@style/touch_screen_on_off_button"
+            android:layout_marginStart="@dimen/image_review_ts_spacing_horizontal"
+            android:checked="false"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="2*3"
+            tools:ignore="HardcodedText" />
+        <RadioButton
+            android:id="@+id/rb_review_image_4_4"
+            style="@style/touch_screen_on_off_button"
+            android:layout_marginStart="@dimen/image_review_ts_spacing_horizontal"
+            android:checked="false"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="4*4"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_RawData"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_below="@+id/rg_review_image_layout"
+        android:layout_marginStart="@dimen/image_review_ts_spacing_horizontal"
+        android:layout_marginTop="@dimen/image_review_ts_spacing_vertical"
+        android:layout_toEndOf="@+id/rg_review_image_layout"
+        android:clickable="true"
+        android:text="@string/review_rawdata"/>
+
+    <ToggleButton
+        android:id="@+id/bt_show_selected"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@id/rg_review_image_layout"
+        android:layout_marginEnd="@dimen/image_review_ts_spacing_horizontal"
+        android:layout_toStartOf="@+id/bt_selected_all"
+        android:textOff="@string/review_show_selected"
+        android:textOn="@string/review_show_selected"/>
+    <ToggleButton
+        android:id="@+id/bt_selected_all"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/rg_review_image_layout"
+        android:layout_marginEnd="@dimen/image_review_ts_margin_right"
+        android:textOff="@string/review_select_all"
+        android:textOn="@string/review_select_all"/>
+    <ToggleButton
+        android:id="@+id/bt_export"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/bt_delete"
+        android:layout_marginEnd="@dimen/image_review_ts_spacing_horizontal"
+        android:layout_toStartOf="@+id/bt_delete"
+        android:enabled="false"
+        android:textOff="@string/review_export"
+        android:textOn="@string/review_export"/>
+    <ToggleButton
+        android:id="@+id/bt_delete"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignEnd="@+id/bt_selected_all"
+        android:layout_below="@+id/bt_selected_all"
+        android:layout_marginTop="@dimen/image_review_ts_spacing_vertical"
+        android:enabled="false"
+        android:textOff="@string/review_delete"
+        android:textOn="@string/review_delete"/>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/bt_page_indicator"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_review_ts_sliders_margin_left"
+        android:layout_marginBottom="@dimen/image_review_ts_margin_bottom"
+        continuous:resource="@layout/widget_arrow_slider"
+        continuous:label="@string/review_page_chamge"
+        continuous:maxvalue="1"
+        continuous:minvalue="-1"
+        continuous:step="1"
+        continuous:type="number"
+        continuous:value="0"
+        continuous:showValue="false">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <Button
+        android:id="@+id/bt_exit"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_height="@dimen/touch_screen_button_small_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/image_review_ts_margin_bottom"
+        android:layout_marginEnd="@dimen/image_review_ts_margin_right"
+        android:clickable="true"
+        android:text="@string/review_exit"/>
+</edan.am57.bx4.review.TsReviewLayout>

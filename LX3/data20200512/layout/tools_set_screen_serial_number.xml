@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/screen_serial_number_input"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="70dp"
+        android:gravity="center">
+
+        <TextView
+            style="@style/main_screen_text_style"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="@string/screen_serial_number"
+            android:textAlignment="textStart" />
+
+        <edan.asp.inputmethod.view.ImEditText
+            style="@style/general_edit_style"
+            android:id="@+id/et_screen_serial_number"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/et_screen_serial_number"
+            android:layout_alignStart="@+id/et_screen_serial_number"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center" >
+
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:layout_width="@dimen/ms_tool_btn_ok_cancel_width"
+            android:layout_marginLeft="45dp"
+            android:id="@+id/setscreenserialnumber_btn_import"
+            android:text="@string/common_import" />
+
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:layout_width="@dimen/ms_tool_btn_ok_cancel_width"
+            android:layout_marginLeft="45dp"
+            android:id="@+id/setscreenserialnumber_btn_cancel"
+            android:text="@string/common_cancel" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

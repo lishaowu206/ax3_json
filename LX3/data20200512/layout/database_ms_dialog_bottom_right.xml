@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_screen_gui_bg_bottom_line_bottom">
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:padding="5dp"
+        android:id="@+id/database_ms_dialog_export_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="40dp"
+        android:text="@string/db_export_format" />
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:padding="5dp"
+        android:id="@+id/database_ms_dialog_staticimg_tv"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/database_ms_dialog_export_title_tv"
+        android:text="@string/db_static_images_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center_vertical"
+        android:id="@+id/database_ms_dialog_img_bmp_cbox"
+        android:layout_toRightOf="@+id/database_ms_dialog_staticimg_tv"
+        android:layout_below="@+id/database_ms_dialog_export_title_tv"
+        android:text="BMP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/database_ms_dialog_img_rawdata_cbox"
+        android:layout_toRightOf="@+id/database_ms_dialog_img_bmp_cbox"
+        android:layout_below="@+id/database_ms_dialog_export_title_tv"
+        android:text="@string/review_rawdata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/database_ms_dialog_img_dicom_cbox"
+        android:layout_below="@+id/database_ms_dialog_export_title_tv"
+        android:layout_toRightOf="@+id/database_ms_dialog_img_rawdata_cbox"
+        android:text="DICOM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:padding="5dp"
+        android:id="@+id/database_ms_dialog_clips_tv"
+        android:layout_below="@+id/database_ms_dialog_staticimg_tv"
+        android:text="@string/db_clips_label"
+        android:layout_alignEnd="@+id/database_ms_dialog_staticimg_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/database_ms_dialog_clips_avi_cbox"
+        android:layout_toRightOf="@+id/database_ms_dialog_clips_tv"
+        android:layout_below="@+id/database_ms_dialog_staticimg_tv"
+        android:text="AVI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/database_ms_dialog_clips_rawdata_cbox"
+        android:layout_toRightOf="@+id/database_ms_dialog_img_bmp_cbox"
+        android:layout_below="@+id/database_ms_dialog_staticimg_tv"
+        android:text="@string/review_rawdata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/database_ms_dialog_clips_dicom_cbox"
+        android:layout_toRightOf="@+id/database_ms_dialog_clips_rawdata_cbox"
+        android:layout_below="@+id/database_ms_dialog_staticimg_tv"
+        android:text="DICOM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@id/btn_export_send"
+        android:enabled="true"
+        android:layout_below="@+id/database_ms_dialog_clips_rawdata_cbox"
+        android:layout_alignLeft="@+id/database_ms_dialog_clips_rawdata_cbox"
+        android:text="@string/db_send"  />
+
+</RelativeLayout>
+

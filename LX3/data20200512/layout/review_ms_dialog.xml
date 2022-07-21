@@ -1,0 +1,55 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_screen_bg_full_blue_capture">
+
+    <include
+        android:id="@+id/patient_info_area"
+        layout="@layout/status_bar_top"
+        android:layout_width="@dimen/patient_info_area_width"
+        android:layout_height="@dimen/patient_info_area_height"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/patient_info_field_bg"/>
+
+    <!--TODO 图像区域-->
+   <RelativeLayout
+       android:id="@+id/thumbnail_layout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_marginTop="@dimen/main_screen_gui_bg_line_size"
+       android:layout_marginBottom="@dimen/main_image_hint_area_height"
+       android:layout_centerHorizontal="true"
+       android:layout_below="@id/patient_info_area"
+       android:background="@color/main_screen_gui_bg">
+
+       <edan.am57.bx4.thumbnailarea.CustomRecyclerView
+           android:id="@+id/thumbnail_image_area"
+           android:layout_width="@dimen/review_area_width"
+           android:layout_height="match_parent"
+           android:scrollbars="none"/>
+
+   </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="18dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/patient_info_area"
+        android:layout_toRightOf="@id/thumbnail_layout"
+        android:layout_marginTop="@dimen/main_screen_gui_bg_line_size"
+        android:layout_marginBottom="@dimen/main_image_hint_area_height"
+        android:layout_marginLeft="-18dp"
+        android:background="@color/main_screen_gui_bg">
+
+    <edan.am57.bx4.common.widget.ScrollBar
+        android:id="@+id/thumbnail_image_scrollbar"
+        android:layout_width="@dimen/thumbnail_scrollbar_width"
+        android:layout_height="match_parent"
+        android:background="@color/main_screen_scrollbar_bg"
+        />
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

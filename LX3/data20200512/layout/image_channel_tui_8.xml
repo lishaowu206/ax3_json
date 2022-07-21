@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.image.view.image.ImageGLSurfaceView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ultrasound="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    ultrasound:native_data_channel="image_channel_tui_8"
+    ultrasound:vertex_shader="vertex.sh"
+    ultrasound:frag_shader="frag_texture_volume.sh"
+    ultrasound:texture_number="1"
+    ultrasound:colormap_number="1"
+    ultrasound:pixel_format="GL_LUMINANCE"
+    ultrasound:resource_free= "true">
+    <!--<edan.am57.bx4.image.image.view.ImageGLSurfaceView-->
+    <!--android:id="@+id/image"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--ultrasound:native_data_channel="image_mode_1d_m"/>-->
+</edan.am57.bx4.image.view.image.ImageGLSurfaceView>
+

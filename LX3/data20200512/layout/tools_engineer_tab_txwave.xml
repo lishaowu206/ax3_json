@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@drawable/tools_engineer_layoutborder"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="184dp"
+        android:layout_height="match_parent">
+
+            <Button
+                android:text="B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hard_key_disp_pm_bmode_btn" />
+
+            <Button
+                android:text="PW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hard_key_disp_pm_pwmode_btn" />
+
+            <Button
+                android:text="C"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hard_key_disp_pm_cmode_btn" />
+
+            <Button
+                android:text="M"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hard_key_disp_pm_mmode_btn" />
+
+            <Button
+                android:text="CW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hard_key_disp_pm_cwmode_btn" />
+
+            <Button
+                android:text="AutoRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/auto_refresh_btn" />
+
+            <Button
+                android:text="StopRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/stop_refresh_btn" />
+
+            <Button
+                android:text="WriteTxWave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/write_txWave_btn" />
+
+        </LinearLayout>
+
+
+        <TableLayout
+            android:layout_width="380dp"
+            android:layout_height="match_parent"
+            android:id="@+id/pmModeTableLayout">
+        </TableLayout>
+
+
+        <TableLayout
+            android:layout_width="380dp"
+            android:layout_height="match_parent"
+            android:id="@+id/txWaveTableLayout">
+        </TableLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

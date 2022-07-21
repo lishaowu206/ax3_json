@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/login_user_title_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingStart="18dp"
+        android:background="@drawable/user_title_raduis_background"
+        android:gravity="center_vertical|left"
+        android:text="@string/user_system_login"  />
+
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_marginTop="15dp"
+        android:id="@+id/login_user_current_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="18dp"
+        android:maxLines="3"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/login_emergency_btn"
+        android:layout_below="@+id/login_user_title_id"/>
+
+    <Button
+        android:layout_below="@+id/login_user_title_id"
+        android:id="@+id/login_emergency_btn"
+        style="@style/main_screen_oneshot_button"
+        android:layout_height="35px"
+        android:layout_width="130px"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/user_emergency" />
+    <View
+        android:id="@+id/login_user_center"
+        android:layout_width="200dp"
+        android:layout_height="10dp"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/login_user_name_lable"
+        android:layout_width="wrap_content"
+        android:layout_toStartOf="@+id/login_user_spiner"
+        android:layout_above="@+id/login_user_center"
+        android:layout_marginTop="@dimen/row_margin"
+        android:layout_marginBottom="@dimen/row_margin"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="@dimen/row_margin"
+        android:gravity="center_vertical"
+        android:text="@string/user_username" />
+
+
+    <edan.am57.bx4.common.widget.EDANCustomSpinner
+        android:id="@+id/login_user_spiner"
+        style="@style/general_spinner_style"
+        android:layout_width="300dp"
+        customSpinner:editable="true"
+        customSpinner:editPaddingLeft="8dp"
+        android:maxLength="64"
+        android:background="@drawable/login_edit_background"
+        android:layout_alignStart="@+id/login_user_center"
+        android:layout_above="@+id/login_user_center"/>
+
+    <ImageView
+        android:paddingStart="10dp"
+        android:id="@+id/login_user_login_flg"
+        android:layout_toEndOf="@+id/login_user_spiner"
+        android:layout_width="wrap_content"
+        android:layout_alignTop="@+id/login_user_spiner"
+        android:layout_alignBottom="@+id/login_user_spiner"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:src="@drawable/body_mark_selected"/>
+
+    <TextView
+        style="@style/general_text_style"
+        android:id="@+id/login_passwd_lable"
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/row_margin"
+        android:layout_alignStart="@+id/login_user_name_lable"
+        android:gravity="center_vertical"
+        android:layout_toStartOf="@+id/login_user_spiner"
+        android:layout_below="@+id/login_user_center"
+        android:text="@string/user_password"/>
+
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@+id/login_passwd_input_et"
+        style="@style/general_edit_style"
+        android:layout_width="wrap_content"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:background="@drawable/login_edit_background"
+        android:layout_below="@+id/login_user_center"
+        android:layout_alignStart="@+id/login_user_center"
+        android:layout_alignEnd="@+id/login_user_spiner" />
+
+    <CheckBox
+        android:id="@+id/login_show_password_cb"
+        style="@style/main_screen_checkbox_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:textSize="18px"
+        android:layout_below="@+id/login_passwd_input_et"
+        android:layout_alignStart="@+id/login_user_center"
+        android:text="@string/bottom_status_bar_wireless_show_password" />
+
+
+    <Button
+        android:id="@+id/login_btn"
+        style="@style/main_screen_oneshot_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/login_passwd_input_et"
+        android:layout_marginBottom="50dp"
+        android:text="@string/user_login" />
+
+
+</RelativeLayout>

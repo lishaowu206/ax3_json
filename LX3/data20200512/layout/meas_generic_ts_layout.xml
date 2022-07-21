@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 已经弃用,可以删除 -->
+<edan.am57.bx4.measurement.TsMeasGenericLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/gen_study_view_pager_indicator_content"
+        android:layout_width="860px"
+        android:layout_height="20px"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/gen_calc_meas_view_pager"
+        android:layout_width="860px"
+        android:layout_height="200px"
+        android:layout_marginTop="25px"
+        android:layout_marginBottom="5px"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/measure_ts_padding_left"
+        android:layout_marginEnd="@dimen/measure_ts_padding_right"
+        android:background="@drawable/measure_ms_data_field_normal_bg"/>
+
+    <LinearLayout
+        android:id="@+id/gen_item_view_pager_indicator_content"
+        android:layout_width="860px"
+        android:layout_height="20px"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/gen_calc_meas_view_pager"/>
+
+    <!--常规测量项-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/gen_item_meas_view_pager"
+        android:layout_width="860px"
+        android:layout_height="200px"
+        android:layout_below="@+id/gen_item_view_pager_indicator_content"
+        android:layout_marginTop="5px"
+        android:layout_marginBottom="@dimen/measure_ts_button_spacing_vertical"
+        android:layout_marginStart="@dimen/measure_ts_padding_left"
+        android:layout_marginEnd="@dimen/measure_ts_padding_right"
+        android:background="@drawable/measure_ms_data_field_normal_bg"/>
+
+    <!--工具按钮-->
+    <RelativeLayout
+        android:id="@+id/meas_menu_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/measure_ts_padding_bottom"
+        android:layout_marginLeft="50px"
+        android:layout_toRightOf="@+id/gen_calc_meas_view_pager">
+
+        <ToggleButton
+            android:id="@+id/btn_AppModeOption"
+            style="@style/touch_screen_on_off_button"
+            android:layout_marginTop="35px"
+            android:layout_alignParentTop="true"
+            android:textOff="Measure Application"
+            android:textOn="Measure Application"/>
+
+        <Button
+            android:id="@+id/btn_exit"
+            style="@style/touch_screen_oneshot_button"
+            android:layout_marginTop="@dimen/measure_ts_button_spacing_horizontal"
+            android:layout_below="@+id/btn_AppModeOption"
+            android:text="@string/common_exit"/>
+
+        <Button
+            android:id="@+id/btn_undo"
+            style="@style/touch_screen_oneshot_button"
+            android:layout_marginTop="50px"
+            android:layout_below="@+id/btn_exit"
+            android:text="@string/meas_operation_undo"/>
+
+        <Button
+            android:id="@+id/btn_delete"
+            style="@style/touch_screen_oneshot_button"
+            android:layout_marginTop="@dimen/measure_ts_button_spacing_horizontal"
+            android:layout_below="@+id/btn_undo"
+            android:text="@string/common_delete"/>
+
+
+    </RelativeLayout>
+</edan.am57.bx4.measurement.TsMeasGenericLayout>

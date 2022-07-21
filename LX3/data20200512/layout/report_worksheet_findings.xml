@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/main_screen_big_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/report_worksheet_findings"
+            android:id="@+id/finding_sign_textview"/>
+
+        <TextView
+            style="@style/main_screen_big_text_style"
+            android:text="@string/feature_preset"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="128dp"
+            android:layout_toEndOf="@id/finding_sign_textview"
+            android:id="@+id/preset_tv"
+            android:gravity="center_vertical" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            style="@style/report_spinner_style"
+            android:enabled="false"
+            android:id="@+id/preset_spinner"
+            android:layout_width="160dp"
+            android:textColor="@color/main_screen_text_normal"
+            android:layout_marginTop="12dp"
+            android:layout_height="40dp"
+            android:textSize="22px"
+            android:layout_toEndOf="@id/preset_tv"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:background="@drawable/worksheet_edit_bg"
+        android:layout_marginTop="8dp">
+
+        <edan.am57.bx4.report.widget.VExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:groupIndicator="@null"
+            android:divider="@null"
+            android:listSelector="@color/transparent"
+            android:childDivider="@color/transparent"
+            android:padding="4dp"
+            android:layout_toStartOf="@+id/findings_listview_scrollbar"
+            android:scrollbarSize="0dp"
+            android:scrollbarThumbHorizontal="@color/colorAccent"
+            android:scrollbarTrackVertical="@color/colorAccent"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"/>
+
+        <edan.am57.bx4.common.ViewWithScrollBar.VScrollBar
+            android:background="@color/main_screen_scrollbar_bg"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/findings_listview_scrollbar"
+            android:layout_alignTop="@+id/expandableListView"
+            android:layout_alignBottom="@+id/expandableListView"
+            android:layout_width="@dimen/main_screen_scroll_bg_width"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_height="wrap_content"  />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="300dp">
+
+        <edan.asp.inputmethod.view.ImEditText
+            android:id="@+id/findingsEdit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_toStartOf="@+id/findings_edit_scrollbar"
+            android:background="@drawable/worksheet_edit_bg"
+            android:textSize="22px"
+            android:textColor="@color/main_screen_text_normal"
+            android:gravity="left|top"
+            android:padding="8dp"
+            android:scrollbars="vertical"
+            android:enabled="true"
+            android:focusable="true"
+            android:scrollbarSize="0dp"
+            android:scrollbarThumbHorizontal="@color/colorAccent"
+            android:scrollbarTrackVertical="@color/colorAccent"
+            android:fadeScrollbars="false"
+            android:focusableInTouchMode="true"
+            android:inputType="textMultiLine"
+            android:maxLines="64"/>
+
+        <edan.am57.bx4.common.ViewWithScrollBar.VScrollBar
+            android:layout_alignTop="@+id/findingsEdit"
+            android:layout_alignBottom="@+id/findingsEdit"
+            android:id="@+id/findings_edit_scrollbar"
+            android:layout_width="@dimen/main_screen_scroll_bg_width"
+            android:layout_height="wrap_content"
+            android:background="@color/main_screen_scrollbar_bg"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            style="@style/main_screen_oneshot_button"
+            android:id="@+id/clearAllBtn"
+            android:layout_width="160px"
+            android:layout_height="60px"
+            android:layout_margin="10dp"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:textSize="22px"
+            android:text="@string/common_clear_all" />
+    </RelativeLayout>
+</LinearLayout>

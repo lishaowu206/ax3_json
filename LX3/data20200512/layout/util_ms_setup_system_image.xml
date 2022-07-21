@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/setup_system_image_tab"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/utils_title_image">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="45sp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:alpha="1"
+            android:textStyle="bold"
+            android:text="." />
+
+        <TextView
+            style="@style/main_screen_second_tittle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:text="@string/setup_system_general"/>
+    </RelativeLayout>
+
+
+    <CheckBox
+        android:layout_below="@+id/utils_title_image"
+        style="@style/general_checkbox_style"
+        android:id="@+id/system_image_hide_cbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/setup_system_hide_l177sq_indicator" />
+
+    <CheckBox
+        style="@style/general_checkbox_style"
+        android:id="@+id/system_image_auto_zoom_cbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/system_image_hide_cbox"
+        android:layout_below="@+id/system_image_hide_cbox"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/setup_system_auto_zoom_shallow_depth"/>
+
+    <CheckBox
+        style="@style/general_checkbox_style"
+        android:id="@+id/system_image_freq_point_cbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/system_image_hide_cbox"
+        android:layout_below="@+id/system_image_auto_zoom_cbox"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/setup_system_image_freq_point"/>
+
+    <TextView
+        android:layout_marginStart="35dp"
+        style="@style/general_text_style"
+        android:id="@+id/system_general_scaleunit_label"
+        android:layout_width="200dp"
+        android:layout_below="@+id/system_image_freq_point_cbox"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@+id/system_general_scaleunit_spinner"
+        android:layout_alignBottom="@+id/system_general_scaleunit_spinner"
+        android:text="@string/setup_system_scaleuint" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:layout_marginTop="10dp"
+        style="@style/general_spinner_style"
+        android:id="@+id/system_general_scaleunit_spinner"
+        android:layout_toEndOf="@+id/system_general_scaleunit_label"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/system_image_freq_point_cbox"
+        android:layout_marginStart="35dp"
+        customSpinner:entries="@array/system_scaleunit_array"/>
+
+    <TextView
+        android:layout_marginStart="35dp"
+        style="@style/general_text_style"
+        android:id="@+id/system_general_default_zoom_label"
+        android:layout_width="200dp"
+        android:layout_below="@+id/system_general_scaleunit_label"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@+id/system_general_default_zoom_spinner"
+        android:layout_alignBottom="@+id/system_general_default_zoom_spinner"
+        android:text="@string/setup_system_defaultzoom" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:layout_marginTop="10dp"
+        style="@style/general_spinner_style"
+        android:id="@+id/system_general_default_zoom_spinner"
+        android:layout_toEndOf="@+id/system_general_default_zoom_label"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/system_general_scaleunit_label"
+        android:layout_marginStart="35dp"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/system_general_default_zoom_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/utils_title_onekeyopt">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="45sp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:alpha="1"
+            android:textStyle="bold"
+            android:text="." />
+
+        <TextView
+            style="@style/main_screen_second_tittle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/setup_system_auto" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/utils_title_onekeyopt"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:id="@+id/utils_title_pw_mode">
+
+        <TextView
+            style="@style/main_screen_second_tittle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:layout_marginBottom="10dp"
+            android:text="@string/setup_system_pw_mode" />
+
+        <CheckBox
+            style="@style/general_checkbox_style"
+            android:id="@+id/system_image_pw_gain_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/setup_system_pw_gain" />
+
+        <CheckBox
+            style="@style/general_checkbox_style"
+            android:id="@+id/system_image_pw_dr_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/setup_system_pw_dr" />
+
+        <CheckBox
+            style="@style/general_checkbox_style"
+            android:id="@+id/system_image_pw_baseline_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/setup_system_pw_baseline" />
+
+    </LinearLayout>
+
+    <!--TODO color auto 布局-->
+    <LinearLayout
+        android:layout_toEndOf="@+id/utils_title_pw_mode"
+        android:layout_below="@+id/utils_title_onekeyopt"
+        android:layout_width="300dp"
+        android:layout_marginStart="35dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/utils_title_color_mode">
+
+        <TextView
+            style="@style/main_screen_second_tittle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/setup_system_color_mode" />
+        <CheckBox
+            style="@style/general_checkbox_style"
+            android:id="@+id/system_image_color_gain_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/setup_system_pw_gain" />
+
+        <CheckBox
+            style="@style/general_checkbox_style"
+            android:id="@+id/system_image_colo_dr_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/setup_system_pw_dr" />
+
+        <CheckBox
+            style="@style/general_checkbox_style"
+            android:id="@+id/system_image_colo_baseline_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/setup_system_pw_baseline" />
+
+    </LinearLayout>
+
+</RelativeLayout>

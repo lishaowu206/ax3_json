@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:EditRegion="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_screen_tab_content_bg"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!--第一行 第1列-->
+    <View
+        android:id="@+id/column_1_title"
+        android:layout_width="195dp"
+        android:layout_height="1dp"
+        android:visibility="invisible"/>
+
+    <View
+        android:id="@+id/column_1_value"
+        android:layout_width="190dp"
+        android:layout_height="1dp"
+        android:layout_toEndOf="@+id/column_1_title"/>
+
+    <!--第2列-->
+    <View
+        android:id="@+id/column_2_title"
+        android:layout_width="195dp"
+        android:layout_height="1dp"
+        android:layout_toEndOf="@+id/column_1_value"/>
+
+    <View
+        android:id="@+id/column_2_value"
+        android:layout_width="190dp"
+        android:layout_height="1dp"
+        android:layout_toEndOf="@+id/column_2_title"/>
+
+    <!--第3列-->
+    <View
+        android:id="@+id/column_3_title"
+        android:layout_width="195dp"
+        android:layout_height="1dp"
+        android:layout_toEndOf="@+id/column_2_value"/>
+
+    <View
+        android:id="@+id/column_3_value"
+        android:layout_width="190dp"
+        android:layout_height="1dp"
+        android:layout_toEndOf="@+id/column_3_title"/>
+
+    <!--第一行 第1列-->
+    <TextView
+        android:id="@id/tv_gender_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_below="@+id/column_1_title"
+        android:text="@string/common_gender"/>
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@id/cs_gender"
+        style="@style/general_spinner_style"
+        android:layout_width="190dp"
+        android:layout_below="@+id/column_1_title"
+        android:layout_toEndOf="@+id/tv_gender_label"/>
+
+    <!--第2列-->
+    <TextView
+        android:id="@+id/paitient_preset_species_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_below="@+id/column_1_title"
+        android:layout_toEndOf="@+id/cs_gender"
+        android:text="@string/common_species"
+        android:gravity="center_horizontal"/>
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/paitient_preset_species_spinner"
+        style="@style/general_spinner_style"
+        android:layout_width="190dp"
+        android:layout_below="@+id/column_1_title"
+        android:layout_toEndOf="@+id/paitient_preset_species_label"
+        customSpinner:entries="@array/species_array"/>
+
+
+    <!--第3列-->
+    <TextView
+        android:id="@+id/paitient_preset_neutered_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_below="@+id/column_1_title"
+        android:layout_toEndOf="@+id/paitient_preset_species_spinner"
+        android:text="@string/common_neutered"
+        android:gravity="center_horizontal"/>
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/paitient_preset_neutered_spinner"
+        style="@style/general_spinner_style"
+        android:layout_width="190dp"
+        android:layout_below="@+id/column_1_title"
+        android:layout_toEndOf="@+id/paitient_preset_neutered_label"
+        customSpinner:entries="@array/neutered_array"/>
+
+    <!--第二行 第1列-->
+    <TextView
+        android:id="@id/tv_lmp_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_below="@+id/tv_gender_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/common_lmp" />
+
+    <edan.am57.bx4.common.widget.datatime.DatePickerView
+        android:id="@id/et_lmp"
+        style="@style/general_edit_style"
+        android:layout_width="190dp"
+        android:layout_below="@+id/tv_gender_label"
+        android:layout_toEndOf="@+id/tv_lmp_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        tools:hint="01/01/1900" />
+
+    <!--第二行 第2列-->
+    <TextView
+        android:id="@id/tv_ga_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_below="@+id/tv_gender_label"
+        android:layout_toEndOf="@+id/et_lmp"
+        android:gravity="center_horizontal"
+        android:text="@string/common_ga" />
+
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@id/et_ga"
+        style="@style/general_edit_style"
+        android:layout_width="190dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_gender_label"
+        android:layout_toEndOf="@+id/tv_ga_label"
+        android:editable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+    <!--第二行 第3列-->
+    <TextView
+        android:id="@id/tv_edd_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_toEndOf="@+id/et_ga"
+        android:layout_below="@+id/tv_gender_label"
+        android:gravity="center_horizontal"
+        android:text="@string/common_edd" />
+
+    <edan.am57.bx4.common.widget.datatime.DatePickerView
+        android:id="@id/et_edd"
+        style="@style/general_edit_style"
+        android:layout_width="190dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_gender_label"
+        android:layout_toEndOf="@+id/tv_edd_label"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        tools:hint="01/01/1900" />
+
+    <!--第三行 第1列-->
+    <TextView
+        android:id="@id/tv_gpa_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_below="@+id/tv_lmp_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/common_gpa" />
+
+    <LinearLayout
+        android:id="@id/ll_gpa"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/tv_gpa_label"
+        android:layout_below="@+id/tv_lmp_label">
+        <!--30dp是因为平分这一列宽度，这一列宽度为100dp，应该根据后期再做修改-->
+        <edan.asp.inputmethod.view.ImEditText
+            android:id="@id/et_gpa_g"
+            style="@style/general_edit_style"
+            android:layout_width="@dimen/patient_ms_gpa_width"
+            android:layout_weight="1"
+            android:digits="0987654321"
+            android:inputType="number"
+            android:maxLength="2" />
+        <!--/ 可以用图片代替-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="/" />
+
+        <edan.asp.inputmethod.view.ImEditText
+            android:id="@id/et_gpa_p"
+            style="@style/general_edit_style"
+            android:layout_width="@dimen/patient_ms_gpa_width"
+            android:layout_weight="1"
+            android:digits="0987654321"
+            android:inputType="number"
+            android:maxLength="2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="/" />
+
+        <edan.asp.inputmethod.view.ImEditText
+            android:id="@id/et_gpa_a"
+            style="@style/general_edit_style"
+            android:layout_width="@dimen/patient_ms_gpa_width"
+            android:layout_weight="1"
+            android:digits="0987654321"
+            android:inputType="number"
+            android:maxLength="2" />
+
+    </LinearLayout>
+
+    <!--第三行 第3列-->
+    <TextView
+        android:id="@id/tv_fetus_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/ll_gpa"
+        android:layout_below="@+id/tv_lmp_label"
+        android:gravity="center_horizontal"
+        android:text="@string/common_fetus" />
+
+    <!--第三行 第4列-->
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@id/cs_fetus"
+        style="@style/general_spinner_style"
+        android:layout_width="190dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/tv_fetus_label"
+        android:layout_below="@+id/tv_lmp_label"
+        customSpinner:entries="@array/fetus_array"/>
+
+    <!--第四行-第1列-->
+    <TextView
+        android:id="@id/tv_height_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_gpa_label"
+        android:text="@string/common_height" />
+    <!-- 第2列-->
+
+    <LinearLayout
+        android:id="@+id/layout_height_group"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_gpa_label"
+        android:layout_toEndOf="@+id/tv_height_label">
+        <!--50dp是因为平分这一列宽度，这一列宽度为100dp，应该根据后期再做修改-->
+        <edan.am57.bx4.common.widget.RegionNumberEditText
+            android:id="@id/et_height"
+            style="@style/general_edit_style"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:digits="0987654321"
+            EditRegion:MaxNumber="299"
+            EditRegion:MinNumber="0" />
+
+        <!--/ 可以用图片代替-->
+        <TextView
+            android:id="@+id/patient_info_height_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="/" />
+
+        <edan.am57.bx4.common.widget.RegionNumberEditText
+            android:id="@id/et_height_extend"
+            style="@style/general_edit_style"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            EditRegion:MaxNumber="11"
+            EditRegion:MinNumber="0"
+            android:digits="0987654321"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@id/tv_height_unit"
+            style="@style/general_text_style"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignBottom="@+id/et_height_extend"
+            android:layout_width="65dp"
+            android:gravity="center"
+            android:text="cm" />
+    </LinearLayout>
+
+    <!--第3列-->
+    <TextView
+        android:id="@id/tv_weight_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignBaseline="@+id/tv_height_label"
+        android:layout_toEndOf="@+id/layout_height_group"
+        android:layout_below="@+id/tv_gpa_label"
+        android:gravity="center_horizontal"
+        android:text="@string/common_weight" />
+
+    <!-- 第4列-->
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@id/et_weight"
+        style="@style/general_edit_style"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_gpa_label"
+        android:layout_alignBaseline="@+id/tv_height_label"
+        android:layout_toEndOf="@+id/tv_weight_label"
+        android:layout_width="140dp"
+        android:digits=".0987654321"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@id/tv_weight_unit"
+        style="@style/general_text_style"
+        android:layout_width="50dp"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_gpa_label"
+        android:layout_alignBaseline="@+id/tv_height_label"
+        android:layout_toEndOf="@+id/et_weight"
+        android:text="Kg" />
+
+    <!--第5列-->
+    <TextView
+        android:id="@id/tv_bsa_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignBaseline="@+id/tv_height_label"
+        android:layout_toEndOf="@+id/tv_weight_unit"
+        android:layout_below="@+id/tv_gpa_label"
+        android:gravity="center_horizontal"
+        android:text="@string/common_bsam2" />
+
+    <!-- 第6列-->
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@id/et_bsa"
+        style="@style/general_edit_style"
+        android:layout_width="190dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignBaseline="@+id/tv_height_label"
+        android:layout_toEndOf="@+id/tv_bsa_label"
+        android:layout_below="@+id/tv_gpa_label"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <!--第五行-第1列-->
+    <TextView
+        android:id="@id/tv_bp_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_bsa_label"
+        android:text="@string/common_bp" />
+
+    <!--第2列-->
+    <LinearLayout
+        android:id="@id/ll_bp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_bsa_label"
+        android:layout_toEndOf="@+id/tv_bp_label"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content">
+        <!--50dp是因为平分这一列宽度，这一列宽度为100dp，应该根据后期再做修改-->
+        <edan.asp.inputmethod.view.ImEditText
+            android:id="@id/et_bp_b"
+            style="@style/general_edit_style"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:digits="0987654321"
+            android:maxLength="3" />
+        <!--/ 可以用图片代替-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="/" />
+
+        <edan.asp.inputmethod.view.ImEditText
+            android:id="@id/et_bp_p"
+            style="@style/general_edit_style"
+            android:layout_weight="1"
+            android:digits="0987654321"
+            android:inputType="number"
+            android:maxLength="3"/>
+
+    </LinearLayout>
+
+    <!--第3列-->
+    <TextView
+        android:id="@id/tv_hr_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignBaseline="@+id/tv_bp_label"
+        android:layout_toEndOf="@+id/ll_bp"
+        android:layout_below="@+id/tv_bsa_label"
+        android:gravity="center_horizontal"
+        android:text="@string/common_hr"  />
+
+    <!-- 第4列-->
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@id/et_hr"
+        style="@style/general_edit_style"
+        android:layout_width="190dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignBaseline="@+id/tv_bp_label"
+        android:layout_below="@+id/tv_bsa_label"
+        android:layout_toEndOf="@+id/tv_hr_label"
+        android:digits="0987654321"
+        android:inputType="number"
+        android:maxLength="3" />
+
+
+    <!--第六行-第1列-->
+    <!--第1列-->
+    <TextView
+        android:id="@id/tv_psa_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_hr_label"
+        android:text="@string/common_psa"  />
+
+    <!--第2列-->
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@id/et_psa"
+        style="@style/general_edit_style"
+        android:layout_width="190dp"
+        android:layout_alignBaseline="@+id/tv_psa_label"
+        android:layout_below="@+id/tv_hr_label"
+        android:layout_toEndOf="@+id/tv_psa_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:digits="0987654321"
+        android:inputType="number"
+        android:maxLength="6" />
+
+    <!--第3列-->
+    <TextView
+        android:id="@id/tv_ppsa_label"
+        style="@style/general_text_style"
+        android:layout_width="250dp"
+        android:layout_alignBaseline="@+id/tv_psa_label"
+        android:layout_below="@+id/tv_hr_label"
+        android:layout_alignEnd="@id/column_3_title"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="@string/common_ppsa" />
+
+    <!-- 第4列-->
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@id/et_ppsa"
+        style="@style/general_edit_style"
+        android:layout_width="190dp"
+        android:layout_alignBaseline="@+id/tv_psa_label"
+        android:layout_below="@+id/tv_hr_label"
+        android:layout_alignStart="@+id/column_3_value"
+        android:layout_alignEnd="@id/column_3_value"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:digits="0987654321"
+        android:inputType="number"
+        android:maxLength="6" />
+
+
+    <!--第七行-->
+    <!--第1列-->
+    <TextView
+        android:id="@id/tv_study_decription_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_below="@+id/tv_psa_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/common_study_description" />
+
+    <!--第2列-->
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@id/et_study_description"
+        style="@style/general_edit_style"
+        android:layout_alignEnd="@+id/column_2_value"
+        android:layout_below="@+id/tv_psa_label"
+        android:layout_toEndOf="@+id/tv_study_decription_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:maxLength="64" />
+
+    <!--第八行-->
+    <!--第1列-->
+    <TextView
+        android:id="@id/tv_cpt_code_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_below="@+id/tv_psa_label"
+        android:layout_toEndOf="@+id/et_study_description"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="@string/common_cpt_code" />
+
+    <!--第2列-->
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@id/et_cpt_code"
+        style="@style/general_edit_style"
+        android:layout_width="190dp"
+        android:layout_below="@+id/tv_psa_label"
+        android:layout_toEndOf="@+id/tv_cpt_code_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:maxLength="80"/>
+
+    <!--第九行-->
+    <!--第1列-->
+    <TextView
+        android:id="@id/tv_ref_physician_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_below="@+id/tv_study_decription_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/common_ref_physician" />
+
+    <!--第2列-->
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@id/cs_ref_physician"
+        style="@style/general_spinner_style"
+        android:layout_width="190dp"
+        android:layout_toEndOf="@+id/tv_ref_physician_label"
+        android:layout_below="@+id/tv_study_decription_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:maxLength="64"
+        customSpinner:editable="true"
+        customSpinner:entries="@array/demo_array"/>
+
+    <!--第十行-->
+    <!--第1列-->
+    <TextView
+        android:id="@id/tv_dx_physician_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_ref_physician_label"
+        android:text="@string/common_dx_physician" />
+
+    <!--第2列-->
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@id/cs_dx_physician"
+        style="@style/general_spinner_style"
+        android:layout_width="190dp"
+        android:layout_toEndOf="@+id/tv_dx_physician_label"
+        android:layout_below="@+id/tv_ref_physician_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:maxLength="64"
+        android:inputType="text"
+        customSpinner:editable="true"
+        customSpinner:entries="@array/demo_array" />
+
+    <!--第十一行-->
+    <!--第1列-->
+    <TextView
+        android:id="@id/tv_operator_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_dx_physician_label"
+        android:text="@string/common_operator" />
+
+    <!--第2列-->
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@id/cs_operator"
+        style="@style/general_spinner_style"
+        android:layout_width="190dp"
+        android:layout_toEndOf="@+id/tv_operator_label"
+        android:layout_below="@+id/tv_dx_physician_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:maxLength="64"
+        customSpinner:editable="true"
+        customSpinner:entries="@array/demo_array" />
+
+    <!--第十二行-->
+    <!--第1列-->
+    <TextView
+        android:id="@id/tv_custom_field1_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_operator_label"
+        tools:text="custom field1" />
+
+    <!--第2列-->
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@id/et_custom_field1"
+        style="@style/general_edit_style"
+        android:layout_alignStart="@+id/column_1_value"
+        android:layout_alignEnd="@+id/column_2_value"
+        android:layout_below="@+id/tv_operator_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:maxLength="80" />
+
+    <!--第十三行-->
+    <!--第1列-->
+    <TextView
+        android:id="@id/tv_custom_field2_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_custom_field1_label"
+        tools:text="custom field2" />
+
+    <!--第2列-->
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@id/et_custom_field2"
+        style="@style/general_edit_style"
+        android:layout_alignStart="@+id/column_1_value"
+        android:layout_alignEnd="@+id/column_2_value"
+        android:layout_below="@+id/tv_custom_field1_label"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:maxLength="80"/>
+
+    <!--第十四u行-->
+    <!--第1列-->
+    <TextView
+        android:id="@id/tv_comments_label"
+        style="@style/general_text_style"
+        android:layout_width="195dp"
+        android:visibility="gone"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_custom_field2_label"
+        android:text="@string/common_comments" />
+
+    <!--第2列-->
+    <!--<edan.asp.inputmethod.view.ImEditText-->
+        <!--android:id="@id/et_comments"-->
+        <!--style="@style/general_edit_style"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:gravity="top"-->
+        <!--android:layout_alignEnd="@+id/paitient_preset_neutered_spinner"-->
+        <!--android:layout_alignStart="@+id/cs_gender"-->
+        <!--android:layout_below="@+id/tv_custom_field2_label"-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:maxLength="1024"-->
+        <!--android:visibility="gone"-->
+        <!--android:inputType="textMultiLine"-->
+        <!--android:scrollbarSize="0dp"-->
+        <!--android:scrollbarThumbHorizontal="@color/colorAccent"-->
+        <!--android:scrollbarTrackVertical="@color/colorAccent"-->
+        <!--android:scrollbars="vertical"-->
+        <!--android:fadeScrollbars="true"-->
+        <!--android:maxLines="64"/>-->
+
+    <!--<edan.am57.bx4.common.ViewWithScrollBar.VScrollBar-->
+        <!--android:id="@+id/et_comments_vscroll"-->
+        <!--android:background="@color/main_screen_scrollbar_bg"-->
+        <!--android:layout_toEndOf="@+id/et_comments"-->
+        <!--android:layout_alignTop="@+id/et_comments"-->
+        <!--android:layout_alignBottom="@+id/et_comments"-->
+        <!--android:layout_width="@dimen/main_screen_scroll_bg_width"-->
+        <!--android:layout_marginLeft="2dp"-->
+        <!--android:layout_marginRight="2dp"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--第2列-->
+    <edan.am57.bx4.common.ViewWithScrollBar.VScrollEditText
+        android:id="@id/et_comments"
+        style="@style/general_edit_style"
+        android:layout_width="wrap_content"
+        android:gravity="top"
+        android:layout_alignStart="@+id/column_1_value"
+        android:layout_toStartOf="@+id/et_comments_vscroll"
+        android:layout_below="@+id/tv_custom_field2_label"
+        android:layout_marginBottom="5dp"
+        android:minWidth="955dp"
+        android:maxWidth="955dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="150dp"
+        android:maxLength="1024"
+        android:inputType="textMultiLine"
+        android:scrollbarSize="0dp"
+        android:scrollbarThumbHorizontal="@color/colorAccent"
+        android:scrollbarTrackVertical="@color/colorAccent"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:maxLines="64"/>
+
+    <edan.am57.bx4.common.ViewWithScrollBar.VScrollBar
+        android:id="@+id/et_comments_vscroll"
+        android:background="@color/main_screen_scrollbar_bg"
+        android:layout_alignEnd="@+id/column_3_value"
+        android:layout_alignTop="@+id/et_comments"
+        android:layout_alignBottom="@+id/et_comments"
+        android:layout_width="@dimen/main_screen_scroll_bg_width"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

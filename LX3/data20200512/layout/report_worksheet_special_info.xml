@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="4dp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/utils_title_report_logo">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="45sp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:alpha="1"
+            android:textStyle="bold"
+            android:text="." />
+
+        <TextView
+            style="@style/main_screen_second_tittle_style"
+            android:id="@+id/title_measure_mode_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:textSize="22px"
+            android:text="@string/report_worksheet_2d_measurements"/>
+    </RelativeLayout>
+
+    <!--<TextView-->
+        <!--style="@style/main_screen_text_style"-->
+        <!--android:id="@+id/title_measure_mode_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/report_worksheet_2d_measurements"/>-->
+
+    <include layout="@layout/report_worksheet_ob_fetus2d_head"/>
+
+</LinearLayout>

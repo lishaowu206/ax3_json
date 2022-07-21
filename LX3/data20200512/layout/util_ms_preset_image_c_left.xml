@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="530dp"
+    android:layout_height="match_parent"
+    android:layout_alignParentEnd="true"
+    android:background="@color/main_screen_tab_content_bg"
+    android:paddingBottom="20dp"
+    android:paddingEnd="40dp"
+    android:paddingStart="20dp"
+    android:paddingTop="20dp">
+
+    <TextView
+        style="@style/utility_preset_image_text"
+        android:layout_alignBottom="@+id/preset_c_flow_type_spinner"
+        android:text="@string/para_flow_type" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/preset_c_flow_type_spinner"
+        style="@style/utility_preset_image_spinner"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="30dp"
+        customSpinner:entries="@array/image_preset_flow_type_options" />
+
+    <TextView
+        android:id="@+id/preset_c_invert_text"
+        style="@style/utility_preset_image_text"
+        android:layout_alignBottom="@+id/preset_c_invert_check"
+        android:text="@string/para_invert" />
+
+    <CheckBox
+        android:id="@+id/preset_c_invert_check"
+        style="@style/utility_preset_image_check_box"
+        android:layout_alignStart="@+id/preset_c_flow_type_spinner"
+        android:layout_below="@+id/preset_c_flow_type_spinner" />
+
+    <TextView
+        android:id="@+id/preset_c_baseline_text"
+        style="@style/utility_preset_image_text"
+        android:layout_alignBottom="@+id/preset_c_baseline_spinner"
+        android:text="@string/para_baseline" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/preset_c_baseline_spinner"
+        style="@style/utility_preset_image_spinner"
+        android:layout_alignStart="@+id/preset_c_flow_type_spinner"
+        android:layout_below="@+id/preset_c_invert_check" />
+
+    <TextView
+        style="@style/utility_preset_image_text"
+        android:layout_alignBottom="@+id/preset_c_color_map_spinner"
+        android:text="@string/para_c_color_map_full" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/preset_c_color_map_spinner"
+        style="@style/utility_preset_image_spinner"
+        android:layout_alignStart="@+id/preset_c_flow_type_spinner"
+        android:layout_below="@+id/preset_c_baseline_spinner" />
+
+    <TextView
+        android:id="@+id/preset_c_steer_text"
+        style="@style/utility_preset_image_text"
+        android:layout_alignBottom="@+id/preset_c_steer_spinner"
+        android:text="@string/para_steer_angle" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/preset_c_steer_spinner"
+        style="@style/utility_preset_image_spinner"
+        android:layout_alignStart="@+id/preset_c_flow_type_spinner"
+        android:layout_below="@+id/preset_c_color_map_spinner" />
+
+    <TextView
+        style="@style/utility_preset_image_text"
+        android:layout_alignBottom="@+id/preset_c_mode_type_spinner"
+        android:text="@string/para_c_mode_type" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/preset_c_mode_type_spinner"
+        style="@style/utility_preset_image_spinner"
+        android:layout_alignStart="@+id/preset_c_flow_type_spinner"
+        android:layout_below="@+id/preset_c_steer_spinner"
+        customSpinner:entries="@array/image_preset_c_mode_type_options" />
+</RelativeLayout>

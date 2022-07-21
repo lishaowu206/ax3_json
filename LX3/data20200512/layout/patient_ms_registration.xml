@@ -1,0 +1,208 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_screen_bg_full_blue_ver_line"
+    android:fitsSystemWindows="true"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+    android:layout_width="@dimen/main_screen_gui_bg_left_line_left"
+    android:layout_height="@dimen/main_screen_gui_bg_top_line_top"
+        android:id="@+id/patient_ms_worklist_title1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="45sp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:alpha="1"
+            android:textStyle="bold"
+            android:text="." />
+
+        <TextView
+            style="@style/main_screen_second_tittle_style"
+            android:id="@+id/patient_ms_worklist_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/main_screen_util_text_normal"
+            android:text="@string/patient_modality_worklist"/>
+    </RelativeLayout>
+    <!--<TextView-->
+        <!--android:id="@+id/patient_ms_points"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="45sp"-->
+        <!--android:textColor="@color/main_screen_util_text_normal"-->
+        <!--android:alpha="1"-->
+        <!--android:textStyle="bold"-->
+        <!--android:text="." />-->
+
+    <!--<TextView-->
+        <!--style="@style/main_screen_big_text_style"-->
+        <!--android:id="@+id/patient_ms_worklist_title"-->
+        <!--android:layout_width="@dimen/main_screen_gui_bg_left_line_left"-->
+        <!--android:layout_height="@dimen/main_screen_gui_bg_top_line_top"-->
+        <!--android:layout_toRightOf="@+id/patient_ms_points"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:padding="10dp"-->
+        <!--android:text="@string/patient_modality_worklist"/>-->
+
+    <RelativeLayout
+        android:id="@+id/patient_ms_registration_worklist_content"
+        android:layout_width="@dimen/patient_ms_worklist_width"
+        android:layout_height="@dimen/patient_ms_worklist_height"
+        android:layout_below="@+id/patient_ms_worklist_title1"
+        android:padding="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ms_patient_grey_frame_bg">
+
+        <include
+            layout="@layout/patient_ms_registration_worklist_item"
+            android:id="@+id/worklist_list_head_item"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/main_screen_listview_head_bg"/>
+
+        <edan.am57.bx4.common.ViewWithScrollBar.ArrowScrollListView
+            style="@style/main_screen_list_view_style"
+            android:id="@+id/rv_worklist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/worklist_list_head_item"
+            android:divider="#5c5c5c"
+            android:dividerHeight="1dp"
+            android:fadeScrollbars="false"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"/>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/worklist_progress_bar"
+            android:layout_centerInParent="true"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/patient_ms_worklist_oper_layout"
+        android:layout_width="@dimen/main_screen_gui_bg_left_line_left"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/patient_ms_registration_worklist_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:id="@+id/btn_hide"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:text="@string/common_hide_list"/>
+
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:id="@+id/btn_update"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:text="@string/common_update"/>
+
+        <RelativeLayout
+            android:id="@+id/patient_ms_registration_filter_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/patient_ms_worklist_filter_tv"
+                style="@style/general_text_style"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/db_filter" />
+
+            <edan.asp.inputmethod.view.ImEditText
+                style="@style/general_edit_style"
+                android:id="@+id/patient_ms_worklist_filter_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/patient_ms_worklist_filter_tv"
+                tools:text="" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <TextClock
+        style="@style/main_screen_big_text_style"
+        android:id="@+id/tv_date_time"
+        android:layout_width="@dimen/capture_area_width"
+        android:layout_height="@dimen/main_screen_gui_bg_top_line_top"
+        android:layout_toRightOf="@+id/patient_ms_worklist_title1"
+        android:gravity="end|center_vertical"
+        android:minHeight="45dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:format12Hour="yyyy/MM/dd hh:mm:ss a"
+        android:format24Hour="yyyy/MM/dd HH:mm:ss"/>
+
+    <RelativeLayout
+        android:id="@+id/patient_ms_exit_area"
+        android:layout_toRightOf="@+id/patient_ms_worklist_title1"
+        android:layout_below="@+id/tv_date_time"
+        android:layout_width="@dimen/capture_area_width"
+        android:layout_height="@dimen/capture_area_height_except_top_area"
+        android:layout_gravity="center"
+        android:paddingTop="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="0dp">
+
+        <include
+            android:id="@+id/patient_ms_registration_non_include"
+            layout="@layout/patient_ms_registration_non_preset"
+            android:layout_width="@dimen/capture_area_width"
+            android:layout_height="@dimen/patient_ms_none_preset_height"
+            android:layout_centerHorizontal="true" />
+
+        <RadioGroup
+            android:id="@+id/patient_registration_tab_rg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/patient_ms_preset_title_height"
+            android:layout_below="@+id/patient_ms_registration_non_include"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"/>
+
+        <include
+            android:id="@+id/patient_ms_registration_preset_include"
+            layout="@layout/patient_ms_registration_preset"
+            android:layout_width="@dimen/capture_area_width"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/patient_registration_tab_rg"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/patient_ms_registration_oprate"
+        android:layout_toRightOf="@+id/patient_ms_worklist_title1"
+        android:layout_below="@+id/patient_ms_exit_area"
+        android:layout_width="@dimen/capture_area_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

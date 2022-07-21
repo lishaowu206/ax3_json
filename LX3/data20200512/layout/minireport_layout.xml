@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--主界面mini report区域布局,包括检查名称标题,Fetus子标题和测量结果-->
+<LinearLayout
+    android:id="@+id/minireport"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="1029dp"
+    android:background="@color/measure_mini_report_area_bg"
+    android:orientation="vertical">
+
+    <!--检查名称-->
+    <TextView
+        android:id="@+id/tv_report_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/patient_info_area_height"
+        android:gravity="center_vertical|left"
+        android:layout_marginRight="1dp"
+        android:paddingLeft="8dp"
+        android:background="@color/measure_mini_report_exam_name_bg"
+        android:textColor="@color/main_screen_text_normal"
+        android:textSize="@dimen/measure_ms_mini_report_title_text_size"/>
+
+    <LinearLayout
+        android:id="@+id/ll_sub_title_zone"
+        android:layout_width="match_parent"
+        android:divider="@drawable/main_screen_tab_indicator_divider"
+        android:background="@color/measure_mini_report_fetus_tap_bg"
+        android:layout_height="@dimen/measure_ms_mini_report_sub_title_height"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal"
+        android:visibility="gone"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/mini_report_result_content"
+        android:padding="1dp"
+        />
+
+
+
+</LinearLayout>

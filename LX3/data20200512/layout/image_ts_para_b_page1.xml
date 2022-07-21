@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:continuous="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <edan.am57.bx4.common.widget.GridRadioGroup
+        android:id="@+id/b_image_type_grp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/image_ts_padding_left_exclude_group"
+        android:layout_marginEnd="@dimen/image_ts_button_spacing_horizontal_exclude_group"
+        android:background="@drawable/touch_screen_radio_group"
+        android:columnCount="2"
+        android:padding="@dimen/touch_screen_button_group_padding"
+        android:rowCount="2">
+
+        <RadioButton
+            android:id="@+id/bmode_details_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:checked="true"
+            android:text="@string/para_b_details"/>
+
+        <RadioButton
+            android:id="@+id/bmode_general_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="0"
+            android:layout_marginTop="@dimen/image_ts_button_spacing_vertical"
+            android:layout_row="1"
+            android:text="@string/para_b_general"/>
+        <RadioButton
+            android:id="@+id/bmode_penetratio_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="1"
+            android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal"
+            android:layout_marginTop="@dimen/image_ts_button_spacing_vertical"
+            android:layout_row="1"
+            android:text="@string/para_b_penetration"/>
+    </edan.am57.bx4.common.widget.GridRadioGroup>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/bmode_freq_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/image_ts_padding_sliders_left"
+        continuous:label="@string/para_frequency"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/bmode_fnum_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/bmode_freq_slider"
+        continuous:label="@string/para_b_focus_num"
+        continuous:maxvalue="4"
+        continuous:minvalue="1"
+        continuous:step="1"
+        continuous:type="number">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/bmode_fpos_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/bmode_fnum_slider"
+        continuous:resource="@layout/widget_arrow_slider"
+        continuous:inverse="true"
+        continuous:label="@string/para_focus_position"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/bmode_persist_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_big"
+        android:layout_toEndOf="@+id/bmode_fpos_slider"
+        continuous:adapter="@array/persist_options"
+        continuous:label="@string/para_b_persist"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/bmode_esri_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/bmode_persist_slider"
+        continuous:adapter="@array/esri_options"
+        continuous:label="@string/para_b_esri"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/bmode_dr_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/bmode_esri_slider"
+        continuous:label="@string/para_dynamic_range"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/bmode_tint_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_big"
+        android:layout_toEndOf="@+id/bmode_dr_slider"
+        continuous:adapter="@array/tint_options"
+        continuous:label="@string/para_tint"
+        continuous:type="adapter"
+        continuous:wrapped="true">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/bmode_map_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/bmode_tint_slider"
+        continuous:label="@string/para_gray_map"
+        continuous:maxvalue="19"
+        continuous:minvalue="0"
+        continuous:step="1"
+        continuous:type="number">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/bmode_power_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/bmode_map_slider"
+        continuous:adapter="@array/acoustic_power_options"
+        continuous:label="@string/para_acoustic_power"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <ToggleButton
+        android:id="@+id/bmode_spaticalcomp_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/touch_screen_button_group_padding"
+        android:layout_toEndOf="@+id/b_image_type_grp"
+        android:textOff="@string/para_b_spatial_comp"
+        android:textOn="@string/para_b_spatial_comp"/>
+
+    <ToggleButton
+        android:id="@+id/bmode_harmonic_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignStart="@+id/bmode_spaticalcomp_tbn"
+        android:layout_below="@+id/bmode_spaticalcomp_tbn"
+        android:layout_marginTop="@dimen/image_ts_button_spacing_vertical"
+        android:textOff="@string/para_b_harmonic"
+        android:textOn="@string/para_b_harmonic"/>
+
+    <ToggleButton
+        android:id="@+id/bmode_trapezoid_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/bmode_spaticalcomp_tbn"
+        android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal"
+        android:layout_toEndOf="@+id/bmode_spaticalcomp_tbn"
+        android:textOff="@string/para_b_trapezoid"
+        android:textOn="@string/para_b_trapezoid"/>
+
+    <ToggleButton
+        android:id="@+id/bmode_colorzie_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignStart="@+id/bmode_trapezoid_tbn"
+        android:layout_below="@+id/bmode_trapezoid_tbn"
+        android:layout_marginTop="@dimen/image_ts_button_spacing_vertical"
+        android:textOff="@string/para_colorize"
+        android:textOn="@string/para_colorize"/>
+
+    <ToggleButton
+        android:id="@+id/bmode_center_line_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/bmode_spaticalcomp_tbn"
+        android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal"
+        android:layout_toEndOf="@+id/bmode_trapezoid_tbn"
+        android:textOff="@string/para_b_center_line"
+        android:textOn="@string/para_b_center_line"/>
+
+    <ToggleButton
+        android:layout_marginTop="@dimen/image_ts_button_spacing_vertical"
+        android:layout_below="@+id/bmode_colorzie_tbn"
+        android:id="@+id/bmode_center_elearn_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignStart="@+id/bmode_colorzie_tbn"
+        android:textOff="@string/el_entrance"
+        android:textOn="@string/el_entrance"/>
+
+    <ToggleButton
+        android:id="@+id/bmode_needle_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignStart="@+id/bmode_center_line_tbn"
+        android:layout_below="@+id/bmode_center_line_tbn"
+        android:layout_marginTop="@dimen/image_ts_button_spacing_vertical"
+        android:textOff="@string/para_b_needle"
+        android:textOn="@string/para_b_needle"/>
+
+    <Button
+        android:id="@+id/bmode_one_key_opt_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_alignStart="@+id/bmode_center_line_tbn"
+        android:layout_below="@+id/bmode_needle_tbn"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/image_ts_button_spacing_horizontal"
+        android:text="@string/para_one_key_optimize"
+        android:visibility="gone"/>
+</RelativeLayout>

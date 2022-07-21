@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ScrollBar="http://schemas.android.com/apk/res-auto">
+
+    <edan.am57.bx4.common.ViewWithScrollBar.ScrollBarWithIndicator
+        android:id="@+id/scrollbarwithindicator"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        ScrollBar:bar_orentation="VERTICAL"
+        ScrollBar:bar_size="20dp"
+        ScrollBar:bar_color="@color/main_screen_spinner_scrollbar_bar"
+        ScrollBar:bar_back_color="@color/main_screen_spinner_scrollbar_bg"/>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:layout_toLeftOf="@id/scrollbarwithindicator"
+        android:layout_marginRight="10dp"></GridView>
+
+
+</RelativeLayout>

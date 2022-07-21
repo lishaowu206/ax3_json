@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/power_off_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/power_dialog_bg"
+    android:layout_width="@dimen/power_dialog_width"
+    android:layout_height="@dimen/power_dialog_height"
+    android:paddingStart="@dimen/power_dialog_padding_horizontal"
+    android:paddingEnd="@dimen/power_dialog_padding_horizontal"
+    android:paddingTop="@dimen/power_dialog_padding_top"
+    android:paddingBottom="@dimen/power_dialog_padding_bottom">
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/power_user_btn"
+            style="@style/power_oneshot_button"
+            android:drawableTop="@drawable/power_user_selector"
+            android:text="@string/setup_manager_user_label" />
+
+        <Button
+            android:id="@+id/power_dormant_btn"
+            style="@style/power_oneshot_button"
+            android:drawableTop="@drawable/power_sleep_selector"
+            android:text="@string/power_dormant" />
+
+        <Button
+            android:id="@+id/power_reboot_btn"
+            style="@style/power_oneshot_button"
+            android:drawableTop="@drawable/power_restart_selector"
+            android:text="@string/power_reboot" />
+
+        <Button
+            android:id="@+id/power_shutdown_btn"
+            style="@style/power_oneshot_button"
+            android:drawableTop="@drawable/power_shutdown_selector"
+            android:text="@string/power_shutdown" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/power_cancel_btn"
+        android:layout_width="@dimen/power_button_cancel_width"
+        android:layout_height="@dimen/power_button_cancel_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/power_cancel_selector"
+        android:button="@null"
+        android:gravity="center"
+        android:text="@string/common_cancel"
+        android:textColor="@color/main_screen_btn_text"
+        android:textSize="@dimen/main_screen_gui_text_size" />
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="150dp"
+    android:paddingEnd="150dp"
+    android:paddingTop="50dp"
+    android:paddingBottom="50dp"
+    android:background="@drawable/main_screen_tab_content">
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:layout_width="@dimen/ms_tool_btn_width"
+        android:layout_height="@dimen/ms_tool_btn_height"
+        android:layout_alignStart="@+id/ms_self_check_btn_fan_status"
+        android:layout_below="@+id/ms_self_check_btn_fan_status"
+        android:layout_marginTop="50dp"
+        android:text="@string/maintenance_tool_lcd_test"
+        android:id="@+id/ms_self_check_btn_lcd_test" />
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:layout_width="@dimen/ms_tool_btn_width"
+        android:layout_height="@dimen/ms_tool_btn_height"
+        android:layout_marginTop="120dp"
+        android:text="@string/maintenance_tool_fan_status"
+        android:id="@+id/ms_self_check_btn_fan_status"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

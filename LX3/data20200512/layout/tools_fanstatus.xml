@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        style="@style/main_screen_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/maintenance_tool_fan_status"
+        android:textSize="@dimen/main_screen_status_top_text_size"
+        android:gravity="center"/>
+    <LinearLayout
+        android:id="@+id/fanStatus_layout"
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:gravity="center" >
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp">
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:layout_width="@dimen/ms_tool_btn_ok_cancel_width"
+            android:id="@+id/fanStatus_btn_refresh"
+            android:layout_marginLeft="200dp"
+            android:layout_alignParentLeft="true"
+            android:text="@string/tcp_ip_wifi_refresh" />
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:layout_width="@dimen/ms_tool_btn_ok_cancel_width"
+            android:id="@+id/fanStatus_btn_exit"
+            android:layout_marginRight="200dp"
+            android:layout_alignParentRight="true"
+            android:text="@string/review_exit" />
+    </RelativeLayout>
+
+</LinearLayout>

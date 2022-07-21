@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.report.worksheet.TsWorksheetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:continuous="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/report_ts_padding_bottom"
+    android:paddingEnd="@dimen/report_ts_padding_right_exclude_group"
+    android:paddingStart="@dimen/report_ts_padding_left"
+    android:paddingTop="@dimen/report_ts_padding_top">
+
+    <ToggleButton
+        android:id="@+id/report_worksheet_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:checked="true"
+        android:clickable="false"
+        android:textOff="@string/feature_worksheet"
+        android:textOn="@string/feature_worksheet"/>
+
+    <ToggleButton
+        android:id="@+id/report_report_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/report_worksheet_btn"
+        android:layout_marginStart="@dimen/report_ts_spacing_horizontal"
+        android:layout_toEndOf="@+id/report_worksheet_btn"
+        android:clickable="true"
+        android:textOff="@string/feature_report"
+        android:textOn="@string/feature_report"/>
+
+    <ToggleButton
+        android:id="@+id/report_growth_curve_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/report_worksheet_btn"
+        android:layout_marginStart="@dimen/report_ts_spacing_horizontal"
+        android:layout_toEndOf="@+id/report_report_btn"
+        android:clickable="true"
+        android:textOff="@string/report_growth_curve"
+        android:textOn="@string/report_growth_curve"
+        android:visibility="invisible"/>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_screen_tab_content_sep"
+        android:layout_below="@+id/report_worksheet_btn"
+        android:layout_marginEnd="@dimen/report_ts_worksheet_buttons_margin_right"
+        android:layout_marginTop="@dimen/report_ts_half_spacing_vertical"
+        android:layout_marginBottom="@dimen/report_ts_half_spacing_vertical"
+        android:background="@color/touch_screen_tab_content_sep"/>
+
+    <edan.am57.bx4.common.widget.GridRadioGroup
+        android:id="@+id/image_meas_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/report_ts_worksheet_buttons_margin_left"
+        android:background="@drawable/touch_screen_radio_group"
+        android:columnCount="4"
+        android:padding="@dimen/touch_screen_button_group_padding"
+        android:rowCount="1">
+
+        <RadioButton
+            android:id="@+id/report_worksheet_2D_btn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:background="@drawable/touch_screen_btn_toggle_selector"
+            android:checked="false"
+            android:enabled="true"
+            android:text="@string/report_worksheet_2d"/>
+
+        <RadioButton
+            android:id="@+id/report_worksheet_m_btn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:background="@drawable/touch_screen_btn_toggle_selector"
+            android:checked="false"
+            android:enabled="true"
+            android:layout_marginStart="@dimen/report_ts_spacing_horizontal"
+            android:text="@string/report_worksheet_m"/>
+
+        <RadioButton
+            android:id="@+id/report_worksheet_doppler_btn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:background="@drawable/touch_screen_btn_toggle_selector"
+            android:checked="false"
+            android:enabled="true"
+            android:layout_marginStart="@dimen/report_ts_spacing_horizontal"
+            android:text="@string/report_worksheet_doppler"/>
+
+        <RadioButton
+            android:id="@+id/report_worksheet_expand_btn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="3"
+            android:layout_row="0"
+            android:background="@drawable/touch_screen_btn_toggle_selector"
+            android:layout_marginStart="@dimen/report_ts_spacing_horizontal"
+            android:checked="true"
+            android:enabled="true"
+            android:text="@string/report_worksheet_expand"/>
+
+    </edan.am57.bx4.common.widget.GridRadioGroup>
+
+    <ToggleButton
+        android:id="@+id/report_worksheet_comments_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignStart="@+id/report_worksheet_btn"
+        android:layout_below="@+id/image_meas_group"
+        android:checked="false"
+        android:layout_marginTop="@dimen/report_ts_spacing_vertical"
+        android:textOff="@string/report_worksheet_comments"
+        android:textOn="@string/report_worksheet_comments"/>
+
+    <ToggleButton
+        android:id="@+id/report_worksheet_findings_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/report_worksheet_comments_btn"
+        android:layout_marginStart="@dimen/report_ts_spacing_horizontal"
+        android:layout_toEndOf="@+id/report_worksheet_comments_btn"
+        android:checked="false"
+        android:textOff="@string/report_worksheet_findings"
+        android:textOn="@string/report_worksheet_findings"
+        android:visibility="visible"/>
+
+    <ToggleButton
+        android:id="@+id/report_worksheet_fetusCompare_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/report_worksheet_findings_btn"
+        android:layout_marginStart="@dimen/report_ts_spacing_horizontal"
+        android:layout_toEndOf="@+id/report_growth_curve_btn"
+        android:checked="false"
+        android:enabled="false"
+        android:textOff="@string/report_growth_curve_fetus_compare"
+        android:textOn="@string/report_growth_curve_fetus_compare"
+        android:visibility="invisible"/>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/report_worksheet_page_btn"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/report_ts_worksheet_sliders_margin_left"
+        continuous:adapter="@array/report_page_level"
+        continuous:label="@string/report_worksheet_page"
+        continuous:resource="@layout/widget_arrow_slider"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.GridRadioGroup
+        android:id="@+id/report_worksheet_gridRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/report_worksheet_fetusCompare_btn"
+        android:layout_toEndOf="@+id/report_worksheet_fetusCompare_btn"
+        android:layout_marginStart="@dimen/report_ts_spacing_horizontal_exclude_group"
+        android:background="@drawable/touch_screen_radio_group"
+        android:columnCount="2"
+        android:padding="@dimen/touch_screen_button_group_padding"
+        android:rowCount="2"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:id="@+id/report_worksheet_fetus_a_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:background="@drawable/touch_screen_btn_toggle_selector"
+            android:checked="true"
+            android:enabled="true"
+            android:text="@string/report_growth_curve_fetus_a"/>
+
+        <RadioButton
+            android:id="@+id/report_worksheet_fetus_b_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="1"
+            android:layout_marginStart="@dimen/report_ts_spacing_horizontal"
+            android:layout_row="0"
+            android:checked="false"
+            android:enabled="false"
+            android:text="@string/report_growth_curve_fetus_b"/>
+
+        <RadioButton
+            android:id="@+id/report_worksheet_fetus_c_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="0"
+            android:layout_marginTop="@dimen/report_ts_spacing_vertical"
+            android:layout_row="1"
+            android:checked="false"
+            android:enabled="false"
+            android:text="@string/report_growth_curve_fetus_c"/>
+
+        <RadioButton
+            android:id="@+id/report_worksheet_fetus_d_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="1"
+            android:layout_marginStart="@dimen/report_ts_spacing_horizontal"
+            android:layout_marginTop="@dimen/report_ts_spacing_vertical"
+            android:layout_row="1"
+            android:checked="false"
+            android:enabled="false"
+            android:text="@string/report_growth_curve_fetus_d"/>
+    </edan.am57.bx4.common.widget.GridRadioGroup>
+
+    <!--TODO 改为Button-->
+    <ToggleButton
+        android:id="@+id/report_worksheet_exit_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_height="@dimen/touch_screen_button_small_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/report_ts_worksheet_buttons_margin_right"
+        android:textOff="@string/common_exit"
+        android:textOn="@string/common_exit"/>
+</edan.am57.bx4.report.worksheet.TsWorksheetLayout>

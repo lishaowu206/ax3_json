@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="530dp"
+    android:layout_height="match_parent"
+    android:layout_alignParentStart="true">
+
+    <RadioGroup
+        android:id="@+id/preset_cw_flow_type_grp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/preset_cw_flow_type_high"
+            android:layout_width="@dimen/main_screen_tabs_width"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_screen_tab_label_style2"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/para_high_flow"
+            android:textColor="@color/main_screen_text"
+            android:textSize="@dimen/main_screen_gui_text_size" />
+
+        <RadioButton
+            android:id="@+id/preset_cw_flow_type_mid"
+            android:layout_width="@dimen/main_screen_tabs_width"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/main_screen_tab_divider_width"
+            android:background="@drawable/main_screen_tab_label_style2"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/para_mid_flow"
+            android:textColor="@color/main_screen_text"
+            android:textSize="@dimen/main_screen_gui_text_size" />
+
+        <RadioButton
+            android:id="@+id/preset_cw_flow_type_low"
+            android:layout_width="@dimen/main_screen_tabs_width"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/main_screen_tab_divider_width"
+            android:background="@drawable/main_screen_tab_label_style2"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/para_low_flow"
+            android:textColor="@color/main_screen_text"
+            android:textSize="@dimen/main_screen_gui_text_size" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/preset_cw_flow_type_grp"
+        android:background="@drawable/main_screen_tab_style_2_contex_bg"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
+
+        <TextView
+            style="@style/utility_preset_image_text"
+            android:layout_alignBottom="@+id/preset_cw_scale_spinner"
+            android:text="@string/para_scale" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            android:id="@+id/preset_cw_scale_spinner"
+            style="@style/utility_preset_image_spinner"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            style="@style/utility_preset_image_text"
+            android:layout_alignBottom="@+id/preset_cw_gain_spinner"
+            android:text="@string/para_gain" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            android:id="@+id/preset_cw_gain_spinner"
+            style="@style/utility_preset_image_spinner"
+            android:layout_alignStart="@+id/preset_cw_scale_spinner"
+            android:layout_below="@+id/preset_cw_scale_spinner" />
+
+        <TextView
+            style="@style/utility_preset_image_text"
+            android:layout_alignBottom="@+id/preset_cw_dr_spinner"
+            android:text="@string/para_dynamic_range_full" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            android:id="@+id/preset_cw_dr_spinner"
+            style="@style/utility_preset_image_spinner"
+            android:layout_alignStart="@+id/preset_cw_scale_spinner"
+            android:layout_below="@+id/preset_cw_gain_spinner" />
+
+        <TextView
+            style="@style/utility_preset_image_text"
+            android:layout_alignBottom="@+id/preset_cw_wall_filter_spinner"
+            android:text="@string/para_wall_filter_full" />
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            android:id="@+id/preset_cw_wall_filter_spinner"
+            style="@style/utility_preset_image_spinner"
+            android:layout_alignStart="@+id/preset_cw_scale_spinner"
+            android:layout_below="@+id/preset_cw_dr_spinner"
+            customSpinner:entries="@array/wall_filter_options" />
+    </RelativeLayout>
+</RelativeLayout>

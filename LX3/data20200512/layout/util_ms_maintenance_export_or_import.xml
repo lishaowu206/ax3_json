@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main_screen_tab_content"
+    android:id="@+id/layout_export_import">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp">
+
+        <TextView
+            style="@style/main_screen_second_tittle_style"
+            android:id="@+id/u_disk_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:text="@string/maintenance_export_import_external_storage_device"/>
+
+        <edan.am57.bx4.common.widget.CustomSpinner
+            style="@style/maintenance_spinner_style"
+            android:id="@+id/u_disk_customspinner"
+            android:layout_width="300dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/u_disk_title"
+            android:layout_alignBaseline="@id/u_disk_title"/>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/main_screen_second_tittle_style"
+        android:id="@+id/settings_export_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:text="@string/common_export"/>
+
+    <edan.am57.bx4.common.ViewWithScrollBar.ArrowScrollListView
+        style="@style/main_screen_list_view_style"
+        android:id="@+id/data_list_layout"
+        android:layout_width="600dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="@dimen/main_screen_general_edit_padding_left"
+        android:background="@drawable/main_screen_content_bg"
+        android:divider="@color/main_screen_tab_content_bg"
+        android:listSelector="@color/transparent"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:padding="1px"
+        android:fadeScrollbars="false"/>
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@+id/settings_export_btn"
+        android:layout_width="@dimen/main_screen_button_width"
+        android:layout_height="@dimen/main_screen_button_height"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/common_export"/>
+
+    <TextView
+        style="@style/main_screen_second_tittle_style"
+        android:id="@+id/settings_import_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="32dp"
+        android:text="@string/common_import"/>
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@+id/settings_import_btn"
+        android:layout_width="@dimen/main_screen_button_width"
+        android:layout_height="@dimen/main_screen_button_height"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/common_import"/>
+
+</LinearLayout>

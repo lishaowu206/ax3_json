@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.tools.engineer.AcquireDataView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp">
+
+    <RelativeLayout
+        android:id="@+id/tools_engineer_acquire_local_area"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/tools_engineer_acquire_local_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/engineer_acquire_local_title"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tools_engineer_acquire_local_size_tv"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tools_engineer_acquire_local_title_tv"
+            android:layout_marginStart="30dp"
+            android:labelFor="@+id/tools_engineer_acquire_local_size_edt"
+            android:text="@string/engineer_acquire_local_size"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/tools_engineer_acquire_local_size_edt"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tools_engineer_acquire_local_title_tv"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@+id/tools_engineer_acquire_local_size_tv"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="10" />
+
+        <RadioGroup
+            android:id="@+id/tools_engineer_acquire_local_pkg_type_radio_grp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tools_engineer_acquire_local_size_tv"
+            android:layout_marginStart="30dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/tools_engineer_acquire_local_pkg_rbn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/engineer_acquire_local_package" />
+
+            <RadioButton
+                android:id="@+id/tools_engineer_acquire_local_IQ_pkg_rbn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/engineer_acquire_local_IQ_package" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/tools_engineer_acquire_start_capture_btn"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tools_engineer_acquire_local_pkg_type_radio_grp"
+            android:layout_marginStart="30dp"
+            android:text="@string/engineer_acquire_local_start_capture" />
+
+        <Button
+            android:id="@+id/tools_engineer_acquire_stop_capture_btn"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tools_engineer_acquire_local_pkg_type_radio_grp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/tools_engineer_acquire_start_capture_btn"
+            android:text="@string/engineer_acquire_local_stop_capture" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tools_engineer_acquire_remote_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tools_engineer_acquire_local_area"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tools_engineer_acquire_remote_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/engineer_acquire_remote_title"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tools_engineer_acquire_remote_IA_service_status_tv"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tools_engineer_acquire_remote_title_tv" />
+
+        <Button
+            android:id="@+id/tools_engineer_acquire_remote_IA_start_service_btn"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tools_engineer_acquire_remote_IA_service_status_tv"
+            android:layout_marginStart="30dp"
+            android:text="@string/engineer_acquire_remote_start_service" />
+
+        <Button
+            android:id="@+id/tools_engineer_acquire_remote_IA_stop_service_btn"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tools_engineer_acquire_remote_IA_service_status_tv"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/tools_engineer_acquire_remote_IA_start_service_btn"
+            android:text="@string/engineer_acquire_remote_stop_service" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tools_engineer_acquire_remote_area"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tools_engineer_acquire_editor_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/engineer_acquire_editor_title"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/tools_engineer_acquire_quick_edit_btn"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tools_engineer_acquire_editor_title_tv"
+            android:layout_marginStart="30dp"
+            android:text="@string/engineer_acquire_editor_quick_edit" />
+
+        <Button
+            android:id="@+id/tools_engineer_acquire_quoda_btn"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tools_engineer_acquire_editor_title_tv"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/tools_engineer_acquire_quick_edit_btn"
+            android:text="@string/engineer_acquire_editor_quoda" />
+    </RelativeLayout>
+</edan.am57.bx4.tools.engineer.AcquireDataView>

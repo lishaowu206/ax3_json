@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/filepicker_dialog_title"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/file_picker_title" />
+
+    <TextView
+        android:layout_below="@+id/filepicker_dialog_title"
+        style="@style/general_text_style"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/filepicker_dialog_storage_path"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:text="@string/file_picker_path_label"/>
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        style="@style/main_screen_spinner_style"
+        android:layout_below="@+id/filepicker_dialog_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@+id/filepicker_dialog_storage_path"
+        android:id="@+id/filepicker_dialog_storage_spinner"
+        android:layout_width="300dp"
+        android:minWidth="100dp" />
+
+    <TextView
+        style="@style/general_text_style"
+        android:layout_below="@+id/filepicker_dialog_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@+id/filepicker_dialog_storage_spinner"
+        android:id="@+id/filepicker_dialog_select_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"/>
+
+
+
+    <FrameLayout
+        android:layout_above="@+id/filepicker_dialog_page"
+        android:id="@+id/filepicker_storge_info_frame"
+        android:layout_below="@+id/filepicker_dialog_storage_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_weight="6"
+        android:gravity="center">
+        <!-- 列出当前路径下的所有文件的ListView -->
+        <ListView
+            android:id="@+id/filepicker_dialog_file_list"
+            android:layout_width="match_parent"
+            android:divider="@color/main_screen_frame_line"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/filepicker_dialog_select_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="30dp" />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/filepicker_dialog_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:layout_margin="30dp" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/filepicker_dialog_page"
+        android:layout_above="@+id/filepicker_dialog_oprate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:background="@drawable/ms_patient_grey_frame_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/main_screen_text_style"
+            android:id="@+id/filepicker_dialog_select_info"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/path_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/file_picker_page_left"
+            android:gravity="center_vertical" />
+
+        <TextView
+            style="@style/main_screen_text_style"
+            android:id="@+id/filepicker_dialog_select_page"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0/0" />
+
+        <Button
+            android:id="@+id/path_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/file_picker_page_right"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/filepicker_dialog_oprate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/util_ms_btn_height"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp">
+
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/util_setup_btn_margin"
+            android:layout_weight="1"
+            android:id="@+id/parent"
+            android:text="@string/file_picker_prevoius" />
+
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:id="@+id/file_picker_refresh_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="@string/file_picker_refresh_label" />
+
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:id="@+id/filepicker_dialog_auto_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="auto search"
+            android:visibility="gone" />
+
+        <View
+            style="@style/general_text_style"
+            android:layout_width="0dp"
+            android:layout_weight="4" />
+
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:id="@+id/filepicker_dialog_ok"
+            android:layout_width="0dp"
+            android:layout_marginRight="@dimen/util_setup_btn_margin"
+            android:layout_weight="1"
+            android:text="@string/common_ok"
+            android:visibility="invisible" />
+
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:id="@+id/filepicker_dialog_cannel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/util_setup_btn_margin"
+            android:text="@string/common_cancel"/>
+    </LinearLayout>
+</RelativeLayout>

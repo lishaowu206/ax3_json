@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_export_import">
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:id="@+id/settings_import_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:text="@string/maintenance_export_import_select_item_to_import"/>
+
+    <edan.am57.bx4.common.ViewWithScrollBar.ArrowScrollListView
+        style="@style/main_screen_list_view_style"
+        android:id="@+id/import_list_listview"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/settings_import_title_tv"
+        android:listSelector="@color/transparent"
+        android:dividerHeight="0dp"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:padding="1px"
+        android:fadeScrollbars="false"/>
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@+id/import_dlg_continue_btn"
+        android:layout_width="@dimen/main_screen_button_width"
+        android:layout_height="@dimen/main_screen_button_height"
+        android:layout_below="@id/import_list_listview"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/common_continue"/>
+
+    <Button
+        style="@style/main_screen_oneshot_button"
+        android:id="@+id/import_dlg_cancel_btn"
+        android:layout_width="@dimen/main_screen_button_width"
+        android:layout_height="@dimen/main_screen_button_height"
+        android:layout_below="@id/import_list_listview"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/common_cancel"/>
+
+</RelativeLayout>

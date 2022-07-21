@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.image.view.needle.ParameterNeedleLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:continuous="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/image_ts_padding_bottom"
+    android:paddingTop="@dimen/image_ts_needle_buttons_top">
+
+    <!--穿刺增强-->
+    <TextView
+        android:id="@+id/needle_vis_text"
+        android:layout_width="@dimen/image_ts_needle_text_width"
+        android:layout_height="@dimen/touch_screen_button_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/image_ts_needle_buttons_left"
+        android:gravity="center_vertical"
+        android:text="@string/needle_vis_tag"
+        android:textColor="@color/touch_screen_btn_text"
+        android:textSize="@dimen/touch_screen_button_text_size"/>
+
+    <ToggleButton
+        android:id="@+id/needle_vis_enable_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/needle_vis_text"
+        android:layout_marginStart="@dimen/image_ts_needle_buttons_spacing_horizontal"
+        android:layout_toEndOf="@+id/needle_vis_text"
+        android:textOff="@string/needle_vis_enable"
+        android:textOn="@string/needle_vis_enable"/>
+
+    <Button
+        android:id="@+id/needle_vis_side_tbn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_alignTop="@+id/needle_vis_text"
+        android:layout_marginStart="@dimen/image_ts_needle_buttons_spacing_horizontal"
+        android:layout_toEndOf="@+id/needle_vis_enable_tbn"
+        android:text="@string/needle_vis_side"/>
+
+    <RadioGroup
+        android:id="@+id/needle_visual_group_attribute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/needle_vis_enable_tbn"
+        android:layout_below="@+id/needle_vis_enable_tbn"
+        android:layout_marginBottom="@dimen/image_ts_needle_buttons_spacing_vertical_exclude_group"
+        android:layout_marginStart="@dimen/touch_screen_button_group_margin"
+        android:layout_marginTop="@dimen/image_ts_needle_buttons_spacing_vertical_exclude_group"
+        android:background="@drawable/touch_screen_radio_group"
+        android:orientation="horizontal"
+        android:padding="@dimen/touch_screen_button_group_padding"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/needle_visual_shallow_tbn"
+            style="@style/touch_screen_on_off_button"
+            android:button="@null"
+            android:checked="false"
+            android:enabled="false"
+            android:text="@string/needle_vis_angle_shallow"/>
+
+        <RadioButton
+            android:id="@+id/needle_visual_med_tbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_marginStart="@dimen/image_ts_needle_buttons_spacing_horizontal"
+            android:button="@null"
+            android:checked="false"
+            android:enabled="false"
+            android:text="@string/needle_vis_angle_med"/>
+
+        <RadioButton
+            android:id="@+id/needle_visual_steep_tbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_marginStart="@dimen/image_ts_needle_buttons_spacing_horizontal"
+            android:button="@null"
+            android:checked="false"
+            android:enabled="false"
+            android:text="@string/needle_vis_angle_steep"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/needle_guide_text"
+        android:layout_width="@dimen/image_ts_needle_text_width"
+        android:layout_height="@dimen/touch_screen_button_height"
+        android:layout_alignStart="@+id/needle_vis_text"
+        android:layout_below="@+id/needle_visual_group_attribute"
+        android:gravity="center_vertical"
+        android:text="@string/needle_guide_tag"
+        android:textColor="@color/touch_screen_btn_text"
+        android:textSize="@dimen/touch_screen_button_text_size"/>
+
+    <ToggleButton
+        android:id="@+id/needle_guide_enable_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/needle_guide_text"
+        android:layout_below="@+id/needle_visual_group_attribute"
+        android:layout_marginStart="@dimen/image_ts_needle_buttons_spacing_horizontal"
+        android:layout_toEndOf="@+id/needle_guide_text"
+        android:textOff="@string/needle_guide_enable"
+        android:textOn="@string/needle_guide_enable"/>
+
+    <ToggleButton
+        android:id="@+id/needle_guide_double_line_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/needle_guide_text"
+        android:layout_marginStart="@dimen/image_ts_needle_buttons_spacing_horizontal"
+        android:layout_toEndOf="@+id/needle_guide_enable_tbn"
+        android:textOff="@string/needle_guide_double_line"
+        android:textOn="@string/needle_guide_double_line"/>
+
+    <ToggleButton
+        android:id="@+id/needle_guide_calibration_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/needle_guide_text"
+        android:layout_marginStart="@dimen/image_ts_needle_buttons_spacing_horizontal"
+        android:layout_toEndOf="@+id/needle_guide_double_line_tbn"
+        android:textOff="@string/needle_guide_calibration"
+        android:textOn="@string/needle_guide_calibration"/>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/needle_guide_angle_index_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/image_ts_needle_sliders_left"
+        continuous:label="@string/needle_guide_line_angle"
+        continuous:showValue="true"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/needle_calibration_angle_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_needle_sliders_margin"
+        android:layout_toEndOf="@+id/needle_guide_angle_index_slider"
+        continuous:label="@string/needle_guide_calibration_angle"
+        continuous:showValue="false"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/needle_calibration_pos_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/needle_calibration_angle_slider"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_big"
+        continuous:label="@string/needle_guide_calibration_pos"
+        continuous:showValue="false"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <Button
+        android:id="@+id/needle_exit_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/image_ts_needle_buttons_right"
+        android:text="@string/common_exit"/>
+</edan.am57.bx4.image.view.needle.ParameterNeedleLayout>

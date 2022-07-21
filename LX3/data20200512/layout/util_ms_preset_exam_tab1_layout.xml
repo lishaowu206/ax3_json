@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/exam_list_layout"
+        android:layout_width="@dimen/util_preset_exam_list_area_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <include layout="@layout/util_ms_preset_exam_examlist_layout"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/exam_relative_preset_layout"
+        android:layout_width="1200dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/main_screen_content_bg"
+        android:layout_toEndOf="@+id/exam_list_layout"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="60dp">
+
+        <include layout="@layout/util_ms_preset_exam_relative_preset_layout"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

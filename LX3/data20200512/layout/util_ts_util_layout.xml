@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.utility.utility.TsUtilityLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/utility_setup_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_gravity="center_vertical"
+        android:layout_alignTop="@+id/utility_preset_btn"
+        android:layout_marginEnd="@dimen/utility_buttons_spacing_horizontal"
+        android:layout_toLeftOf="@+id/utility_preset_btn"
+        android:text="@string/feature_setup"/>
+
+    <Button
+        android:id="@+id/utility_preset_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_marginTop="@dimen/utility_ts_margin_top"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:text="@string/feature_preset"/>
+
+    <ToggleButton
+        android:id="@+id/utility_mainte_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/utility_preset_btn"
+        android:layout_marginStart="@dimen/utility_buttons_spacing_horizontal"
+        android:layout_toEndOf="@+id/utility_preset_btn"
+        android:textOff="@string/feature_maintenance"
+        android:textOn="@string/feature_maintenance"/>
+
+    <Button
+        android:id="@+id/util_ts_return_image_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_height="@dimen/touch_screen_button_small_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/utility_ts_margin_bottom"
+        android:layout_marginEnd="@dimen/utility_ts_margin_right"
+        android:text="@string/common_exit"/>
+</edan.am57.bx4.utility.utility.TsUtilityLayout>

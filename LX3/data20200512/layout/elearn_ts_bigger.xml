@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+    <edan.am57.bx4.elearn.ELearnImageTipView
+        android:id="@+id/custom_bigger"
+        android:layout_width="@dimen/elearn_center_width"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+</LinearLayout>

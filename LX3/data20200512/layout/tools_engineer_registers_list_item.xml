@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:divider="@color/white"
+    android:dividerHeight="1dp"
+    android:showDividers="middle"
+    android:orientation="horizontal"
+    android:background="#17181D">
+
+    <TextView
+        android:id="@+id/engineer_register_title_no_tv"
+        style="@style/engineer_list_view_text_style"
+        android:layout_width="50dp"
+        android:layout_height="match_parent" />
+
+    <!--<View-->
+        <!--android:id="@+id/no_address_divider"-->
+        <!--style="@style/main_screen_list_view_divider_style"-->
+        <!--android:layout_toEndOf="@+id/engineer_register_title_no_tv" />-->
+
+    <TextView
+        android:id="@+id/engineer_register_title_address_tv"
+        style="@style/engineer_list_view_text_style"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="@string/engineer_register_title_address" />
+
+    <!--<View-->
+        <!--android:id="@+id/address_name_divider"-->
+        <!--style="@style/main_screen_list_view_divider_style"-->
+        <!--android:layout_toEndOf="@+id/engineer_register_title_address_tv" />-->
+
+    <TextView
+        android:id="@+id/engineer_register_title_name_tv"
+        style="@style/engineer_list_view_text_style"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:text="@string/engineer_register_title_name" />
+
+    <!--<View-->
+        <!--android:id="@+id/name_symbol_divider"-->
+        <!--style="@style/main_screen_list_view_divider_style"-->
+        <!--android:layout_toEndOf="@+id/engineer_register_title_name_tv" />-->
+
+    <TextView
+        android:id="@+id/engineer_register_title_symbol_tv"
+        style="@style/engineer_list_view_text_style"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="@string/engineer_register_title_symbol" />
+
+    <!--<View-->
+        <!--android:id="@+id/symbol_bits_divider"-->
+        <!--style="@style/main_screen_list_view_divider_style"-->
+        <!--android:layout_toEndOf="@+id/engineer_register_title_symbol_tv" />-->
+
+    <TextView
+        android:id="@+id/engineer_register_title_bits_tv"
+        style="@style/engineer_list_view_text_style"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:text="@string/engineer_register_title_bits" />
+
+    <!--<View-->
+        <!--android:id="@+id/bits_description_divider"-->
+        <!--style="@style/main_screen_list_view_divider_style"-->
+        <!--android:layout_toEndOf="@+id/engineer_register_title_bits_tv" />-->
+
+    <TextView
+        android:id="@+id/engineer_register_title_description_tv"
+        style="@style/engineer_list_view_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/engineer_register_title_description" />
+</LinearLayout>

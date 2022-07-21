@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/main_screen_listview_head_bg">
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/dicom_server_status_tv"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:textSize="18dp"
+        android:text="" />
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/status_right_line"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/dicom_server_status_tv" />
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/dicom_server_hostname_tv"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/status_right_line"
+        android:text="@string/dicom_server_name" />
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/name_right_line"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/dicom_server_hostname_tv"/>
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/dicom_server_ae_title_tv"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/name_right_line"
+        android:text="@string/dicom_server_ae_title" />
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/aetitle_right_line"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/dicom_server_ae_title_tv"/>
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/dicom_server_ip_tv"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/aetitle_right_line"
+        android:text="@string/dicom_server_address" />
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/ip_right_line"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/dicom_server_ip_tv"/>
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/dicom_server_port_tv"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/ip_right_line"
+        android:text="@string/dicom_server_port" />
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/port_right_line"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/dicom_server_port_tv"/>
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/dicom_server_pdu_tv"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/port_right_line"
+        android:text="@string/dicom_server_max_pdu" />
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/maxpdu_right_line"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/dicom_server_pdu_tv"/>
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/dicom_server_encryption_tv"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/maxpdu_right_line"
+        android:text="@string/dicom_server_encrypted" />
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/encrypted_right_line"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/dicom_server_encryption_tv"/>
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/dicom_server_mode_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/encrypted_right_line"
+        android:text="@string/dicom_server_mode" />
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:id="@+id/wificonf_form"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customSpinner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:width="200dp"
+        android:gravity="center" />
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:layout_toStartOf="@id/center"
+        android:gravity="right|center_vertical"
+        android:text="@string/network_name" />
+
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@+id/dlg_ssid"
+        style="@style/general_edit_style"
+        android:layout_width="280dp"
+        android:layout_margin="5dp"
+        android:layout_height="40dp"
+        android:maxLength="32"
+        android:layout_alignLeft="@id/center"
+
+        android:selectAllOnFocus="true" />
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/dlg_ssid"
+        android:layout_toStartOf="@id/center"
+        android:gravity="right|center_vertical"
+        android:text="@string/security" />
+
+    <edan.am57.bx4.common.widget.CustomSpinner
+        android:id="@+id/dlg_spinner_security"
+        style="@style/main_screen_spinner_style"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/dlg_ssid"
+        android:layout_alignLeft="@id/center"
+        customSpinner:entries="@array/wifi_security_options" />
+
+    <TextView
+        android:id="@+id/dlg_password_lable"
+        style="@style/main_screen_text_style"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/dlg_spinner_security"
+        android:layout_toStartOf="@id/center"
+        android:gravity="right|center_vertical"
+        android:text="@string/user_password" />
+
+    <edan.asp.inputmethod.view.ImEditText
+        android:id="@+id/dlg_password"
+        style="@style/general_edit_style"
+        android:layout_width="280dp"
+        android:layout_margin="5dp"
+        android:layout_height="40dp"
+        android:maxLength="128"
+        android:layout_below="@+id/dlg_spinner_security"
+        android:layout_alignLeft="@id/center"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true" />
+
+    <CheckBox
+        android:layout_alignLeft="@id/center"
+        android:layout_below="@+id/dlg_password"
+        android:id="@+id/show_password_cb"
+        style="@style/main_screen_checkbox_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="@string/bottom_status_bar_wireless_show_password" />
+</RelativeLayout>
+

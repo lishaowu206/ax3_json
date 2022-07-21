@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/simulator_key_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="750dp"
+    android:layout_height="350dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:background="@color/black"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/sim_image_mode_btn_area"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tools_sim_kb_image_mode_area_height"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_pw_img_btn"
+            android:text="PW"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_cw_img_btn"
+            android:text="Cw"
+            android:layout_toStartOf="@+id/sim_pw_img_btn"
+            android:layout_alignBottom="@+id/sim_pw_img_btn"
+            android:layout_alignBaseline="@+id/sim_pw_img_btn"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_m_img_btn"
+            android:text="M"
+            android:layout_toStartOf="@+id/sim_cw_img_btn"
+            android:layout_alignBottom="@+id/sim_pw_img_btn"
+            android:layout_alignBaseline="@+id/sim_pw_img_btn"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_color_img_btn"
+            android:text="Color"
+            android:layout_toEndOf="@+id/sim_pw_img_btn"
+            android:layout_alignBottom="@+id/sim_pw_img_btn"
+            android:layout_alignBaseline="@+id/sim_pw_img_btn"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_b_img_btn"
+            android:text="B"
+            android:layout_toEndOf="@+id/sim_color_img_btn"
+            android:layout_alignBottom="@+id/sim_pw_img_btn"
+            android:layout_alignBaseline="@+id/sim_pw_img_btn"
+            android:layout_marginEnd="10dp"/>
+
+        <!--<Button style="@style/SimKbBtnStyle"-->
+            <!--android:id="@+id/sim_needle_img_btn"-->
+            <!--android:text="Needle"-->
+            <!--android:layout_toLeftOf="@+id/sim_m_img_btn"-->
+            <!--android:layout_alignBottom="@+id/sim_pw_img_btn"-->
+            <!--android:layout_alignBaseline="@+id/sim_pw_img_btn"-->
+            <!--android:layout_marginRight="10dp"/>-->
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/sim_left_layout"
+        android:layout_width="@dimen/tools_sim_kb_other_area_weight"
+        android:layout_height="@dimen/tools_sim_kb_other_area_height"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sim_image_mode_btn_area"
+        android:layout_marginEnd="@dimen/tools_sim_kb_other_area_margin_right"
+        android:columnCount="3"
+        android:rowCount="6">
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_patient_btn"
+            android:text="@string/feature_patient"
+            android:layout_column="0"
+            android:layout_row="0"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_transducer_btn"
+            android:text="@string/feature_transducer"
+            android:layout_column="0"
+            android:layout_row="1"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_review_btn"
+            android:text="@string/feature_review"
+            android:layout_column="0"
+            android:layout_row="3"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_print_btn"
+            android:text="@string/feature_print"
+            android:layout_column="0"
+            android:layout_row="4"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_report_btn"
+            android:text="@string/feature_report"
+            android:layout_column="0"
+            android:layout_row="5"/>
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_columnSpan="2"
+            android:layout_column="1"
+            android:layout_row="0">
+            <Button
+                style="@style/SimKbBtnStyle"
+                android:layout_width="30dp"
+                android:id="@+id/sim_zoom_angle_down_btn"
+                android:layout_alignParentStart="true"
+                android:text="-"/>
+            <Button
+                style="@style/SimKbBtnStyle"
+                android:layout_toEndOf="@+id/sim_zoom_angle_down_btn"
+                android:layout_toStartOf="@+id/sim_zoom_angle_up_btn"
+                android:id="@+id/sim_zoom_angle_btn"
+                android:text="Zoom/Angle"/>
+            <Button
+                style="@style/SimKbBtnStyle"
+                android:layout_width="30dp"
+                android:id="@+id/sim_zoom_angle_up_btn"
+                android:layout_alignParentEnd="true"
+                android:text="+"/>
+        </RelativeLayout>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_f1_btn"
+            android:text="F1"
+            android:layout_column="1"
+            android:layout_row="3"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_f2_btn"
+            android:text="F2"
+            android:layout_column="1"
+            android:layout_row="4"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_clear_btn"
+            android:text="@string/common_clear"
+            android:layout_column="2"
+            android:layout_row="3"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_bodymark_btn"
+            android:text="@string/feature_body_mark"
+            android:layout_column="2"
+            android:layout_row="4"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_cursor_btn"
+            android:text="Cursor"
+            android:layout_column="2"
+            android:layout_row="5"/>
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/sim_mid_layout"
+        android:layout_width="@dimen/tools_sim_kb_other_area_weight"
+        android:layout_height="@dimen/tools_sim_kb_other_area_height"
+        android:layout_below="@+id/sim_image_mode_btn_area"
+        android:layout_toEndOf="@+id/sim_left_layout"
+        android:layout_marginRight="@dimen/tools_sim_kb_other_area_margin_right"
+        android:columnCount="3"
+        android:rowCount="6">
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_comment_btn"
+            android:text="Comment"
+            android:layout_column="0"
+            android:layout_row="2"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_update_btn"
+            android:text="Update"
+            android:layout_column="1"
+            android:layout_row="2"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_measure_btn"
+            android:text="@string/feature_measure"
+            android:layout_column="2"
+            android:layout_row="2"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_caliper_btn"
+            android:text="@string/us_caliper"
+            android:layout_column="2"
+            android:layout_row="3"/>
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/sim_right_layout"
+        android:layout_width="@dimen/tools_sim_kb_other_area_weight"
+        android:layout_height="@dimen/tools_sim_kb_other_area_height"
+        android:layout_below="@+id/sim_image_mode_btn_area"
+        android:layout_toEndOf="@+id/sim_mid_layout">
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_freeze_btn"
+            android:text="Freeze"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_store_clip_btn"
+            android:text="StoreClip"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/sim_freeze_btn"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_store_image_btn"
+            android:text="StoreImage"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/sim_store_clip_btn"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_double_b_btn"
+            android:text="Double B"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/sim_store_image_btn"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_single_b_btn"
+            android:text="Single B"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/sim_double_b_btn"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:layout_width="30dp"
+            android:layout_above="@+id/sim_gain_up_btn"
+            android:layout_toStartOf="@+id/sim_depth_focus_btn"
+            android:id="@+id/sim_depth_focus_down_btn"
+            android:text="-"/>
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:layout_width="90dp"
+            android:layout_toStartOf="@+id/sim_depth_focus_up_btn"
+            android:layout_above="@+id/sim_gain_up_btn"
+            android:id="@+id/sim_depth_focus_btn"
+            android:text="Depth/Focus"/>
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:layout_width="30dp"
+            android:layout_above="@+id/sim_gain_up_btn"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/sim_depth_focus_up_btn"
+            android:text="+"/>
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:layout_above="@+id/sim_auto_btn"
+            android:layout_toStartOf="@+id/sim_gain_up_btn"
+            android:id="@+id/sim_gain_down_btn"
+            android:text="Gain-"/>
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:layout_above="@+id/sim_auto_btn"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/sim_gain_up_btn"
+            android:text="Gain+"/>
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/sim_auto_btn"
+            android:text="Auto"/>
+
+        <Button
+            style="@style/SimKbBtnStyle"
+            android:id="@+id/sim_quad_b_btn"
+            android:text="Quad B"
+            android:layout_alignBaseline="@+id/sim_single_b_btn"
+            android:layout_alignBottom="@+id/sim_single_b_btn"
+            android:layout_toEndOf="@+id/sim_depth_focus_down_btn" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

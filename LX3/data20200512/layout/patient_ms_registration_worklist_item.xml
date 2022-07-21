@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/main_screen_listview_head_bg">
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/tv_patient_name"
+        android:layout_width="175dp"
+        android:layout_height="45dp"
+        android:text="@string/db_patient_name" />
+
+    <View
+        style="@style/main_screen_list_view_divider_style"
+        android:id="@+id/mid_line"
+        android:layout_toRightOf="@id/tv_patient_name"/>
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/tv_patient_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_toRightOf="@id/mid_line"
+        android:text="@string/db_patient_id"/>
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:id="@+id/tips_dialog_layout"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/main_screen_tips_text_style"
+        android:id="@+id/tips_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/tips_dialog_line"
+        android:gravity="center"
+        tools:text="提示文字" />
+
+    <View
+        android:id="@+id/tips_dialog_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/tips_dialog_btn1"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/main_screen_frame_line" />
+
+    <Button
+        style="@style/main_screen_oneshot_small_button"
+        android:id="@+id/tips_dialog_btn1"
+        android:layout_width="@dimen/util_setup_btn_width"
+        android:layout_height="@dimen/util_setup_btn_height"
+        android:layout_toStartOf="@+id/tips_dialog_btn2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="20dp"
+        android:nextFocusRight="@+id/tips_dialog_btn3"
+        android:nextFocusLeft="@+id/tips_dialog_btn2" />
+
+    <Button
+        style="@style/main_screen_oneshot_small_button"
+        android:id="@+id/tips_dialog_btn2"
+        android:layout_width="@dimen/util_setup_btn_width"
+        android:layout_height="@dimen/util_setup_btn_height"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:nextFocusRight="@+id/tips_dialog_btn3"
+        android:nextFocusLeft="@+id/tips_dialog_btn1"/>
+
+    <Button
+        style="@style/main_screen_oneshot_small_button"
+        android:id="@+id/tips_dialog_btn3"
+        android:layout_width="@dimen/util_setup_btn_width"
+        android:layout_height="@dimen/util_setup_btn_height"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@+id/tips_dialog_btn2"
+        android:layout_alignParentBottom="true"
+        android:nextFocusRight="@+id/tips_dialog_btn1"
+        android:nextFocusLeft="@+id/tips_dialog_btn2"/>
+
+</RelativeLayout>

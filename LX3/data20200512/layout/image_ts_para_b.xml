@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.image.view.parameter.ParameterBLayout
+    android:id="@+id/ts_image_b_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tgc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/image_ts_padding_bottom"
+    android:paddingTop="@dimen/image_ts_padding_top">
+
+    <LinearLayout
+        android:id="@+id/bmode_viewpager_dot"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_screen_page_indicator_height"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <View
+            android:id="@+id/bmode_page1_dot"
+            android:layout_width="@dimen/touch_screen_page_indicator_size"
+            android:layout_height="@dimen/touch_screen_page_indicator_size"
+            android:layout_margin="@dimen/touch_screen_page_indicator_spacing"
+            android:background="@drawable/touch_screen_page_indicator_selector"/>
+        <View
+            android:id="@+id/bmode_page2_dot"
+            android:layout_width="@dimen/touch_screen_page_indicator_size"
+            android:layout_height="@dimen/touch_screen_page_indicator_size"
+            android:layout_margin="@dimen/touch_screen_page_indicator_spacing"
+            android:background="@drawable/touch_screen_page_indicator_selector"/>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/bmode_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/bmode_viewpager_dot"
+        android:layout_marginTop="@dimen/image_ts_padding_buttons_top_exclude_group">
+    </android.support.v4.view.ViewPager>
+
+    <edan.am57.bx4.common.widget.TgcControl
+        android:id="@+id/bmode_tgc_layout"
+        android:layout_width="@dimen/image_ts_tgc_area_width"
+        android:layout_height="@dimen/image_ts_tgc_area_height"
+        android:paddingTop="@dimen/image_ts_tgc_area_padding_top"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/image_tgc_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        tgc:num="8">
+
+        <SeekBar
+            android:id="@+id/bmode_tgc1"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+
+        <SeekBar
+            android:id="@+id/bmode_tgc2"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+
+        <SeekBar
+            android:id="@+id/bmode_tgc3"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+
+        <SeekBar
+            android:id="@+id/bmode_tgc4"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+
+        <SeekBar
+            android:id="@+id/bmode_tgc5"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+
+        <SeekBar
+            android:id="@+id/bmode_tgc6"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+
+        <SeekBar
+            android:id="@+id/bmode_tgc7"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+
+        <SeekBar
+            android:id="@+id/bmode_tgc8"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+    </edan.am57.bx4.common.widget.TgcControl>
+
+    <edan.am57.bx4.common.widget.TgcControl
+        android:id="@+id/bmode_lgc_layout"
+        android:layout_toStartOf="@id/bmode_tgc_layout"
+        android:rotation="-90"
+        android:layout_width="@dimen/image_ts_tgc_area_width"
+        android:layout_height="@dimen/image_ts_tgc_area_height"
+        android:paddingTop="@dimen/image_ts_tgc_area_padding_top"
+        android:background="@drawable/image_tgc_bg"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:orientation="horizontal"
+        tgc:num="8">
+        <SeekBar
+            android:id="@+id/bmode_lgc1"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+        <SeekBar
+            android:id="@+id/bmode_lgc2"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+
+        <SeekBar
+            android:id="@+id/bmode_lgc3"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+
+        <SeekBar
+            android:id="@+id/bmode_lgc4"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+
+        <SeekBar
+            android:id="@+id/bmode_lgc5"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+
+        <SeekBar
+            android:id="@+id/bmode_lgc6"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+
+        <SeekBar
+            android:id="@+id/bmode_lgc7"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+
+        <SeekBar
+            android:id="@+id/bmode_lgc8"
+            style="@style/image_tgc_bar"
+            android:max="255"
+            android:progress="120"/>
+    </edan.am57.bx4.common.widget.TgcControl>
+</edan.am57.bx4.image.view.parameter.ParameterBLayout>

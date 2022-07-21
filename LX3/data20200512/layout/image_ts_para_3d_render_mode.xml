@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.image.view.parameter.Parameter3DRenderModeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/touch_screen_tab_content_bg"
+    android:orientation="horizontal">
+
+    <edan.am57.bx4.common.widget.GridRadioGroup
+        android:id="@+id/vol_mode_render_mode_grp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/touch_screen_button_height"
+        android:layout_marginStart="@dimen/touch_screen_button_width"
+        android:rowCount="1"
+        android:columnCount="2">
+
+        <RadioButton
+            android:id="@+id/vol_mode_render_mode_surface_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginStart="@dimen/touch_screen_button_width"
+            android:text="@string/para_3d_render_mode_surface"/>
+
+        <RadioButton
+            android:id="@+id/vol_mode_render_mode_max_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:text="@string/para_3d_render_mode_max"/>
+
+    </edan.am57.bx4.common.widget.GridRadioGroup>
+
+    <Button
+        android:id="@+id/vol_mode_render_mode_exit_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_below="@id/vol_mode_render_mode_grp"
+        android:layout_alignRight="@id/vol_mode_render_mode_grp"
+        android:layout_marginTop="@dimen/touch_screen_button_height"
+        android:text="@string/common_exit"/>
+
+</edan.am57.bx4.image.view.parameter.Parameter3DRenderModeLayout>

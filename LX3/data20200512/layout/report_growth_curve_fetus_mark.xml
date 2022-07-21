@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginLeft="140dp"
+    android:layout_marginRight="60dp">
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:text="x : "
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:id="@+id/mark_a" />
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:text="@string/report_growth_curve_fetus_a"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/mark_a"
+        android:id="@+id/fetus_a" />
+
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:text="+ : "
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="128dp"
+        android:visibility="invisible"
+        android:layout_toEndOf="@+id/fetus_a"
+        android:id="@+id/mark_b" />
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:text="@string/report_growth_curve_fetus_b"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/mark_b"
+        android:id="@+id/fetus_b" />
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:text="* : "
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="128dp"
+        android:visibility="invisible"
+        android:layout_toEndOf="@+id/fetus_b"
+        android:id="@+id/mark_c" />
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:text="@string/report_growth_curve_fetus_c"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/mark_c"
+        android:id="@+id/fetus_c" />
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:text="o : "
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="128dp"
+        android:layout_toEndOf="@+id/fetus_c"
+        android:id="@+id/mark_d" />
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:text="@string/report_growth_curve_fetus_d"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/mark_d"
+        android:id="@+id/fetus_d" />
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/main_screen_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/tool_set_model_and_area_title"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            style="@style/main_screen_text_style"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tool_set_model_and_area_area"
+            android:textAlignment="textStart" />
+        <Spinner
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/setmodelandarea_spinner_area_list">
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            style="@style/main_screen_text_style"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tool_set_model_and_area_model"
+            android:textAlignment="textStart" />
+
+        <Spinner
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/setmodelandarea_spinner_model_list">
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center" >
+
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:layout_width="@dimen/ms_tool_btn_ok_cancel_width"
+            android:layout_marginLeft="45dp"
+            android:id="@+id/setmodelandarea_btn_save"
+            android:text="@string/bottom_status_bar_wireless_password_ensure" />
+
+        <Button
+            style="@style/main_screen_oneshot_small_button"
+            android:layout_width="@dimen/ms_tool_btn_ok_cancel_width"
+            android:layout_marginLeft="45dp"
+            android:id="@+id/setmodelandarea_btn_cancel"
+            android:text="@string/bottom_status_bar_wireless_password_cancel" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

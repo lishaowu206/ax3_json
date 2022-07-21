@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.utility.setup.layout.TsSetupLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ToggleButton
+        android:id="@+id/setup_system_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/setup_screen_btn"
+        android:layout_marginEnd="@dimen/utility_buttons_spacing_horizontal"
+        android:layout_toLeftOf="@+id/setup_screen_btn"
+        android:textOff="@string/setup_system"
+        android:textOn="@string/setup_system"/>
+
+    <ToggleButton
+        android:id="@+id/setup_screen_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_marginTop="@dimen/utility_ts_margin_top"
+        android:layout_centerHorizontal="true"
+        android:textOff="@string/feature_screen_setup"
+        android:textOn="@string/feature_screen_setup"/>
+
+    <ToggleButton
+        android:id="@+id/setup_connectivity_btn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignTop="@+id/setup_screen_btn"
+        android:layout_marginStart="@dimen/utility_buttons_spacing_horizontal"
+        android:layout_toEndOf="@+id/setup_screen_btn"
+        android:textOff="@string/setup_connectivity"
+        android:textOn="@string/setup_connectivity"/>
+
+    <include
+        layout="@layout/util_ts_util_bottom_layout"/>
+
+</edan.am57.bx4.utility.setup.layout.TsSetupLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.bodymark.customview.TSGridLayoutBodyMarkItem
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <edan.am57.bx4.bodymark.customview.BodyMarkSquareImageView
+        android:id="@+id/img_view_bodymark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"/>
+
+    <ImageView
+        android:id="@+id/img_view_preset_ms_bodymark_outline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bodymark_graphic_unselected_bg"
+        android:contentDescription="@null"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/img_view_bodymark_selected_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:scaleType="fitXY"
+        android:background="@drawable/body_mark_selected"
+        android:contentDescription="@null"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/img_view_bodymark_default_indicator"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/body_mark_default"
+        android:contentDescription="@null"
+        android:visibility="gone"/>
+</edan.am57.bx4.bodymark.customview.TSGridLayoutBodyMarkItem>

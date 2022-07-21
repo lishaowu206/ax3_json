@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    style="@style/utility_dlg_layout_style"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/util_ms_util_top_layout" />
+    <View
+        android:layout_width="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_height="match_parent"
+        android:background="@color/measure_mini_report_sep"
+        android:visibility="visible"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_alignParentEnd="true"
+        android:layout_height="match_parent"
+        android:background="@color/measure_mini_report_sep"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/util_ms_bottom_area"
+        android:layout_below="@+id/util_ms_top_area"
+        android:orientation="vertical">
+
+
+        <TextView
+            style="@style/utility_title_text_style"
+            android:id="@+id/util_ms_system_title"
+            android:text="@string/connectivity_settings" />
+
+        <TabHost
+            android:id="@android:id/tabhost"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:background="@drawable/main_screen_tab_indicator"
+                    android:divider="@drawable/main_screen_tab_indicator_divider"
+                    android:showDividers="middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_screen_tabs_height" />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_screen_tab_content">
+
+                    <include
+                        android:id="@+id/setup_connect_tcp_ip_tab"
+                        layout="@layout/util_ms_setup_connectivity_tcp_ip"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp" />
+
+                    <include
+                        android:id="@+id/setup_connect_dicom_tab"
+                        layout="@layout/util_ms_setup_connectivity_dicom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp" />
+
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+    </LinearLayout>
+
+    <include layout="@layout/util_ms_dlg_bottom_layout" />
+
+</RelativeLayout>

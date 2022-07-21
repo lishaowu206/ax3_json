@@ -1,0 +1,48 @@
+<edan.am57.bx4.patient.TsEndExamLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_end_exam"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/end_exam_ts_margin_left"
+        android:layout_marginTop="@dimen/end_exam_ts_margin_top"
+        android:text="@string/patient_end_exam"/>
+
+    <Button
+        android:id="@+id/btn_edit_current"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_alignTop="@id/btn_end_exam"
+        android:layout_marginStart="@dimen/end_exam_ts_spacing_horizontal"
+        android:layout_toEndOf="@+id/btn_end_exam"
+        android:text="@string/patient_edit_current"/>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_alignTop="@id/btn_end_exam"
+        android:layout_marginStart="@dimen/end_exam_ts_spacing_horizontal"
+        android:layout_toEndOf="@+id/btn_edit_current"
+        android:text="@string/common_cancel"/>
+
+    <Button
+        android:id="@+id/btn_new_exam"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_alignTop="@id/btn_end_exam"
+        android:layout_marginStart="@dimen/end_exam_ts_spacing_horizontal"
+        android:layout_toEndOf="@+id/btn_cancel"
+        android:text="@string/patient_new_exam"/>
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:id="@+id/chk_same_patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_new_exam"
+        android:layout_below="@+id/btn_new_exam"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/patient_same_patient"/>
+</edan.am57.bx4.patient.TsEndExamLayout>

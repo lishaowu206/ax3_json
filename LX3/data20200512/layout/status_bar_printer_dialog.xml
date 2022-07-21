@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bottom_menu_dialog_background">
+
+    <TextView
+        android:id = "@+id/printerInfo_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/main_screen_text"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"
+        android:textSize="20sp" />
+
+    <Button
+        style="@style/main_screen_menu_button"
+        android:id = "@+id/printerCancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textSize="20sp"
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/bottom_status_bar_print_cancel"/>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/mainten_ms_bottom_area"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_screen_gui_capture_area_bottom"
+    android:layout_alignParentBottom="true">
+
+    <!--<View-->
+        <!--android:id="@+id/util_ms_maintence_black_bar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/util_setup_top_bottom_blank_height"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@color/black" />-->
+
+    <!--android:background="@color/black"-->
+    <!--动态添加按键-->
+    <LinearLayout
+        android:id="@+id/util_ms_maintence_bottom_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/util_setup_bottom_area_height"
+        android:layout_toEndOf="@+id/util_ms_def_btn"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <Button
+        style="@style/main_screen_utility_operation_button_style"
+        android:id="@+id/util_ms_back_btn"
+        android:layout_toStartOf="@+id/util_ms_exit_btn"
+        android:layout_centerVertical="true"
+        android:text="@string/common_back"/>
+
+    <Button
+        style="@style/main_screen_utility_operation_button_style"
+        android:id="@+id/util_ms_exit_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="@string/common_exit"/>
+</RelativeLayout>

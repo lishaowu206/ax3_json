@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp">
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/report_worksheet_height_tv"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="30dp"
+        android:text="@string/report_worksheet_height" />
+
+    <EditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/report_worksheet_height_edit"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/report_worksheet_height_tv"/>
+
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/report_worksheet_weight_tv"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/report_worksheet_height_edit"
+        android:gravity="center_horizontal"
+        android:text="@string/report_worksheet_weight" />
+
+    <EditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/report_worksheet_weight_edit"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/report_worksheet_weight_tv"/>
+
+
+    <TextView
+        style="@style/report_top_info_text_style"
+        android:id="@+id/report_worksheet_bsa_tv"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/report_worksheet_weight_edit"
+        android:gravity="center_horizontal"
+        android:text="@string/report_worksheet_bsa" />
+
+    <EditText
+        style="@style/report_top_info_edit_style"
+        android:id="@+id/report_worksheet_bsa_edit"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/report_worksheet_bsa_tv"/>
+
+    <include layout="@layout/report_worksheet_devider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="9dp"
+        android:layout_below="@id/report_worksheet_weight_tv"/>
+</merge>

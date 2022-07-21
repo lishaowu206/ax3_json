@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:focusable="false"
+    android:background="@color/main_screen_listview_head_bg"
+    android:orientation="horizontal">
+
+    <CheckBox
+        style="@style/main_screen_checkbox_style"
+        android:focusable="false"
+        android:clickable="false"
+        android:id="@+id/demo_item_nm"
+        android:layout_width="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_height="match_parent"
+        android:textColor="@color/main_screen_text_normal"
+        android:enabled="false"
+        android:button="@drawable/checkbox_select"
+        android:gravity="center"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_toStartOf="@+id/demo_item_name"
+        android:text="@string/demo_num" />
+
+    <View
+        android:layout_toEndOf="@+id/demo_item_nm"
+        style="@style/main_screen_list_view_divider_style"/>
+
+    <TextView
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/demo_item_name"
+        android:layout_width="420dp"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_centerInParent="true"
+        android:text="@string/demo_name" />
+    <View
+        android:layout_toEndOf="@+id/demo_item_name"
+        style="@style/main_screen_list_view_divider_style"/>
+
+    <TextView
+        android:layout_toEndOf="@+id/demo_item_name"
+        style="@style/main_screen_list_view_title_style"
+        android:id="@+id/demo_item_size"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/demo_item_name_silder"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="@string/demo_size" />
+    <View
+        android:id="@+id/demo_item_name_silder"
+        android:layout_alignParentEnd="true"
+        style="@style/main_screen_list_view_divider_style"/>
+</RelativeLayout>

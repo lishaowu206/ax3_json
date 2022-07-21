@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edan.am57.bx4.utility.maintenance.layout.TsDemoPlayerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:continuous="http://schemas.android.com/apk/res-auto">
+
+    <RadioGroup
+        android:id="@+id/util_ts_maintance_demo_rgbtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/util_ts_bottom_area"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/utility_ts_margin_left"
+        android:layout_marginBottom="@dimen/utility_ts_margin_bottom"
+        android:layout_marginTop="@dimen/utility_ts_margin_top"
+        android:checkedButton="@+id/util_ts_maintance_demo_play_btn"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/util_ts_maintance_demo_play_btn"
+            style="@style/touch_screen_on_off_button"
+            android:text="@string/common_play"/>
+
+        <RadioButton
+            android:id="@+id/util_ts_maintance_demo_pause_btn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_marginStart="@dimen/utility_buttons_spacing_horizontal"
+            android:text="@string/common_stop"/>
+
+        <edan.am57.bx4.common.widget.ContinuousControl
+            android:id="@+id/util_ts_maintance_demo_page_btn"
+            style="@style/touch_screen_continuous_control"
+            android:layout_gravity="bottom|start"
+            continuous:resource="@layout/widget_arrow_slider"
+            continuous:label="@string/review_page_chamge"
+            continuous:maxvalue="1"
+            continuous:minvalue="-1"
+            continuous:step="1"
+            continuous:type="number"
+            continuous:value="0"
+            continuous:showValue="false"/>
+
+        <RadioButton
+            style="@style/touch_screen_on_off_button"
+            android:layout_height="@dimen/touch_screen_button_small_height"
+            android:layout_gravity="bottom|end"
+            android:layout_marginStart="416px"
+            android:textSize="@dimen/main_screen_button_text_size"
+            android:textColor="@color/main_screen_btn_text"
+            android:id="@+id/util_ts_maintance_demo_cannel_btn"
+            android:text="@string/common_exit"/>
+    </RadioGroup>
+
+    <include
+        layout="@layout/util_ts_util_bottom_layout"
+        android:visibility="gone"/>
+
+</edan.am57.bx4.utility.maintenance.layout.TsDemoPlayerLayout>

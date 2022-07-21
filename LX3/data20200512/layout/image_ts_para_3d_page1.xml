@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:continuous="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <edan.am57.bx4.common.widget.GridRadioGroup
+        android:id="@+id/vol_mpr_type_grp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/image_ts_button_spacing_vertical_exclude_group"
+        android:layout_marginStart="@dimen/image_ts_padding_left_exclude_group"
+        android:background="@drawable/touch_screen_radio_group"
+        android:columnCount="2"
+        android:padding="@dimen/touch_screen_button_group_padding"
+        android:rowCount="2">
+
+        <RadioButton
+            android:id="@+id/vol_mode_mpr_a_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:checked="true"
+            android:text="@string/para_3d_mpr_type_a"/>
+        <RadioButton
+            android:id="@+id/vol_mode_mpr_b_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal_in_group"
+            android:text="@string/para_3d_mpr_type_b"/>
+        <RadioButton
+            android:id="@+id/vol_mode_mpr_c_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_marginTop="@dimen/image_ts_button_spacing_vertical"
+            android:text="@string/para_3d_mpr_type_c"/>
+        <RadioButton
+            android:id="@+id/vol_mode_mpr_3d_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal_in_group"
+            android:layout_marginTop="@dimen/image_ts_button_spacing_vertical"
+            android:text="@string/para_3d_mpr_type_3d"/>
+    </edan.am57.bx4.common.widget.GridRadioGroup>
+
+    <edan.am57.bx4.common.widget.GridRadioGroup
+        android:id="@+id/vol_mpr_disp_type_grp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/vol_mpr_type_grp"
+        android:layout_toEndOf="@+id/vol_mpr_type_grp"
+        android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal_between_group"
+        android:background="@drawable/touch_screen_radio_group"
+        android:columnCount="3"
+        android:padding="@dimen/touch_screen_button_group_padding"
+        android:rowCount="1">
+
+        <RadioButton
+            android:id="@+id/vol_mode_single_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:text="@string/para_layout_single"/>
+        <RadioButton
+            android:id="@+id/vol_mode_dual_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal_in_group"
+            android:text="@string/para_layout_dual"/>
+        <RadioButton
+            android:id="@+id/vol_mode_quad_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal_in_group"
+            android:checked="true"
+            android:text="@string/para_layout_quad"/>
+    </edan.am57.bx4.common.widget.GridRadioGroup>
+
+    <Button
+        android:id="@+id/vol_mode_auto_face_btn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_below="@+id/vol_mpr_type_grp"
+        android:layout_marginStart="@dimen/image_ts_padding_left"
+        android:layout_marginTop="@dimen/image_ts_button_spacing_vertical_exclude_group"
+        android:text="@string/para_3d_auto_face"/>
+
+    <Button
+        android:id="@+id/vol_mode_render_mode_btn"
+        style="@style/touch_screen_folder_button"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/vol_mpr_type_grp"
+        android:layout_toEndOf="@+id/vol_mode_auto_face_btn"
+        android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal_in_group"
+        android:layout_alignTop="@+id/vol_mode_auto_face_btn"
+        android:text="@string/para_3d_render_mode"/>
+
+    <ToggleButton
+        android:id="@+id/vol_mode_voi_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_below="@+id/vol_mpr_disp_type_grp"
+        android:layout_toEndOf="@+id/vol_mode_render_mode_btn"
+        android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal"
+        android:layout_marginTop="@dimen/image_ts_button_spacing_vertical_exclude_group"
+        android:textOff="@string/para_3d_voi"
+        android:textOn="@string/para_3d_voi"/>
+
+    <Button
+        android:id="@+id/vol_mode_reset_tbn"
+        style="@style/touch_screen_oneshot_button"
+        android:layout_alignTop="@+id/vol_mode_voi_tbn"
+        android:layout_toEndOf="@+id/vol_mode_voi_tbn"
+        android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal_in_group"
+        android:text="@string/para_3d_reset"/>
+
+    <Button
+        android:id="@+id/vol_mode_cut_btn"
+        style="@style/touch_screen_folder_button"
+        android:layout_toEndOf="@+id/vol_mode_reset_tbn"
+        android:layout_alignTop="@+id/vol_mode_voi_tbn"
+        android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal"
+        android:text="@string/para_3d_cut"/>
+
+    <edan.am57.bx4.common.widget.GridRadioGroup
+        android:id="@+id/vol_mode_fast_rotation_grp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/vol_mpr_disp_type_grp"
+        android:layout_toEndOf="@+id/vol_mpr_disp_type_grp"
+        android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal_between_group"
+        android:background="@drawable/touch_screen_radio_group"
+        android:padding="@dimen/touch_screen_button_group_padding"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <RadioButton
+            android:id="@+id/vol_mode_rotation_0_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:text="0"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/vol_mode_rotation_90_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal_in_group"
+            android:text="90"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/vol_mode_rotation_180_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginTop="@dimen/image_ts_button_spacing_vertical"
+            android:text="180"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/vol_mode_rotation_270_rbn"
+            style="@style/touch_screen_on_off_button"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_marginTop="@dimen/image_ts_button_spacing_vertical"
+            android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal_in_group"
+            android:text="270"
+            tools:ignore="HardcodedText" />
+    </edan.am57.bx4.common.widget.GridRadioGroup>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/vol_mode_threshold_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/image_ts_padding_sliders_left"
+        continuous:label="@string/para_3d_threshold"
+        continuous:maxvalue="250"
+        continuous:minvalue="10"
+        continuous:step="1"
+        continuous:type="number">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/vol_mode_brightness_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/vol_mode_threshold_slider"
+        continuous:label="@string/para_3d_brightness"
+        continuous:maxvalue="255"
+        continuous:minvalue="0"
+        continuous:step="1"
+        continuous:type="number">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/vol_mode_contrast_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/vol_mode_brightness_slider"
+        continuous:label="@string/para_3d_contrast"
+        continuous:maxvalue="255"
+        continuous:minvalue="0"
+        continuous:step="1"
+        continuous:type="number">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/vol_mode_mpr_smooth_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_big"
+        android:layout_toEndOf="@+id/vol_mode_contrast_slider"
+        continuous:adapter="@array/volume_smooth"
+        continuous:label="@string/para_3d_mpr_smooth"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/vol_mode_volume_smooth_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/vol_mode_mpr_smooth_slider"
+        continuous:adapter="@array/volume_smooth"
+        continuous:label="@string/para_3d_vol_smooth"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/vol_mode_mpr_rotation_x_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_big"
+        android:layout_toEndOf="@+id/vol_mode_volume_smooth_slider"
+        continuous:wrapped="true"
+        continuous:label="@string/para_3d_rotation_x"
+        continuous:maxvalue="355"
+        continuous:minvalue="0"
+        continuous:step="5"
+        continuous:type="number">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/vol_mode_mpr_rotation_y_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/vol_mode_mpr_rotation_x_slider"
+        continuous:wrapped="true"
+        continuous:label="@string/para_3d_rotation_y"
+        continuous:maxvalue="355"
+        continuous:minvalue="0"
+        continuous:step="5"
+        continuous:type="number">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/vol_mode_mpr_rotation_z_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/vol_mode_mpr_rotation_y_slider"
+        continuous:wrapped="true"
+        continuous:label="@string/para_3d_rotation_z"
+        continuous:maxvalue="355"
+        continuous:minvalue="0"
+        continuous:step="5"
+        continuous:type="number">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+</RelativeLayout>

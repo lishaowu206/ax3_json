@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:continuous="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/bmode_fr_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/image_ts_padding_sliders_left"
+        continuous:adapter="@array/line_density_options"
+        continuous:label="@string/para_line_density"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/bmode_fov_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/bmode_fr_slider"
+        continuous:adapter="@array/scan_angle_options"
+        continuous:label="@string/para_b_scan_angle"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <edan.am57.bx4.common.widget.ContinuousControl
+        android:id="@+id/bmode_steer_slider"
+        style="@style/touch_screen_continuous_control"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/image_ts_slider_spacing_horizontal_small"
+        android:layout_toEndOf="@+id/bmode_fov_slider"
+        continuous:label="@string/para_steer_angle"
+        continuous:type="adapter">
+    </edan.am57.bx4.common.widget.ContinuousControl>
+
+    <ToggleButton
+        android:id="@+id/bmode_lefttoright_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_marginStart="@dimen/image_ts_padding_left"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/touch_screen_button_group_padding"
+        android:layout_alignParentTop="true"
+        android:rotationY="180"
+        android:textOff="@string/para_b_lr_invert"
+        android:textOn="@string/para_b_lr_invert"/>
+
+    <ToggleButton
+        android:id="@+id/bmode_uptodown_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_marginStart="@dimen/image_ts_button_spacing_horizontal"
+        android:layout_alignTop="@+id/bmode_lefttoright_tbn"
+        android:layout_toEndOf="@+id/bmode_lefttoright_tbn"
+        android:rotationX="180"
+        android:textOff="@string/para_b_ud_invert"
+        android:textOn="@string/para_b_ud_invert"/>
+
+    <ToggleButton
+        android:id="@+id/bmode_3d_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignStart="@+id/bmode_lefttoright_tbn"
+        android:layout_below="@+id/bmode_lefttoright_tbn"
+        android:layout_marginTop="@dimen/image_ts_button_spacing_vertical"
+        android:textOff="@string/feature_3d_mode"
+        android:textOn="@string/feature_3d_mode"/>
+
+    <ToggleButton
+        android:id="@+id/bmode_4d_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignStart="@+id/bmode_uptodown_tbn"
+        android:layout_below="@+id/bmode_uptodown_tbn"
+        android:layout_marginTop="@dimen/image_ts_button_spacing_vertical"
+        android:textOff="@string/feature_4d_mode"
+        android:textOn="@string/feature_4d_mode"/>
+
+    <ToggleButton
+        android:id="@+id/bmode_lgc_tbn"
+        android:layout_marginTop="@dimen/image_ts_button_spacing_vertical"
+        android:layout_below="@+id/bmode_3d_tbn"
+        style="@style/touch_screen_on_off_button"
+        android:layout_alignStart="@+id/bmode_lefttoright_tbn"
+        android:textOff="@string/para_b_lgc"
+        android:textOn="@string/para_b_lgc"/>
+</RelativeLayout>
